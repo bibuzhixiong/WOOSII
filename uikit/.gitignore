@@ -1,0 +1,43 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+
+/build/*
+/.gradle/*
+/.idea/*
+/bin/*
+/obj/*
+/Rtmp/build/*
+/Rtmp/Rtmp.iml
+
+# Built application files
+*.apk
+*.ap_
+
+# Java class files
+*.class
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Generated files
+bin/
+gen/
+out/
+
+# Intellij
+*.iml
+
+# local properties
+local.properties
+
+# Android Studio captures folder
+captures/
+
+# DS_Store file
+.DS_Store
