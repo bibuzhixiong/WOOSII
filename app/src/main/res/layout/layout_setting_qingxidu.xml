@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/tv_LD"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="标清"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:gravity="center"
+                android:background="@drawable/bg_live_setting_corner"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/tv_SD"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="高清"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_live_setting_corner_gray"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/tv_HD"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="超清"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:gravity="center"
+                android:background="@drawable/bg_live_setting_corner_gray"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

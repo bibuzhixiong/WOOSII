@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <!--android:divider="?android:attr/listDivider"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/corners_popupwindow"
+        android:orientation="vertical"
+        android:showDividers="middle" >
+        <TextView
+            android:id="@+id/tv_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="男"
+            android:textColor="@color/text_choice_color"
+            android:textSize="@dimen/textBiggerSize"
+            android:textAppearance="?android:attr/textAppearanceButton" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/topLineThin"
+            android:background="@color/tipColor"/>
+        <TextView
+            android:id="@+id/tv_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="女"
+            android:textColor="@color/text_choice_color"
+            android:textSize="@dimen/textBiggerSize"
+            android:textAppearance="?android:attr/textAppearanceButton" />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/corners_popupwindow" >
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="取消"
+            android:textColor="@color/text_choice_color"
+            android:textSize="@dimen/textBiggerSize"
+            android:textAppearance="?android:attr/textAppearanceButton" />
+    </FrameLayout>
+</LinearLayout>

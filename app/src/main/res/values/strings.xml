@@ -1,3 +1,143 @@
 <resources>
-    <string name="app_name">WOOSII</string>
+    <string name="app_name">沃噻教育</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="forgetpassword">忘记密码</string>
+
+
+    <string name="share_title">沃噻梦，中国梦。</string>
+    <string name="share_invite">沃噻大学志在打破传统大学的围墙，让大学融入草根，让学习碎片化；教育与企业孵化结合，让人才融入企业，让企业成功转型</string>
+    <string name="share_explain_title">什么是沃噻大学？</string>
+    <string name="share_explain1">1、你学习我付费----------沃噻大学所有课程可免费学习，学习完课程后可获得经验值，累计一定经验值可获得沃大证书。</string>
+    <string name="share_explain2">2、人人是老师---------每个人都可以通过沃噻大学讲述自己独特的经验，分享自己的领悟。</string>
+    <string name="share_explain3">3、人人是校长---------每个人都可以成为校长，形成以校长为中心的校区商业圈，激发“大众集体智慧”</string>
+
+    //微信授权反馈
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unknown">发送返回</string>
+    <string name="cancel_authorization">取消授权</string>
+    <string name="authorization_failure">授权失败</string>
+    <string name="authorization_unsupport">授权不支持</string>
+
+    <string name="str_dialog_want_cancel">手指上滑取消问话</string>
+    <string name="str_dialog_listening">正在收听</string>
+    <string name="str_dialog_time_short">说话时间太短了</string>
+
+    <!-- 版本更新 -->
+    <string name="soft_update_no">您使用的已经是最新版本了</string>
+    <string name="soft_update_title">软件版本更新</string>
+    <string name="soft_update_info">检测到新版本，立即更新吗?</string>
+    <string name="soft_update_updatebtn">立即更新</string>
+    <string name="soft_update_later">下次再说</string>
+    <string name="soft_updating">正在更新</string>
+
+    <string name="upload_movies">上传</string>
+
+    <string name="recharge_text_explain_one">1.VR使用时间可用于购买课程</string>
+    <string name="recharge_text_explain_two">2.平台账户所充值的时间不可提现、不可退款，只能用于沃噻学院平台使用</string>
+    <string name="vr_rent_yajin">为了保证VR一体机的正常租用，需缴纳押金，押金于VR一体机退还后，3-7个工作日退还至付款账户</string>
+    <string name="vr_rent_vr_info">产品信息：</string>
+    <string name="vr_rent_vr_chanping_xinghao">产品型号：</string>
+    <string name="vr_rent_vr_jianrong_xinghao">兼容型号：</string>
+    <string name="vr_unrent_tip">退租时需将VR一体机退回至小沃中心，并由工作人员进行检查审核后，系统自动将押金退至付费账户</string>
+    <string name="about_we_detail">\u3000\u3000沃噻移动互联网大学以“双创”为核心定位，致力于打造新一代的移动互联网教育平台，引领中国移动教育。建立“你学习，我付费”的创新生态模式。</string>
+
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+    <string name="authentication_explain">说明：为了保障用户的资金安全，提现用户必须提交实名认证信息。认证通过了就可以提现账户的余额。</string>
+
+    <string name="poetry0">蝶恋花\n花褪残红青杏小。燕子飞时，绿水人家绕。\n枝上柳绵吹又少，天涯何处无芳草。\n墙里秋千墙外道。墙外行人，墙里佳人笑。\n笑渐不闻声渐悄，多情却被无情恼。\n蝶恋花\n花褪残红青杏小。燕子飞时，绿水人家绕。\n枝上柳绵吹又少，天涯何处无芳草。\n墙里秋千墙外道。墙外行人，墙里佳人笑。\n笑渐不闻声渐悄，多情却被无情恼。\n蝶恋花\n花褪残红青杏小。燕子飞时，绿水人家绕。\n枝上柳绵吹又少，天涯何处无芳草。\n墙里秋千墙外道。墙外行人，墙里佳人笑。\n笑渐不闻声渐悄，多情却被无情恼。</string>
+
+
+
+
+    <!--直播相关-->
+    <string name="chose_identity">请选择您的身份, 开始体验</string>
+    <string name="master">主播</string>
+    <string name="audience">观众</string>
+    <string name="live_url_hint">请输入直播流地址</string>
+    <string name="enter_live">进入直播</string>
+    <string name="mode_choose">美图模式选择</string>
+    <string name="normal">普通</string>
+    <string name="filter">美颜</string>
+    <string name="start_live">开始直播</string>
+    <string name="whitening">美白</string>
+    <string name="night_view">夜景</string>
+    <string name="blur">模糊</string>
+    <string name="black_white">黑白</string>
+    <string name="sunset">黄昏</string>
+    <string name="filter_mode">滤镜模式</string>
+    <string name="play">播放</string>
+    <string name="tip">提示</string>
+    <string name="ok">确定</string>
+    <string name="living_finished">主播已停止直播，直播结束</string>
+    <string name="video_finished">视频播放结束</string>
+    <string name="living_error">直播异常</string>
+    <string name="not_support_version">当前系统版本不支持滤镜模式，请选择普通模式</string>
+    <string name="live_starting">直播已开始</string>
+    <string name="net_broken">网络连接已断开</string>
+    <string name="live_finished">直播已结束</string>
+    <string name="is_not_filter_mode">当前模式不支持滤镜</string>
+    <string name="buffering">缓冲中</string>
+
+    <!-- im -->
+    <string name="empty"></string>
+    <string name="main_tab_session">会话</string>
+    <string name="main_tab_contact">通讯录</string>
+    <string name="user_profile">个人名片</string>
+    <string name="logining">登录中\u2026</string>
+    <string name="register_quickly">快速注册 ></string>
+    <string name="registering">注册中\u2026</string>
+    <string name="agree">同意</string>
+    <string name="reject">拒绝</string>
+    <string name="network_is_not_available">当前网络不可用，请检查您的网络设置</string>
+    <string name="i_know">我知道了</string>
+    <string name="login_hint_account">请输入帐号</string>
+    <string name="login_hint_password">请输入密码</string>
+    <string name="input_account">请输入帐号，限20位字母或者数字</string>
+    <string name="register_account_tip">帐号限20位字母或者数字</string>
+    <string name="input_nickname">请输入昵称，限10位汉字、字母或者数字</string>
+    <string name="register_nick_name_tip">昵称限10位汉字、字母或者数字</string>
+    <string name="input_password">请输入密码，6~20位字母或者数字</string>
+    <string name="register_password_tip">密码必须为6~20位字母或者数字</string>
+    <string name="register_success">注册成功</string>
+    <string name="register_failed">注册失败,错误码%1$s:%2$s</string>
+    <string name="login_has_account">已有帐号？快速登录 ></string>
+    <string name="done">完成</string>
+    <string name="latest_message_draft_prefix">[草稿] </string>
+    <string name="main_msg_unread_msg_count">[%d条]</string>
+    <string name="out_time">超时</string>
+    <string name="prepare_data">正在准备数据...</string>
+
+    <!-- 多端登录 -->
+    <string name="multiport_manager">多端登录管理</string>
+    <string name="multiport_logout">下线</string>
+    <string name="computer_version">云信电脑版</string>
+    <string name="web_version">云信网页版</string>
+    <string name="mobile_version">云信移动版</string>
+    <string name="multiport_logging">正在使用</string>
+    <string name="kickout_notify">下线通知</string>
+    <string name="kickout_content">你的帐号被%1$s踢出下线，请确定帐号信息安全</string>
+
+    <string name="login_failed">帐号或密码错误</string>
+    <string name="login_exception">无效输入</string>
+
+    <string name="online">正在直播</string>
+
+    <string name="send_gift">送了</string>
+    <string name="no_gift">当前还没收到礼物</string>
+
+    <string name="input_hint_audience_address">请输入拉流地址</string>
+    <string name="input_hint_audience_room">请输入房间号</string>
+
+
+
+    <string name="setting_filter">使用滤镜</string>
+    <string name="share_tip">直播地址已复制,请到第三方播放器打开,或分享给好友</string>
+    <string name="video_share_tip">视频地址已复制, 请到播放器中打开, 或分享给好友</string>
+    <string name="share">分享</string>
+
+
+
 </resources>

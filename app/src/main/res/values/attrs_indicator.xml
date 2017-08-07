@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--ViewPager的指示器属性-->
+    <attr format="integer" name="visiable_tab_count"/> <declare-styleable name="ViewpagerIndicatorOver"> <attr name="visiable_tab_count"/> </declare-styleable>
+
+</resources>

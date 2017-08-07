@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <TextView
+        android:id="@+id/tv_item"
+        android:text="商城"
+        android:textColor="@color/gray"
+        android:paddingLeft="10dp"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:drawableRight="@drawable/ordering_right"
+        android:paddingRight="8dp"
+        />
+
+</LinearLayout>

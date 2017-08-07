@@ -1,21 +1,617 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="sochat.so.com.android">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="sochat.so.com.android"
+    android:versionCode="36"
+    android:versionName="1.1.06">
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19"
+        tools:ignore="OldTargetApi"
+        tools:replace="minSdkVersion, targetSdkVersion"
+        />
+
+    <uses-feature android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false" />
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 允许程序使用闪光灯 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <!-- 摄影机 -->
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+
+    <!-- 添加屏幕及版本支持 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 友盟分享 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <!-- 来电 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
+    <permission
+        android:name="com.easemob.chatuidemo.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.easemob.chatuidemo.permission.C2D_MESSAGE" />
+    <!-- 极光推送权限 -->
+    <permission
+        android:name="sochat.so.com.android.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="sochat.so.com.android.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+
+
 
     <application
+        tools:replace="Android:icon, android:theme"
+        android:name=".app.MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app_icon_big"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true"
+        >
+        <activity android:name=".activity.MyMainActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        <!--微信支付-->
+        <activity android:name="sochat.so.com.android.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            android:theme="@style/AppTransparentTheme"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="wxcac78bb693d4095e" />
+            </intent-filter>
+        </activity>
+        <!--友盟微信分享-->
+        <activity android:name="sochat.so.com.android.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            />
+        <!--友盟QQ分享-->
+        <!--<data android:scheme="tencent100424468" />-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:label="@string/app_name">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent1105381238" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <!--新的欢迎界面-->
+        <activity android:name=".activity.WelcomeNewActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--<activity android:name=".activity.WelcomeActivity"-->
+        <!--android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:label="@string/app_name"-->
+        <!--android:windowSoftInputMode="stateAlwaysHidden"-->
+        <!--&gt;-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN" />-->
+        <!--<category android:name="android.intent.category.LAUNCHER" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!--登录-->
+        <activity android:name=".activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <!--忘记密码-->
+        <activity android:name=".activity.ForgetPasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <!--注册-->
+        <activity android:name=".activity.RegisterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--woosii的实名认证-->
+        <activity android:name=".activity.AuthenticationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--开户实名认证-->
+        <activity android:name=".activity.AuthenticationInformationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--找回支付密码-->
+        <activity android:name=".activity.LLPayFindPayPasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--修改支付密码-->
+        <activity android:name=".activity.LLPayChangePayPasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <!--绑定手机号-->
+        <activity android:name=".activity.WXBindPhoneActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--选择是否是管理员-->
+        <activity android:name=".activity.RegisterSelectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--选择管理员身份-->
+        <activity android:name=".activity.SelectRegisterIDActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--充值时间-->
+        <activity android:name=".activity.RechargeTimeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--钱包-->
+        <activity android:name=".activity.LLPayWalletActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--六方分成明细表-->
+        <activity android:name=".activity.SixPartyIncomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--交易明细-->
+        <activity android:name=".activity.LLPayOrderListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--选择提现的银行卡-->
+        <activity android:name=".activity.LLPayChooseBankWithdrawActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--连连银行卡-->
+        <activity android:name=".activity.LLPayBankActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--解绑银行卡-->
+        <activity android:name=".activity.LLPayUnBindBankActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--修改绑定手机号-->
+        <activity android:name=".activity.LLPayChangeBindPhoneActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--绑定银行卡-->
+        <activity android:name=".activity.LLPayBindCardActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--VR租用成功-->
+        <activity android:name=".activity.RentSuccessActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--收益提现-->
+        <activity android:name=".activity.IncomeToCashActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--RV租用-->
+        <activity android:name=".activity.VRRentActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--退租审核-->
+        <activity android:name=".activity.UnrentCheckActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--充值时间结果-->
+        <activity android:name=".activity.RechargeResultActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!--VR一体机登录验证码-->
+        <activity android:name=".activity.VRLoginCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <!--分享-->
+        <activity android:name=".activity.SharedActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--设置-->
+        <activity android:name=".activity.SettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--关注-->
+        <activity android:name=".activity.MyAttentionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--关于我们-->
+        <activity android:name=".activity.WithWoosiiActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--版本说明-->
+        <activity android:name=".activity.WoosiiVersionExplainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--收藏-->
+        <activity android:name=".activity.MyCollectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--选择教材-->
+        <activity android:name=".activity.TextBookActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--管理-->
+        <activity android:name=".activity.MyManageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--小沃员工找的老师的列表-->
+        <activity android:name=".activity.WoosiiEmployeeFoundTeacherActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--视频播放的Activity-->
+        <activity android:name=".activity.PlayVedioActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:launchMode="singleTask"
+            />
+        <!--反馈-->
+        <activity android:name=".activity.FeedbackActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--搜索老师-->
+        <activity android:name=".activity.SearchTeacherActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--360全景Webview-->
+        <activity android:name=".activity.PanoramaWebViewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--更多推荐视频-->
+        <activity android:name=".activity.MoreRecommentActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--选择城市-->
+        <activity android:name=".activity.ChooseCityActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--老师信息-->
+        <activity android:name=".activity.TeacherInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <!--个人信息-->
+        <activity android:name=".activity.UserSelfInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <activity android:name=".activity.RecyclerViewNormalActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <!--谷歌VR视频播放-->
+        <activity android:name=".activity.PlayVRVedioActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <!-- Primary intent when launching from the home screen -->
+                <category android:name="com.google.intent.category.CARDBOARD" />
+            </intent-filter>
+        </activity>
+        <!--视频播放的第三方框架-->
+        <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            tools:replace="android:theme" />
+
+        <!--Unity3D的Activity-->
+        <activity android:name=".activity.U3DActivity"
+            android:theme="@style/AppTheme"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:screenOrientation="landscape">
+            <!--<meta-data android:name="unityplayer.UnityActivity" android:value="true" />-->
+            <meta-data android:name="android.app.lib_name" android:value="unity" />
+            <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
+        </activity>
+
+        <activity android:name=".activity.WosiiUserProblem"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+
+        <!--友盟分享配置-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5716ee6d67e58ebfbd001f81" />
+
+
+
+
+        <!--直播相关-->
+        <activity
+            android:name=".live.activity.EnterLiveActivity"
+            android:theme="@style/AppTransparentTheme"
+            android:screenOrientation="portrait" />
+
+        <!--关注直播-->
+        <activity
+            android:name=".activity.MyAttentionLiveActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".live.activity.LiveRoomActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".live.activity.InputActivity"
+            android:theme="@style/InputActivityTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".live.activity.EnterAudienceActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.netease.nim.appKey"
+            android:value="5db3cc39a09c4873b1b0ea4dd8f30135" />
+        <!-- 声明网易云通信后台服务，如需保持后台推送，使用独立进程效果会更好。 -->
+        <service
+            android:name="com.netease.nimlib.service.NimService"
+            android:process=":core"/>
+
+        <!-- 运行后台辅助服务 -->
+        <service
+            android:name="com.netease.nimlib.service.NimService$Aux"
+            android:process=":core"/>
+
+        <!-- 声明网易云通信后台辅助服务 -->
+        <service
+            android:name="com.netease.nimlib.job.NIMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":core"/>
+
+        <!-- 网易云通信SDK的监视系统启动和网络变化的广播接收器，用户开机自启动以及网络变化时候重新登录，
+            保持和 NimService 同一进程 -->
+        <receiver android:name="com.netease.nimlib.service.NimReceiver"
+            android:process=":core"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 网易云通信进程间通信 Receiver -->
+        <receiver android:name="com.netease.nimlib.service.ResponseReceiver"/>
+
+        <!-- 网易云通信进程间通信service -->
+        <service android:name="com.netease.nimlib.service.ResponseService"/>
+
+        <!-- 安卓保活配置 -->
+        <!--<service-->
+        <!--android:name="com.netease.cosine.core.CosineService"-->
+        <!--android:process=":cosine">-->
+        <!--</service>-->
+
+        <!--<receiver-->
+        <!--android:name="com.netease.cosine.target.CosineReceiver"-->
+        <!--android:exported="true"-->
+        <!--android:process=":cosine">-->
+        <!--</receiver>-->
+
+        <meta-data
+            android:name="com.netease.cosine.target"
+            android:value=""/>
+        <meta-data
+            android:name="com.netease.cosine.target.receiver"
+            android:value="com.netease.nimlib.service.NimReceiver"/>
+
+        <!--以下极光推送-->
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="sochat.so.com.android" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":mult"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="sochat.so.com.android" />
+            </intent-filter>
+
+        </service>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="sochat.so.com.android" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" android:exported="false"/>
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name="sochat.so.com.android.jpush.MyReceiver"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="sochat.so.com.android" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="b97601e58905479007371de9" /> <!--  </>值来自开发者平台取得的AppKey-->
+        <!--以上极光推送-->
+
+
     </application>
 
 </manifest>

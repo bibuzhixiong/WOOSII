@@ -1,0 +1,44 @@
+<animation-list android:oneshot="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="25" android:drawable="@drawable/audio_animate1" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate2" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate3" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate4" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate5" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate6" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate7" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate8" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate9" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate10" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate11" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate12" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate13" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate14" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate15" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate16" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate17" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate18" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate19" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate20" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate21" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate22" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate23" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate24" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate25" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate26" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate27" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate28" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate29" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate30" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate31" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate32" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate33" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate34" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate35" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate36" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate37" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate38" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate39" />
+    <item android:duration="25" android:drawable="@drawable/audio_animate40" />
+
+</animation-list>

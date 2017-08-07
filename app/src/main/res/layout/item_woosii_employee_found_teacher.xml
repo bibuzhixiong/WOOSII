@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="98dp">
+
+    <sochat.so.com.android.customview.CircleImageView
+        android:id="@+id/iv_teacher_photo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/morentouxiang"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        />
+
+        <TextView
+            android:id="@+id/tv_teacher_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainTextColor"
+            android:text="王双"
+            android:layout_alignTop="@+id/iv_teacher_photo"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/textPrimarySize"
+            android:layout_toRightOf="@+id/iv_teacher_photo"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_teacher_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainHintColor"
+            android:maxLines="1"
+            android:text="我是一个厉害的哥哥"
+            android:textSize="@dimen/textSmallerSize"
+            android:layout_below="@+id/tv_teacher_name"
+            android:ellipsize="end"
+            android:layout_alignLeft="@+id/tv_teacher_name"
+            android:layout_marginTop="3dp"
+            />
+
+    <TextView
+        android:id="@+id/tv_yesterday_income"
+        android:layout_below="@+id/tv_teacher_info"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="昨日收益20元"
+        android:drawablePadding="5dp"
+        android:textColor="@color/mainTipColor"
+        android:layout_toLeftOf="@+id/line_vertical"
+        android:drawableLeft="@drawable/zuorishouyishallow"
+        android:gravity="center"
+        android:layout_alignLeft="@+id/tv_teacher_name"
+        />
+
+    <TextView
+        android:id="@+id/tv_all_income"
+        android:layout_below="@+id/tv_teacher_info"
+        android:layout_toRightOf="@+id/tv_yesterday_income"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="累计收益268元"
+        android:textColor="@color/mainTipColor"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/leijishouyi"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+
+        />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topLineThin"
+        android:background="@color/line_gray"
+        android:layout_below="@+id/tv_all_income"
+        android:layout_marginLeft="10dp"
+        />
+
+
+</RelativeLayout>

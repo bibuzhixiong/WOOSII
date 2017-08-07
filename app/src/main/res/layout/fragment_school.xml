@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gap_bg"
+    >
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<include-->
+            <!--android:id="@+id/top"-->
+            <!--layout="@layout/activity_top"/>-->
+
+        <!--<TextView-->
+            <!--android:visibility="gone"-->
+            <!--android:id="@+id/tv_city"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="全国"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_alignBottom="@+id/top"-->
+            <!--android:layout_alignTop="@+id/top"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:textSize="@dimen/textBiggerSize"-->
+            <!--android:drawableRight="@drawable/xiaosanjiao"-->
+            <!--android:drawablePadding="5dp"-->
+
+            <!--/>-->
+
+    <!--</RelativeLayout>-->
+
+    <include layout="@layout/activity_top_search"/>
+
+    <!--<sochat.so.com.android.customview.ViewpagerIndicatorOver-->
+        <!--android:id="@+id/viewpager_indicator"-->
+        <!--android:paddingTop="10dp"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--hyman:visiable_tab_count="5"-->
+        <!--android:background="@color/white"-->
+        <!--&gt;-->
+
+    <!--</sochat.so.com.android.customview.ViewpagerIndicatorOver>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/magic_indicator"
+            android:layout_marginRight="40dp"
+            >
+        </net.lucode.hackware.magicindicator.MagicIndicator>
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:textColor="@color/mianColor"
+            android:background="@drawable/yincang"
+            android:layout_toLeftOf="@+id/jiahao"
+
+            />
+        <TextView
+            android:id="@+id/jiahao"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:text="+"
+            android:gravity="center"
+            android:textSize="32dp"
+            android:textColor="@color/mianColor"
+            android:background="@color/white"
+            android:layout_alignParentRight="true"
+
+            />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/dingbufengexian"
+        android:layout_marginTop="-1dp"
+        />
+    <EditText
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textPrimarySize"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:hint="搜索"
+        android:gravity="center"
+        android:drawableLeft="@drawable/sousuo"
+        android:background="@drawable/corners_edittext"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <android.support.v4.view.ViewPager
+        android:layout_marginTop="10dp"
+        android:id="@+id/school_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+
+</LinearLayout>

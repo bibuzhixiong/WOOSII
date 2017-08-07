@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gap_bg">
+    <include layout="@layout/activity_top_hold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/with_woosii"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="沃噻大学 V1.0"
+            android:textColor="@color/mainTextColor"
+            android:textSize="@dimen/textPrimarySize"
+            android:layout_below="@+id/iv_icon"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            />
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:id="@+id/tv_version_update"
+            android:text="版本更新"
+            style="@style/ItemTitleTextStyle"
+            />
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="无新版"
+            android:textSize="@dimen/textSmallerSize"
+            android:textColor="@color/mainTipColor"
+            android:paddingRight="10dp"
+            android:background="@drawable/selector_my_item_click_bg"
+            android:layout_alignTop="@+id/tv_version_update"
+            android:layout_alignBottom="@+id/tv_version_update"
+            android:gravity="center"
+            />
+        <View
+            android:layout_below="@+id/tv_version_update"
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/topLineThin"
+            android:background="@color/line_gray"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:layout_below="@+id/line"
+            android:id="@+id/tv_version_explain"
+            android:text="说明"
+            style="@style/ItemTitleTextStyle"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

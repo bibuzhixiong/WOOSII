@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="10dp">
+    <RadioButton
+        android:id="@+id/rb_huaijiu"
+        android:text="怀旧"
+        style="@style/live_checked_filter_text_style"
+        android:checked="true"
+        />
+    <RadioButton
+        android:id="@+id/rb_ganjing"
+        android:text="干净"
+        style="@style/live_checked_filter_text_style"
+
+        />
+    <RadioButton
+        android:id="@+id/rb_ziran"
+        android:text="自然"
+        style="@style/live_checked_filter_text_style"
+
+        />
+    <RadioButton
+        android:id="@+id/rb_jiankang"
+        android:text="健康"
+        style="@style/live_checked_filter_text_style"
+
+        />
+    <RadioButton
+        android:id="@+id/rb_fugu"
+        android:text="复古"
+        style="@style/live_checked_filter_text_style"
+
+        />
+    <RadioButton
+        android:id="@+id/rb_wenrou"
+        android:text="温柔"
+        style="@style/live_checked_filter_text_style"
+
+        />
+    <RadioButton
+        android:id="@+id/rb_meibai"
+        android:text="美白"
+        style="@style/live_checked_filter_text_style"
+
+        />
+
+
+</RadioGroup>

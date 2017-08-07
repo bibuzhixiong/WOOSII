@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="110dp">
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/changtiaohong"
+        >
+
+<sochat.so.com.android.customview.CircleImageView
+    android:id="@+id/iv_bank_icon"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:src="@mipmap/bank_deflaut"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="15dp"
+
+    />
+        <TextView
+            android:id="@+id/tv_bank_name"
+            android:layout_alignTop="@+id/iv_bank_icon"
+            android:layout_toRightOf="@+id/iv_bank_icon"
+            android:layout_marginLeft="20dp"
+            android:text="招商银行"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textBigBiggerSize"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_bank_type"
+            android:layout_alignLeft="@+id/tv_bank_name"
+            android:layout_below="@+id/tv_bank_name"
+            android:textSize="@dimen/textPrimarySize"
+            android:text="储蓄卡"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/tv_bank_no_star"
+            android:layout_alignLeft="@+id/tv_bank_name"
+            android:layout_below="@+id/tv_bank_type"
+            android:textSize="@dimen/textBigBiggerSize"
+            android:text="****  ****  ****  "
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            />
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/tv_bank_no_four"
+            android:layout_toRightOf="@+id/tv_bank_no_star"
+            android:layout_below="@+id/tv_bank_type"
+            android:textSize="@dimen/textPrimarySize"
+            android:text="3191"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/transparent"
+        />
+
+</LinearLayout>

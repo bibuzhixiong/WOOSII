@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="80dp"
+    >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            >
+                <TextView
+                    android:text="0.00"
+                    android:id="@+id/tv_cumulative_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="32sp"
+                    android:gravity="center"
+                    android:textColor="@color/mianColor"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSmallSmallerSize"
+                    android:gravity="center"
+                    android:text="累计收益（元）"
+                    android:textColor="@color/mainHintColor"
+                    />
+
+        </LinearLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/topLineThin"
+            android:background="@color/chunk_gray2"
+            />
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+        <include
+            android:id="@+id/id_ViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            layout="@layout/player_activity_video_play_fragment" />
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <com.github.jdsjlzx.recyclerview.LRecyclerView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/et_comment"
+                    >
+
+                </com.github.jdsjlzx.recyclerview.LRecyclerView>
+
+                <sochat.so.com.android.customview.SearchEditText
+                            android:id="@+id/et_comment"
+                            style="@style/editTextStylecomment"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/corners_layout"
+                            android:layout_alignParentBottom="true"
+                            android:layout_weight="1"
+                            android:imeOptions="actionSend"
+                            />
+
+
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rl_vedio_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                        <TextView
+                            android:id="@+id/tv_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="简介"
+                            android:textColor="@color/mainTextColor"
+                            android:padding="10dp"
+                            />
+                        <ImageButton
+                            android:id="@+id/ibClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:src="@drawable/guanbi"
+                            android:background="@null"
+                            android:layout_alignParentRight="true"
+                            android:padding="10dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_vedio_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="名称：小沃中心"
+                            android:layout_below="@+id/tv_detail"
+                            android:paddingLeft="10dp"
+
+                            />
+                        <TextView
+                            android:id="@+id/tv_vedio_play_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="播放：0次播放"
+                            android:layout_below="@+id/tv_vedio_name"
+                            android:padding="10dp"
+                            android:minEms="10"
+                            />
+                        <TextView
+                            android:id="@+id/tv_addtime"
+                            android:layout_toRightOf="@+id/tv_vedio_play_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="时间：2016年12月"
+                            android:layout_below="@+id/tv_vedio_name"
+                            android:padding="10dp"
+                            />
+
+                        <ScrollView
+                            android:layout_below="@+id/tv_addtime"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    >
+                                        <TextView
+                                            android:id="@+id/tv_vedio_info"
+                                            android:text="这里是关于视频的介绍"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+
+                                </RelativeLayout>
+
+                        </ScrollView>
+
+                </RelativeLayout>
+
+        </RelativeLayout>
+
+</LinearLayout>

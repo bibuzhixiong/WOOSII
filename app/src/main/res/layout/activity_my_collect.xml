@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/activity_top_hold"/>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="@dimen/textPrimarySize"
+            android:textColor="@color/comment_time_color"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        ></com.github.jdsjlzx.recyclerview.LRecyclerView>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_bg"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/topLineThick"
+            android:background="@color/line_gray"
+            />
+
+        <LinearLayout
+            android:layout_below="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_all"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:text="全选"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_my_item_click_bg"
+                android:textSize="@dimen/textBigBiggerSize"
+                android:textColor="@drawable/selector__text_selected"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/line_gray"
+                />
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:text="删除"
+                android:drawableLeft="@drawable/delete"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/selector_my_item_click_bg"
+                android:textSize="@dimen/textBigBiggerSize"
+                android:textColor="@color/red"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

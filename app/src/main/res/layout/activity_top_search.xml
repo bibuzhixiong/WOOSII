@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/white">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/app_icon"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_city"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="广州"
+        android:textSize="@dimen/textPrimarySize"
+        android:textColor="@color/mainTextColor"
+        android:drawableRight="@drawable/xiaosanjiao"
+        android:drawablePadding="5dp"
+        />
+
+
+
+    <EditText
+        android:id="@+id/iv_search"
+        android:layout_marginLeft="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/corners_edittext"
+        android:drawableLeft="@drawable/sousuo_grey"
+        android:paddingLeft="10dp"
+        android:drawablePadding="5dp"
+        android:hint="请输入搜索内容"
+        android:textSize="@dimen/textSmallerSize"
+        android:textColor="@color/mainTextColor"
+        android:layout_marginRight="20dp"
+        android:focusable="false"
+        />
+
+
+</LinearLayout>

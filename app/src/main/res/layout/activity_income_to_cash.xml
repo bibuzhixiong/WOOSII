@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gap_bg"
+    >
+    <include layout="@layout/activity_top_hold"/>
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:background="@drawable/selector_my_item_click_bg"
+        >
+        <TextView
+            android:id="@+id/tv_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:drawablePadding="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="@dimen/textPrimarySize"
+            android:text="银行卡"
+            android:minEms="4"
+            android:textColor="@color/mainTextColor" />
+        <sochat.so.com.android.customview.CircleImageView
+            android:id="@+id/iv_bank_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/bank_deflaut"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_current_bank__name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/skip"
+            android:layout_marginRight="10dp"
+            android:text="银行卡名字"
+            android:textColor="@color/mainHintColor" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="提现金额"
+            android:textSize="@dimen/textPrimarySize"
+            android:gravity="center_vertical"
+            android:textColor="@color/mainTextColor"
+            android:minEms="4"
+            />
+        <EditText
+            android:id="@+id/et_input_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:hint="￥请输入转出金额"
+            android:textColorHint="@color/line_gray"
+            android:textSize="@dimen/textPrimarySize"
+            android:inputType="numberDecimal"
+            android:background="@null"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        >
+        <TextView
+            android:id="@+id/tv_show_money"
+            android:text="可提现金额：0元"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/mainTipColor"
+            android:textSize="@dimen/textSmallerSize"
+            />
+        <TextView
+            android:id="@+id/tv_freeze_balance"
+            android:text="冻结金额：0元"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/mainTipColor"
+            android:textSize="@dimen/textSmallerSize"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        >
+        <TextView
+            android:id="@+id/tv_roll_out_now"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/line_gray"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="立即转出"
+            android:textSize="@dimen/textBiggerSize"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:text="金额将转出至您绑定的银行卡"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/tanhaohongse"
+            android:drawablePadding="10dp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

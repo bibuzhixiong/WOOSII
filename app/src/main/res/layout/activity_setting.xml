@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gap_bg">
+
+    <include layout="@layout/activity_top_hold"/>
+
+    <TextView
+        android:id="@+id/tv_change_password"
+        android:text="修改密码"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:drawableRight="@drawable/skip"
+        android:background="@drawable/selector_my_item_click_bg"
+        style="@style/ItemTitleTextStyle"
+        />
+
+    <TextView
+        android:id="@+id/tv_with_woosii"
+        android:layout_marginTop="20dp"
+        android:text="关于我们"
+        style="@style/ItemTitleTextStyle" />
+    <View
+        android:id="@+id/line"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topLineThin"
+        android:background="@color/line_gray"
+        />
+    <TextView
+        android:id="@+id/tv_with_feedback"
+        android:text="建议反馈"
+        android:paddingRight="15dp"
+        android:drawableRight="@drawable/skip"
+        style="@style/ItemTitleTextStyle"
+        />
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/rl_current_version"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_my_item_click_bg">
+        <TextView
+            android:text="当前版本"
+            style="@style/ItemTitleTextStyle"
+            />
+        <TextView
+            android:id="@+id/tv_current_version"
+            android:text="1.0版"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/hint_textcolor"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+             />
+    </RelativeLayout>
+    <View
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topLineThin"
+        android:background="@color/line_gray"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_remove_cache"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_my_item_click_bg">
+        <TextView
+            android:text="清除缓存"
+            style="@style/ItemTitleTextStyle"
+            />
+        <TextView
+            android:id="@+id/tv_cache_size"
+            android:text="0.0M"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/hint_textcolor"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+             />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_exit"
+        android:layout_marginTop="20dp"
+        android:text="退出账号"
+        android:textSize="@dimen/textBiggerSize"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_my_item_click_bg"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/mianColor"
+        android:gravity="center_horizontal"
+         />
+
+
+</LinearLayout>

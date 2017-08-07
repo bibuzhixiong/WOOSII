@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--底部人员操作布局 用于展示当前选中的人员信息与操作按钮-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_member_operate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_black_bf000000"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <sochat.so.com.android.live.im.widget.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/avatar_def" />
+
+        <TextView
+            android:id="@+id/tv_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test name"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:id="@+id/btn_mute"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/operate_btn_selector"
+                android:text="禁言"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btn_kick"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/operate_btn_selector"
+                android:text="踢人"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

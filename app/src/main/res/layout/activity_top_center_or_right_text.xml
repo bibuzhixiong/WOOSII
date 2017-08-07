@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+     >
+    <ImageView
+        android:id="@+id/top_back_forget"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/selector_back_press"
+        android:padding="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/login"
+        android:id="@+id/main_top_text_center"
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="12dp"
+        android:background="@null"
+        android:gravity="center"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/main_top_text_rignt"
+        android:layout_alignBottom="@+id/main_top_text_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/register"
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="12dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:gravity="center"
+        android:textSize="16sp"/>
+    <View
+        android:layout_below="@+id/main_top_text_rignt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topLineThin"
+        android:background="@color/line_gray"
+        />
+
+</RelativeLayout>

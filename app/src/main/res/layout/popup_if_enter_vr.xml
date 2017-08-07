@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/rlLayout"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_time_layout"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22"
+            android:textSize="52sp"
+            android:includeFontPadding="false"
+            />
+        <TextView
+            android:id="@+id/tv_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_day"
+            android:layout_alignTop="@+id/tv_day"
+            android:text="星期四"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="6dp"
+            />
+        <TextView
+            android:id="@+id/tv_year_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_day"
+            android:layout_alignBaseline="@+id/tv_day"
+            android:layout_marginLeft="10dp"
+            android:text="06/2017"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/ll_enter_or_pause_vr"
+        android:layout_below="@+id/rl_time_layout"
+        android:paddingBottom="100dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="即将进入"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VR"
+            android:textColor="@color/mianColor"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="精彩世界..."
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_enter_or_pause_vr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:id="@+id/llLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+            <TextView
+                android:text="进入VR"
+                android:gravity="center"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:drawableTop="@drawable/vrxianxing"
+                android:background="@drawable/selector_enter_vr_press"
+                android:padding="18dp"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:id="@+id/llRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+            <TextView
+                android:text="暂不进入"
+                android:gravity="center"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/selector_pause_enter_vr_press"
+                android:drawableTop="@drawable/shoujixianxing"
+                android:padding="12dp"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/pop_rl_click"
+        android:layout_width="wrap_content"
+        android:layout_height="55dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/huiseanniu" />
+
+        <ImageView
+            android:id="@+id/pop_iv_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/add" />
+    </RelativeLayout>
+
+</RelativeLayout>

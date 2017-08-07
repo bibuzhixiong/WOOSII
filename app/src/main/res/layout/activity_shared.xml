@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/layout_temp_top"
+        layout="@layout/activity_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_temp_top"
+        android:layout_above="@+id/share_bottom"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/share_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/share_title"
+            android:lineSpacingMultiplier="1.3"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:textColor="#aa33a427"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/share_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/share_invite"
+            android:lineSpacingMultiplier="1.3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#aa33a427"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:text="立即分享"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_login_or_register_pressed" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/share_monus_style"
+            android:layout_marginTop="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:background="@color/view_color"
+                />
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/share_explain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/share_explain_title"
+                android:textSize="@dimen/textSmallerSize"
+                android:textColor="@color/hint_text_color"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:background="@color/view_color"
+                />
+        </LinearLayout>
+        <!-- <TextView
+            android:id="@+id/share_explain"
+            style="@style/share_monus_style"
+            android:text="@string/share_explain_title"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            /> -->
+        <TextView
+            style="@style/share_monus_style"
+            android:text="@string/share_explain1"
+            />
+        <TextView
+            style="@style/share_monus_style"
+            android:text="@string/share_explain2"
+            />
+        <TextView
+            style="@style/share_monus_style"
+            android:text="@string/share_explain3"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/share_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/share_count"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:text="已邀请人数xxx人"
+            android:visibility="gone"
+            android:textColor="#FF8F3A"
+            android:gravity="center"
+            />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/room_title"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="沃噻教育"
+        android:paddingTop="?attr/padding_top"
+        />
+
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/rl_room_id"
+        android:layout_below="@+id/room_title"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/bg_audience_room_id"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp">
+        <sochat.so.com.android.live.im.widget.CircleImageView
+            android:id="@+id/master_head"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/avatar_def"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/room_id_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="房间ID："
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/room_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="房间号："
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/master_head"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/tv_liver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/master_head"
+            android:textColor="@color/white"
+            android:text="主讲人：黄晓晴"
+            android:textSize="12sp"
+            android:maxLines="1"
+            />
+
+
+    </RelativeLayout>
+    <TextView
+        android:layout_below="@+id/rl_room_id"
+        android:id="@+id/online_count_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/rl_room_id"
+        android:textColor="#d8d8d8"
+        android:text="6780人在观看"
+        android:textSize="11sp"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_audience_room_id"
+        android:drawableLeft="@drawable/guanzhongrenshu"
+        android:drawablePadding="3dp"
+        />
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_room_member"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/online_count_text"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="50dp"
+        />
+
+</RelativeLayout>

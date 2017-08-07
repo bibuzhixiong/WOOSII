@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="StatusBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/AnimFade</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="teacher_height">210dp</item>
+        <item name="padding_top">20dp</item>
+        <item name="theme_height">70dp</item>
+        <item name="margin_top_h">115dp</item>
+    </style>
+
+    <style name="StatusBarTheme1" parent="android:style/Theme.Holo.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/AnimFade</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="teacher_height">190dp</item>
+        <item name="padding_top">0dp</item>
+        <item name="theme_height">50dp</item>
+        <item name="margin_top_h">95dp</item>
+    </style>
+
+</resources>

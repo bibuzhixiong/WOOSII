@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <sochat.so.com.android.customview.NoScrollViewPager
+        android:id="@+id/main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_radiogroup">
+
+    </sochat.so.com.android.customview.NoScrollViewPager>
+
+
+    <TextView
+        android:layout_above="@+id/main_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topLineThin"
+        android:background="@color/line_gray"
+        />
+
+    <!--<RadioButton-->
+        <!--android:id="@+id/rb_tab_vr"-->
+        <!--android:button="@null"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:drawableTop="@drawable/selector_main_tab_icon_vr_selected"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="VR"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="@dimen/textMoreSmallerSize"-->
+        <!--android:textColor="@drawable/selector_main_tab_text_selected"-->
+        <!--/>-->
+
+    <RadioGroup
+        android:id="@+id/main_radiogroup"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/colorMainTabBg">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/rb_tab_marketing"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/selector_main_tab_icon_shouye_selected"
+            android:layout_weight="1"
+            android:text="首页"
+            android:gravity="center"
+            android:textSize="@dimen/textMoreSmallerSize"
+            android:textColor="@drawable/selector_main_tab_text_selected"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_tab_school"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/selector_main_tab_icon_shufu_selected"
+            android:layout_weight="1"
+            android:text="课外课"
+            android:gravity="center"
+            android:textSize="@dimen/textMoreSmallerSize"
+            android:textColor="@drawable/selector_main_tab_text_selected"
+            />
+        <RadioButton
+            android:id="@+id/rb_tab_vr"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/selector_main_tab_icon_vr_selected"
+            android:layout_weight="1"
+            android:text="VR"
+            android:gravity="center"
+            android:textSize="@dimen/textMoreSmallerSize"
+            android:textColor="@drawable/selector_main_tab_text_selected"
+            android:enabled="false"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_tab_answer"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/selector_main_tab_icon_answer_selected"
+            android:layout_weight="1"
+            android:text="答案"
+            android:gravity="center"
+            android:textSize="@dimen/textMoreSmallerSize"
+            android:textColor="@drawable/selector_main_tab_text_selected"
+            />
+        <RadioButton
+            android:id="@+id/rb_tab_my"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/selector_main_tab_icon_my_selected"
+            android:layout_weight="1"
+            android:text="我的"
+            android:gravity="center"
+            android:textSize="@dimen/textMoreSmallerSize"
+            android:textColor="@drawable/selector_main_tab_text_selected"
+            />
+
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/iv_vr_center"
+        android:layout_width="55dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/main_radiogroup"
+        android:layout_marginTop="-15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/vr_center"
+        android:layout_marginBottom="-15dp"
+        />
+
+</RelativeLayout>

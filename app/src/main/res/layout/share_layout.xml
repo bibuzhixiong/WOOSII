@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/share_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_share_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_black_df000000"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:gravity="center"
+            android:text="分享地址类型"
+            android:textSize="14sp"
+            android:textColor="@color/white" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="#80ffffff"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="22dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_share_http"
+                style="@style/share_btn"
+                android:text="HTTP"
+                />
+
+            <Button
+                android:id="@+id/btn_share_hls"
+                style="@style/share_btn"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:text="HLS" />
+
+            <Button
+                android:id="@+id/btn_share_rtmp"
+                style="@style/share_btn"
+                android:text="RTMP" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="#80ffffff"/>
+
+        <Button
+            android:id="@+id/btn_share_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@null"
+            android:text="取消"
+            android:textSize="14sp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/corners_popupwindow"
+        android:divider="?android:attr/listDivider"
+        android:orientation="vertical"
+        android:showDividers="middle" >
+        <TextView
+            android:id="@+id/tv_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="确定删除所有缓存？"
+            android:textColor="@color/mainTipColor"
+            android:textSize="@dimen/textBiggerSize"
+            android:textAppearance="?android:attr/textAppearanceButton" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/topLineThin"
+            android:background="@color/chunk_gray"
+            />
+        <TextView
+            android:id="@+id/tv_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="确定"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textBigBiggerSize"
+            android:textAppearance="?android:attr/textAppearanceButton" />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/corners_popupwindow" >
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="取消"
+            android:textColor="@color/mainTextColor"
+            android:textSize="@dimen/textBiggerSize"
+            android:textAppearance="?android:attr/textAppearanceButton" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <sochat.so.com.android.view.SquareLayout
+            android:id="@+id/layout_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <ImageView
+                android:id="@+id/iv_live_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/zhanweifu"
+                android:background="@color/white"
+                android:scaleType="centerCrop" >
+            </ImageView>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="6dp"-->
+                <!--android:layout_marginTop="6dp"-->
+
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:background="@drawable/circle_corner_bg_white"-->
+                <!--android:paddingLeft="6dp"-->
+                <!--android:paddingRight="6dp"-->
+                <!--android:paddingTop="2dp"-->
+                <!--android:paddingBottom="2dp"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_alignParentEnd="true">-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/zhongjie"-->
+                    <!--android:layout_width="4dp"-->
+                    <!--android:layout_height="4dp"-->
+                    <!--android:background="@drawable/green_circle"-->
+                    <!--android:layout_marginRight="4dp"-->
+                    <!--android:scaleType="centerInside" />-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:textSize="10sp"-->
+                    <!--android:text="直播中"/>-->
+            <!--</LinearLayout>-->
+        </sochat.so.com.android.view.SquareLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_live_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="沃噻教育"
+                android:gravity="center"
+                android:layout_marginTop="6dp"
+                android:textSize="15sp"
+                android:textColor="@color/mainTextColor"
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_live_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:layout_marginTop="6dp"
+                android:text="主讲人："
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+
+        </LinearLayout>
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginRight="10dp">-->
+            <!--<TextView-->
+                <!--android:id="@+id/tv_live_looknum"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:textSize="12sp"-->
+                <!--android:text="0人"/>-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+</LinearLayout>

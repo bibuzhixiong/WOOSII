@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp">
+            <ImageView
+                android:id="@+id/iv_course_thumb"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:src="@drawable/liuyifei"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="2dp"
+                />
+            <ImageView
+                android:id="@+id/iv_jingping"
+                android:visibility="gone"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/jingpin"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_course_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="课程名字"
+                android:minLines="2"
+                android:textColor="@color/comment_commente_color"
+                />
+
+            <TextView
+                android:layout_below="@+id/tv_course_name"
+                android:id="@+id/tv_time_long"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="时长：00:00"
+                android:textSize="@dimen/textSmallSmallerSize"
+                android:textColor="@color/red"
+                android:layout_marginRight="20dp"
+
+                />
+            <TextView
+                android:layout_below="@+id/tv_course_name"
+                android:id="@+id/tv_free"
+                android:visibility="invisible"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="免费"
+                android:textSize="@dimen/textSmallSmallerSize"
+                android:textColor="@color/mianColor"
+                android:layout_marginRight="20dp"
+
+                />
+
+            <ImageView
+                android:layout_toRightOf="@+id/tv_time_long"
+                android:layout_below="@+id/tv_course_name"
+                android:id="@+id/iv_eye"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/guankan"
+                android:layout_alignBottom="@+id/tv_attention_count"
+                android:layout_marginTop="5dp"
+                />
+
+
+            <TextView
+                android:layout_below="@+id/tv_course_name"
+                android:id="@+id/tv_attention_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="263.9万"
+                android:layout_toRightOf="@+id/iv_eye"
+                android:textSize="@dimen/textSmallSmallerSize"
+                android:textColor="@color/school_contentcolor"
+                android:paddingLeft="5dp"
+                android:layout_alignBaseline="@+id/tv_time_long"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_below="@+id/tv_top_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topLineThin"
+        android:background="@color/line_gray"
+        />
+</LinearLayout>

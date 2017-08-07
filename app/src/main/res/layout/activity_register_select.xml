@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/activity_top_center_or_right_text"/>
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/woosii"
+        android:layout_marginTop="29dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="你身边的移动大学"
+        android:textColor="#666666"
+        android:gravity="center"
+        android:layout_below="@+id/icon"
+        android:textSize="@dimen/textBigBiggerSize"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/tv_general"
+            android:text="我是普通用户"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textPrimarySize"
+            android:textColor="@color/mianColor"
+            android:layout_below="@+id/tv"
+            android:gravity="center"
+            android:background="@drawable/circle_corner_text_bg"
+            android:padding="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            />
+        <TextView
+            android:id="@+id/tv_manager"
+            android:text="我是管理员"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textPrimarySize"
+            android:textColor="@color/mianColor"
+            android:layout_below="@+id/tv"
+            android:gravity="center"
+            android:background="@drawable/circle_corner_text_bg"
+            android:padding="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="32dp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择身份进入注册"
+        android:textColor="@color/comment_time_color"
+        android:gravity="center|bottom"
+        android:layout_marginBottom="25dp"
+        android:layout_weight="1"
+        />
+
+
+</LinearLayout>

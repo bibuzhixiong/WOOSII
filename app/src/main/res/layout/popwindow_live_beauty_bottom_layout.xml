@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="#80000000"
+    android:id="@+id/bg_enter_live_bottom_beauty_filter"
+    >
+
+    <LinearLayout
+        android:id="@+id/rl_lvjing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <include layout="@layout/layout_beauty_or_mopi"/>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/hs_layout"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:scrollbars="none"
+            android:visibility="gone"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <include layout="@layout/layout_choose_filter"/>
+
+            </RelativeLayout>
+
+
+        </HorizontalScrollView>
+        <View
+            android:id="@+id/viewline"
+            android:layout_below="@+id/ll_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/topLineThin"
+            android:background="@color/chunk_gray"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_layout2"
+            android:layout_below="@+id/viewline"
+            android:layout_width="match_parent"
+            android:layout_height="59.5dp"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_beauty_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/bg_live_beauty_filter"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                >
+                <TextView
+                    android:button="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="美颜"
+                    android:drawableLeft="@drawable/meiyanrenlian"
+                    android:textColor="@color/white"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_beauty_filter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                >
+                <TextView
+                    android:button="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="滤镜"
+                    android:drawableLeft="@drawable/lvjing"
+                    android:textColor="@color/white"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+<!--设置清晰度-->
+    <RelativeLayout
+        android:id="@+id/ll_setting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <include layout="@layout/layout_setting_qingxidu"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

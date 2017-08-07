@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="textPrimarySize">16sp</dimen>
+    <dimen name="textBiggerSize">18sp</dimen>
+    <dimen name="textBigBiggerSize">20sp</dimen>
+    <dimen name="textSmallerSize">14sp</dimen>
+    <dimen name="textSmallSmallerSize">12sp</dimen>
+    <dimen name="textMoreSmallerSize">10sp</dimen>
+
+    <!--答案界面语音图标的尺寸-->
+    <dimen name="yuYinSize">70dp</dimen>
+    <!--答案界面语音水波背景1-->
+    <dimen name="weaveSizeOne">80dp</dimen>
+    <!--答案界面语音水波背景1-->
+    <dimen name="weaveSizeTwo">90dp</dimen>
+    <!--答案界面语音水波背景1-->
+    <dimen name="weaveSizeThree">100dp</dimen>
+    <!--答案界面语音图标背景空间-->
+    <dimen name="voiceBgSize">120dp</dimen>
+    <!--答案界面语音提示文字与上边距的距离-->
+    <dimen name="tipTextMarginTop">80dp</dimen>
+    <!--答案界面语音提示文字与上边距的距离-->
+    <dimen name="tipTextContentMarginTop">30dp</dimen>
+    <!--答案界面语音图标离底部的距离-->
+    <dimen name="yuYinMarginBottom">30dp</dimen>
+    <!--答案界面语音图标下面文字的Padding-->
+    <dimen name="voiceTextPadding">3dp</dimen>
+    <!--答案界面语音图标与顶部的距离-->
+    <dimen name="voiceImageMarginTop">100dp</dimen>
+    <!--VR界面每个Item图片的高度-->
+    <dimen name="vrCoverHeight">200dp</dimen>
+    <!--顶部布局线条细的-->
+    <dimen name="topLineThin">0.5dp</dimen>
+    <!--顶部布局线条粗的-->
+    <dimen name="topLineThick">1dp</dimen>
+    <!--padding-->
+    <dimen name="itemPadding">10dp</dimen>
+    <!--padding-->
+    <dimen name="divider_height1">5dp</dimen>
+    <!--padding-->
+    <dimen name="divider_Padding1">10dp</dimen>
+
+
+    <!--谷歌VR控件相关-->
+    <dimen name="title_text_size">24dip</dimen>
+    <dimen name="caption_text_size">12dip</dimen>
+    <dimen name="paragragh_text_size">15dip</dimen>
+
+
+    <!--直播相关-->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+</resources>

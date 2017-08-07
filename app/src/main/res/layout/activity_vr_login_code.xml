@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include layout="@layout/activity_top_hold"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/vr_code_icon"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="在VR一体机上输入验证码，仅能同时登录一台。"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/hint_text_color"
+        android:layout_marginTop="30dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="每次验证码有效期为2分钟。"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/hint_text_color"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        >
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="39dp"
+            android:layout_height="49dp"
+            android:background="@color/gap_bg"
+            android:padding="10dp"
+            android:textSize="26sp"
+            android:textColor="@color/mainTextColor"
+            android:gravity="center"
+            android:text=""
+            android:layout_margin="5dp"
+
+            />
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="39dp"
+            android:layout_height="49dp"
+            android:background="@color/gap_bg"
+            android:padding="10dp"
+            android:textSize="26sp"
+            android:textColor="@color/mainTextColor"
+            android:gravity="center"
+            android:text=""
+            android:layout_margin="5dp"
+
+            />
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="39dp"
+            android:layout_height="49dp"
+            android:background="@color/gap_bg"
+            android:padding="10dp"
+            android:textSize="26sp"
+            android:textColor="@color/mainTextColor"
+            android:gravity="center"
+            android:text=""
+            android:layout_margin="5dp"
+
+            />
+        <TextView
+            android:id="@+id/tv_four"
+            android:layout_width="39dp"
+            android:layout_height="49dp"
+            android:background="@color/gap_bg"
+            android:padding="10dp"
+            android:textSize="26sp"
+            android:textColor="@color/mainTextColor"
+            android:gravity="center"
+            android:text=""
+            android:layout_margin="5dp"
+
+            />
+        <TextView
+            android:id="@+id/tv_five"
+            android:layout_width="39dp"
+            android:layout_height="49dp"
+            android:background="@color/gap_bg"
+            android:padding="10dp"
+            android:textSize="26sp"
+            android:textColor="@color/mainTextColor"
+            android:gravity="center"
+            android:text=""
+            android:layout_margin="5dp"
+
+            />
+        <TextView
+            android:id="@+id/tv_six"
+            android:layout_width="39dp"
+            android:layout_height="49dp"
+            android:background="@color/gap_bg"
+            android:padding="10dp"
+            android:textSize="26sp"
+            android:textColor="@color/mainTextColor"
+            android:gravity="center"
+            android:text=""
+            android:layout_margin="5dp"
+
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:id="@+id/tv_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="重新发送验证码"
+        android:textColor="@color/mianColor"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="10dp"
+        />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="30秒后 重新发送验证码"
+        android:textColor="@color/mainTextColor"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="10dp"
+        />
+
+
+</LinearLayout>

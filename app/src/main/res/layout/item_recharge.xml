@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corners_layout"
+        android:padding="5dp"
+        android:layout_margin="3dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20沃币"
+            android:textColor="@color/mainTextColor"
+            android:textSize="@dimen/textBiggerSize"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="售价 10元"
+            android:textSize="@dimen/textSmallerSize"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/mainTipColor"
+            />
+    </LinearLayout>
+    
+</RelativeLayout>

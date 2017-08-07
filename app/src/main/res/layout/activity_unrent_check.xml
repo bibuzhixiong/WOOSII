@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/activity_top_hold"
+        android:id="@+id/layout1"/>
+    <TextView
+        android:layout_below="@+id/layout1"
+        android:id="@+id/tv_unrent_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="退款"
+        android:padding="10dp"
+        android:textColor="@color/mainTextColor"
+        android:textSize="@dimen/textBigBiggerSize"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_yuan_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_unrent_text"
+        android:text="元"
+        android:padding="10dp"
+        android:textSize="@dimen/textBigBiggerSize"
+        android:textColor="@color/mainTextColor"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_untent_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3999"
+        android:textSize="@dimen/textBigBiggerSize"
+        android:textColor="@color/red"
+        android:layout_toLeftOf="@+id/tv_yuan_text"
+        android:layout_alignBaseline="@+id/tv_yuan_text"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_layout1"
+        android:layout_below="@id/tv_unrent_text"
+        android:background="@color/gap_bg"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingBottom="30dp"
+        android:paddingTop="30dp"
+        >
+
+        <!--<LinearLayout-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/gap_bg"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:gravity="center_vertical"-->
+            <!--&gt;-->
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_shenqing_tuizu"-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:padding="5dp"-->
+                <!--android:src="@drawable/tuizushenqing"-->
+                <!--android:layout_marginLeft="50dp"-->
+                <!--/>-->
+            <!--<View-->
+                <!--android:layout_width="0dp"-->
+                <!--android:background="@color/line_gray"-->
+                <!--android:layout_height="@dimen/topLineThick"-->
+                <!--android:layout_weight="1"-->
+                <!--/>-->
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_tuizu_shenhe"-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:src="@drawable/shenhetuizu"-->
+                <!--/>-->
+            <!--<View-->
+                <!--android:layout_width="0dp"-->
+                <!--android:background="@color/line_gray"-->
+                <!--android:layout_height="@dimen/topLineThick"-->
+                <!--android:layout_weight="1"-->
+                <!--/>-->
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_tuizu_success"-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:src="@drawable/tuizuchenggong"-->
+                <!--android:layout_marginRight="50dp"-->
+                <!--/>-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/gap_bg"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--&gt;-->
+            <!--<RelativeLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+
+            <!--</RelativeLayout>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_shenqing_tuizu"-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="50dp"-->
+                <!--android:text="申请退租"-->
+                <!--android:gravity="center"-->
+                <!--/>-->
+            <!--<View-->
+                <!--android:layout_width="0dp"-->
+                <!--android:background="@color/transparent"-->
+                <!--android:layout_height="@dimen/topLineThick"-->
+                <!--android:layout_weight="1"-->
+                <!--/>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--&gt;-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_tuizu_shenhe"-->
+                    <!--android:layout_width="70dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:text="退租审核"-->
+                    <!--android:gravity="center"-->
+                    <!--/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_tuizu_shenhe_time_year_mouth_day"-->
+                    <!--android:layout_width="70dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:text="2017.04.06"-->
+                    <!--android:gravity="center"-->
+                    <!--/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_tuizu_shenhe_time_second"-->
+                    <!--android:layout_width="70dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:text="09.32"-->
+                    <!--android:gravity="center"-->
+                    <!--/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<View-->
+                <!--android:layout_width="0dp"-->
+                <!--android:background="@color/transparent"-->
+                <!--android:layout_height="@dimen/topLineThick"-->
+                <!--android:layout_weight="1"/>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_marginRight="50dp"-->
+                <!--&gt;-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_tuizu_success"-->
+                    <!--android:layout_width="70dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:text="退租成功"-->
+                    <!--android:gravity="center"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_tuizu_success_time_second"-->
+                    <!--android:layout_width="70dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:text="09.32"-->
+                    <!--android:gravity="center"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_tuizu_success_time_year_mouth_day"-->
+                    <!--android:layout_width="70dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:text="2017.04.06"-->
+                    <!--android:gravity="center"-->
+                    <!--/>-->
+
+            <!--</LinearLayout>-->
+
+        <!--</LinearLayout>-->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_shenqing_tuizu"
+                >
+                <ImageView
+                    android:id="@+id/iv_shenqing_tuizu"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/shenhetuizu"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    />
+
+                <View
+                    android:id="@+id/line1"
+                    android:background="@color/mianColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/topLineThick"
+                    android:layout_toRightOf="@+id/iv_shenqing_tuizu"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/rl_shenqing_tuizu"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/tv_shenqing_tuizu"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:text="申请退租"
+                    android:gravity="center"
+                    android:textColor="@color/mianColor"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_shenqing_shenhe"
+
+                >
+                <View
+                    android:id="@+id/line2"
+                    android:background="@color/mianColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/topLineThick"
+                    android:layout_toLeftOf="@+id/iv_tuizu_shenhe"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    />
+                <ImageView
+                    android:id="@+id/iv_tuizu_shenhe"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/shenhetuizu"
+                    android:layout_centerHorizontal="true"
+                    android:padding="3dp"
+                    />
+
+                <View
+                    android:id="@+id/line3"
+                    android:background="@color/line_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/topLineThick"
+                    android:layout_toRightOf="@+id/iv_tuizu_shenhe"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/rl_shenqing_shenhe"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/tv_tuizu_shenhe"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:text="退租审核"
+                    android:gravity="center"
+                    android:textColor="@color/mianColor"
+                    />
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/tv_tuizu_shenhe_time_year_mouth_day"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:text="2017.04.06"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    />
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/tv_tuizu_shenhe_time_second"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:text="09.32"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_tuizu_success"
+
+                >
+                <ImageView
+                    android:id="@+id/iv_tuizu_success"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/tuizuchenggonggray"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <View
+                    android:id="@+id/line4"
+                    android:background="@color/line_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/topLineThick"
+                    android:layout_toLeftOf="@+id/iv_tuizu_success"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/rl_tuizu_success"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/tv_tuizu_success"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:text="退租成功"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/tv_tuizu_success_time_year_mouth_day"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:text="2017.04.06"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    />
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/tv_tuizu_success_time_second"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:text="09.32"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_shuoming_text"
+        android:layout_below="@+id/ll_layout1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/shuominghuise"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        />
+<TextView
+    android:layout_toRightOf="@+id/iv_shuoming_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignTop="@+id/iv_shuoming_text"
+    android:paddingLeft="10dp"
+    android:textColor="@color/mainTipColor"
+    android:text="@string/vr_unrent_tip"
+    android:lineSpacingMultiplier="1.2"
+    />
+
+</RelativeLayout>

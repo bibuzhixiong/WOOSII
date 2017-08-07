@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="?attr/padding_top"
+    >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        >
+        <ImageView
+            android:id="@+id/iv_switch_camera"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/fanzhuanxiangji"
+            />
+    <ImageView
+        android:id="@+id/iv_openclose_flash"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/shanguangdeng"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/iv_switch_camera"
+        />
+    <ImageView
+        android:id="@+id/iv_setting"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/shezhi"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/iv_openclose_flash"
+        />
+    <ImageView
+        android:id="@+id/iv_meiyan"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/meiyan"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/iv_setting"
+        />
+    <ImageView
+        android:id="@+id/iv_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:src="@drawable/guanbiheise"
+        android:layout_alignParentRight="true"
+        android:padding="3dp"
+
+        />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#80000000"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp">
+
+        <ImageView
+            android:id="@+id/iv_change_pan"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@drawable/xiugaifangjian" />
+
+        <EditText
+            android:id="@+id/tv_room_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_change_pan"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:hint="请输入直播间名字"
+            android:textColorHint="@color/color_black_30"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textPrimarySize"
+            android:background="@null"
+            android:layout_toLeftOf="@+id/line1"
+            />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="@dimen/topLineThick"
+            android:layout_height="20dp"
+            android:layout_toLeftOf="@+id/iv_if_charge"
+            android:background="@color/line_gray" />
+
+        <ImageView
+            android:id="@+id/iv_if_charge"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/tv_if_charge"
+            android:src="@drawable/zhibojiage"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_if_charge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/live_pull_down"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:text="免费"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSmallerSize"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:maxEms="5"
+
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

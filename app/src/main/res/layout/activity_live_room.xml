@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_live_root"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    >
+
+    <!--Fragment容器 用于展示视频采集或播放Fragment-->
+    <FrameLayout
+        android:id="@+id/layout_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+    <!--Fragment容器 用于展示顶部房间信息,与控制按钮-->
+    <FrameLayout
+        android:id="@+id/layout_room_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        >
+    </FrameLayout>
+
+    <!--Fragment容器 用于展示聊天列表与聊天输入框-->
+    <FrameLayout
+        android:id="@+id/layout_chat_room"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        >
+        <fragment
+            android:name="sochat.so.com.android.live.fragment.ChatRoomMessageFragment"
+            android:id="@+id/chat_room_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </fragment>
+    </FrameLayout>
+
+    <!--底部人员操作布局 用于展示当前选中的人员信息与操作按钮-->
+    <include
+        layout="@layout/layout_member_operate"
+        android:id="@+id/rl_member_operate"
+        android:visibility="gone"
+        />
+
+    <!--直播结束展示布局-->
+    <include
+        layout="@layout/layout_live_finished"
+        android:id="@+id/ll_live_finish"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

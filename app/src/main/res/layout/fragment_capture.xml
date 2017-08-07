@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.netease.vcloud.video.render.NeteaseView
+        android:id="@+id/live_normal_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<com.netease.LSMediaCapture.view.NeteaseGLSurfaceView-->
+        <!--android:id="@+id/live_filter_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:visibility="gone" />-->
+
+    <sochat.so.com.android.live.widget.AudioAnimateLayout
+        android:id="@+id/layout_audio_animate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:visibility="gone">
+    </sochat.so.com.android.live.widget.AudioAnimateLayout>
+
+    <LinearLayout
+        android:id="@+id/live_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="49dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="185dp"
+        >
+
+        <ImageView
+            android:id="@+id/live_video_btn"
+            style="@style/control_button"
+            android:src="@drawable/btn_camera_on_n"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/live_camera_btn"
+            style="@style/control_button"
+            android:src="@drawable/btn_change_camera_n"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/live_audio_btn"
+            style="@style/control_button"
+            android:src="@drawable/btn_audio_on_n"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/live_flash"
+            style="@style/control_button"
+            android:src="@drawable/flashstart"
+            android:visibility="gone"
+           />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/live_cancel"
+            android:visibility="gone"
+            style="@style/control_button"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/ic_close" />
+
+    </LinearLayout>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/live_title_layout"
+        android:thumb="@drawable/circle"
+        android:max="100"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        />
+    <!--<SeekBar-->
+        <!--android:id="@+id/live_seekbar_focus"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:max="100"-->
+        <!--android:maxHeight="2dp"-->
+        <!--android:minHeight="2dp"-->
+        <!--android:paddingLeft="8dp"-->
+        <!--android:progressDrawable="@drawable/video_seek_progress"-->
+        <!--android:thumb="@drawable/video_seek_thumb"-->
+        <!--android:thumbOffset="7dp"-->
+        <!--android:visibility="gone"/>-->
+
+    <!--<SeekBar-->
+        <!--android:id="@+id/live_seekbar_filter"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/live_seekbar_focus"-->
+        <!--android:thumb="@drawable/circle"-->
+        <!--android:max="100"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:visibility="gone"-->
+        <!--/>-->
+
+    <Button
+        android:id="@+id/btn_star_live"
+        style="@style/main_button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:text="开始直播"
+        android:visibility="visible"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_enter_live_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/layout_enter_live_top"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_live_beauty_bottom_layout"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_live_beauty_bottom_layout"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/popwindow_live_beauty_bottom_layout"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

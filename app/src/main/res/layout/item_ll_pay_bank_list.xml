@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_pay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:background="@drawable/selector_my_item_click_bg"
+        android:paddingLeft="10dp"
+        >
+        <sochat.so.com.android.customview.CircleImageView
+            android:id="@+id/iv_bank_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/b_03080000"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_bank_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/skip"
+            android:layout_marginRight="10dp"
+            android:text="银行卡名字"
+            android:textColor="@color/mainTextColor" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

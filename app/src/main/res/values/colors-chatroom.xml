@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_gray_alpha">#99323232</color>
+    <color name="color_gray_alpha40">#66000000</color>
+    <color name="color_chat_text">#ffffff</color>
+    <color name="color_chat_name">#c2ff9a</color>
+
+    <color name="color_green_C2FF9A">#C2FF9A</color>
+    <color name="color_yellow_FAEC55">#faec55</color>
+    <color name="contact_letter_idx_bg">#33000000</color>
+    <color name="color_black_bf000000">#bf000000</color>
+    <color name="color_black_df000000">#df000000</color>
+    <color name="list_divider">#534f4d</color>
+    <color name="list_select">#238efa</color>
+    <color name="color_blue_74b9ff">#74b9ff</color>
+    <color name="color_gray_dfe2e6">#dfe2e6</color>
+</resources>

@@ -1,6 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <color name="mianColor">#15B422</color>
+    <color name="mainTipColor">#999999</color>
+    <color name="mainHintColor">#666666</color>
+    <color name="mainTextColor">#333333</color>
+    <color name="mainEnableColor">#E5E5E5</color>
+    <color name="tipColor">#b8b8b8</color>
+
+    <color name="white">#FFFFFF</color>
+    <!-- 白色 -->
+
+    <color name="red">#EB243F</color>
+    <!-- 红色 -->
+
+    <color name="line_gray">#E5E5E5</color>
+    <!-- 线-灰色 -->
+
+    <color name="chunk_gray">#EEEEEE</color>
+    <color name="chunk_gray2">#DEDCDA</color>
+    <!-- 块-灰色 -->
+
+    <color name="grey">#808080</color>
+    <!-- 字体 -灰色 -->
+
+    <color name="gray">#808080</color>
+    <!-- 灰色 -->
+    <color name="t_gray">#50808080</color>
+
+    <color name="black">#000000</color>
+    <!-- 黑色 -->
+
+    <color name="light_black">#99000000</color>
+    <!-- 淡黑色 -->
+
+    <color name="green">#008000</color>
+    <!-- 绿色 -->
+
+    <color name="beige">#FAFAFA</color>
+    <!-- 米色 -->
+
+    <!--透明-->
+    <color name="transparent">#00000000</color>
+
+    <color name="bg">#EAEAEA</color>
+
+    <!--app中黑色的文字-->
+    <color name="text_primary_color">#333333</color>
+
+
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="colorAccent">#15B422</color>
+
+
+    <!--主界面的底部Tab文字被选中的颜色-->
+    <color name="colorMainTabTextSelected">#14B422</color>
+    <!--主界面的底部Tab文字未被选中的颜色-->
+    <color name="colorMainTabTextUnSelected">#9D9D9D</color>
+    <!--主界面的底部Tab的背景色-->
+    <color name="colorMainTabBg">#F5F5F5</color>
+    <!--Activity顶部的标题栏颜色-->
+    <color name="colorActivityTopBg">#14B422</color>
+    <!--登陆注册的Activity头部标题栏的背景色-->
+    <color name="login_or_register_top_bg">#F8F8F7</color>
+    <!--Activity的头部标题的颜色-->
+    <color name="top_title">#333333</color>
+    <!--浅蓝色，登录界面注册这两个字的颜色-->
+    <color name="text_register">#00ACED</color>
+    <!--EditText输入框hint的颜色-->
+    <color name="hint_textcolor">#b1afaf</color>
+    <!-- 登录按钮不能点击时的颜色 -->
+    <color name="login_unclick_bgcolor">#DCDCDC</color>
+    <!--登陆按钮点击时按下时的颜色-->
+    <color name="green_light">#8814B422</color>
+    <!--答案界面水波背景颜色1-->
+    <color name="weave_bg_one">#80D7F4</color>
+    <!--答案界面水波背景颜色1-->
+    <color name="weave_bg_two">#A0E0F8</color>
+    <!--答案界面水波背景颜色1-->
+    <color name="weave_bg_three">#E6F5F9</color>
+    <!--中小学界面时间文字颜色-->
+    <color name="shchool_timecolor">#CCCCCC</color>
+    <!--我的界面登录和注册背景颜色-->
+    <color name="my_login_or_register_bg">#88FFFFFF</color>
+    <!--我的界面登录和注册背景颜色-->
+    <color name="my_login_or_register_bg_other">#88666666</color>
+    <!--间隔背景色-->
+    <color name="gap_bg">#F6F6F6</color>
+    <!--中小学教室名字文字颜色-->
+    <color name="school_infocolor">#666666</color>
+    <!--中小学教室课程文字颜色-->
+    <color name="school_contentcolor">#999999</color>
+    <!--教师详情页评论时间文字颜色-->
+    <color name="comment_time_color">#B8B8B8</color>
+    <!--教师详情页评论内容文字颜色-->
+    <color name="comment_commente_color">#333333</color>
+    <!--老师信息界面关注数量文字颜色-->
+    <color name="teacher_info_color">#E5E5E5</color>
+    <!--编辑个人信息文字选择的颜色-->
+    <color name="text_choice_color">#207BE0</color>
+    <!--钱包界面收益点击颜色press-->
+    <color name="yesterday_income_press">#33000000</color>
+    <!--钱包界面收益点击颜色pressed-->
+    <color name="yesterday_income_pressed">#66000000</color>
+
+    <color name="partTranslucent">#39000000</color>
+
+
+    <color name="search_edit_gray">#ffcccccc</color>
+
+
+
+    <color name="feedback_border">#F6F6F6</color>
+
+    <color name="vrListBg">#EBEBEB</color>
+    <color name="view_color">#E4E5E5</color>
+    <color name="hint_text_color">#999999</color>
+
+
+
+    <!--直播相关颜色-->
+    <color name="color_black_333333_90_transparent">#e5333333</color>
+    <color name="color_yellow_c5a962">#c5a962</color>
+    <color name="color_black_20">#33FFFFFF</color>
+    <color name="color_black_30">#4CFFFFFF</color>
+    <color name="color_black_2e2625">#2e2625</color>
+    <color name="color_black_CCffffff">#CCffffff</color>
+    <color name="color_black_cc000000">#cc000000</color>
+    <color name="color_black_10_fffff">#19ffffff</color>
+
+    <color name="color_btn_main">#ff238efa</color>
+    <color name="color_btn_main_unable">#80238efa</color>
+
+    <color name="color_btn_delete">#fff05b60</color>
+    <color name="color_btn_delete_unable">#80f05b60</color>
+
+    <color name="text_color_content">#aaaaaa</color>
+
+    <color name="text_color_333333">#ff333333</color>
+    <color name="text_hint_color_999999">#ff999999</color>
+
+
+    <color name="title_grey">#CED9E7</color>
+
+
+    <color name="actionbar_sel_color">#1c1c1c</color>
+
+    <color name="menu_item_click_color">#346fc3</color>
+    <color name="light_blue">#8CA4FF</color>˙
+    <color name="text_color_count">#F6BB42</color>
+    <color name="text_label_color">#595976</color>
+    <color name="text_context_color">#4D4D4D</color>
+    <color name="text_time_color">#9393AA</color>
+    <color name="text_yellow_color">#FFC024</color>
+    <color name="devide_line_color">#CCCCCC</color>
+    <color name="dada_background_color">#363546</color>
+    <color name="group_small_text_color">#ABAABF</color>
+    <color name="devider_view_color">#EDEDF3</color>
+    <color name="gonglue_detail_color">#FFCE54</color>
+
+    <color name="equipment_text_color">#5D9CEC</color>
+    <color name="diet_text_color">#F6BB42</color>
+    <color name="skill_text_color">#AC92EC</color>
+    <color name="nickname_color">#FDBF2E</color>
+    <color name="live_text_color">#FFFFFE</color>
+    <color name="dialog_click_color">#0084FF</color>
+    <color name="dialog_black">#272636</color>
+    <color name="edit_text_color">#ABAABF</color>
+    <color name="release_layout_bgcolor">#EDEDF3</color>
+    <color name="live_chat">#F6BB42</color>
+
+    <!---->
+    <color name="color_white_66ffffff">#66ffffff</color>
+
+
+    <color name="radio_btn">#346fc3</color>
+    <color name="title_bar_divide_line">#ffb2b2b2</color>
+    <color name="video_item_divide_line">#ffc8c7cc</color>
+    <color name="comment_bg_color">#eeeeee</color>
+    <color name="mix_audio_bg">#80000000</color>
+    <color name="btn_enter_text_unable">#80ffffff</color>
+    <color name="next_unable">#4c238efa</color>
+    <color name="next_enable">#238efa</color>
+    <color name="color_upload_fail">#f05b60</color>
+    <color name="color_upload_normal">#999999</color>
+    <color name="bg_color_main_top_tab">#f7f7f8</color>
+    <color name="video_detail_subtitle_bg">#e3e6ea</color>
+    <color name="video_detail_divide_line">#cbd0d8</color>
+    <color name="bg_color_input_divide">#cbd0d8</color>
+    <color name="bg_media_player_controller">#7f000000</color>
+
+    <color name="bg_live_beauty_filter">#8000ff00</color>
+
 </resources>

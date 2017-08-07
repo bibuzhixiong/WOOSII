@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:background="@color/white"
+     >
+
+	<RelativeLayout
+		android:id="@+id/rl_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentStart="true">
+
+		<ImageView
+			android:id="@+id/iv_top_back"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:layout_alignParentLeft="true"
+			android:scaleType="centerInside"
+			android:padding="10dp"
+			android:src="@drawable/selector_back_press"/>
+
+		<sochat.so.com.android.customview.SearchEditText
+			android:layout_toRightOf="@+id/iv_top_back"
+			android:id="@+id/tv_top_edittext"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/mainTextColor"
+			android:layout_centerVertical="true"
+			android:padding="5dp"
+			android:layout_marginRight="15dp"
+			android:singleLine="true"
+			android:hint="搜索"
+			android:background="@drawable/corners_layout"
+			android:drawableLeft="@drawable/sousuo"
+			android:drawablePadding="5dp"
+			android:textSize="@dimen/textPrimarySize"
+			android:imeOptions="actionSearch"
+			/>
+
+		<TextView
+			android:id="@+id/line"
+			android:layout_below="@+id/iv_top_back"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/topLineThin"
+			android:background="@color/line_gray"
+			android:layout_gravity="bottom"
+
+			/>
+
+	</RelativeLayout>
+
+</RelativeLayout>

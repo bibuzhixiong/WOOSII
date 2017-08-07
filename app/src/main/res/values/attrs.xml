@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- api>19距离状态栏的高度，未适配 -->
+    <attr name="teacher_height" format="reference|dimension"/>
+    <!-- api>19距离状态栏的高度，未适配 -->
+    <attr name="padding_top" format="reference|dimension"/>
+    <!-- api>19 集成环信的高度，未适配 -->
+    <attr name="theme_height" format="reference|dimension"/>
+    <!-- api>19 四大学院里面的说明文字到顶部的距离 -->
+    <attr name="margin_top_h" format="reference|dimension"/>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <!-- StateView 使用 -->
+    <declare-styleable name="StateView">
+        <attr name="state_content" format="reference"/>
+        <attr name="state_error" format="reference"/>
+        <attr name="state_empty" format="reference"/>
+        <attr name="state_loading" format="reference"/>
+        <attr name="state_current" format="enum">
+            <enum name="content" value="0"/>
+            <enum name="loading" value="1"/>
+            <enum name="error" value="2"/>
+            <enum name="empty" value="3"/>
+            <enum name="content_loading" value="4"/>
+        </attr>
+    </declare-styleable>
+
+    <!--侧滑的控件-->
+    <declare-styleable name="SwipeMenuView">
+        <attr name="swipeEnable" format="boolean"/>
+        <attr name="ios" format="boolean"/>
+        <attr name="leftSwipe" format="boolean"/>
+    </declare-styleable>
+
+
+</resources>

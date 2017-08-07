@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="2dp"
+    android:paddingLeft="2dp"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/rl_img"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerHorizontal="true">
+        <sochat.so.com.android.live.im.widget.CircleImageView
+            android:id="@+id/circle_image_view"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/avatar_def"
+            />
+        <ImageView
+            android:id="@+id/iv_forbidden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_forbidden"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_img"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="爱丽丝"
+        android:textSize="9sp"/>
+</RelativeLayout>

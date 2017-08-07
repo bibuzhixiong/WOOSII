@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:background="@drawable/selector_my_item_click_bg"
+    >
+
+    <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:textColor="@color/mainHintColor"
+        android:textSize="@dimen/textBiggerSize"
+        tools:text="广州"/>
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/topLineThin"-->
+        <!--android:background="@color/line_gray"/>-->
+</LinearLayout>

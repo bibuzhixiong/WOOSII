@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:background="@color/white"
+     >
+
+	<RelativeLayout
+		android:id="@+id/main_titlelayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white">
+
+		<ImageView
+			android:id="@+id/iv_top_back"
+			android:visibility="gone"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:layout_alignParentLeft="true"
+			android:scaleType="centerInside"
+			android:background="@null"
+			android:padding="10dp"
+			android:src="@drawable/top_back_black"/>
+
+		<TextView
+			android:id="@+id/tv_top_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:text="Title"
+			android:textColor="@color/black"
+			android:singleLine="true"
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:background="@null"
+			android:gravity="center"
+			android:textSize="@dimen/textPrimarySize"/>
+
+		<TextView
+			android:id="@+id/line"
+			android:layout_below="@+id/tv_top_text"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/topLineThin"
+			android:background="@color/line_gray"
+			/>
+
+		<ImageView
+			android:visibility="gone"
+			android:id="@+id/iv_search"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:layout_alignParentRight="true"
+			android:scaleType="centerInside"
+			android:background="@null"
+			android:padding="10dp"
+			android:src="@drawable/sousuo"/>
+	</RelativeLayout>
+
+</RelativeLayout>

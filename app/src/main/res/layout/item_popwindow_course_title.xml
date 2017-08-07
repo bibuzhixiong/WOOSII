@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_textbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_corner_bg_grey"
+        android:text="语文"
+        android:gravity="center"
+        android:textColor="@color/mainTextColor"
+        android:textSize="@dimen/textPrimarySize"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:maxEms="5"
+        android:minEms="4"
+        />
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:visibility="gone"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/icon_delete"
+        android:layout_alignRight="@+id/tv_textbook"
+        android:layout_alignTop="@+id/tv_textbook"
+        android:layout_marginRight="-5dp"
+        android:layout_marginTop="-5dp"
+        android:scaleType="fitCenter"
+        />
+
+
+
+</RelativeLayout>

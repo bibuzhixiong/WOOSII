@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_layout1"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/rl_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lvshutiao"
+            />
+
+        <TextView
+            android:id="@+id/tv_course_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="简介"
+            android:textSize="@dimen/textBiggerSize"
+            android:paddingLeft="10dp"
+            android:textColor="@color/comment_commente_color"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_info_content"
+        android:layout_below="@+id/ll_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="    暂无内容"
+        android:padding="10dp"
+        android:textColor="@color/school_contentcolor"
+        android:minLines="3"
+        android:maxLines="3"
+        android:ellipsize="end"
+        />
+
+    <TextView
+        android:id="@+id/line_border"
+        android:layout_below="@+id/tv_info_content"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/gap_bg"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_layout2"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/line_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lvshutiao"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="课程"
+            android:textSize="@dimen/textBiggerSize"
+            android:paddingLeft="10dp"
+            android:textColor="@color/comment_commente_color"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/beijingtu"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:id="@+id/iv_top_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/back_arrow"/>
+
+        <TextView
+            android:id="@+id/tv_top_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@null"
+            android:gravity="center"
+            android:layout_alignBottom="@+id/iv_search"
+            android:layout_alignTop="@+id/iv_search"
+            android:textSize="@dimen/textPrimarySize"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_share"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/shared_vedio_pressed"/>
+
+        <sochat.so.com.android.customview.CircleImageView
+            android:id="@+id/iv_user_photo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/iv_top_back"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/morentouxiang"
+            />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="你的名字"
+            android:padding="5dp"
+            android:layout_below="@+id/iv_user_photo"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textPrimarySize"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_1"
+            android:layout_below="@+id/tv_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/tv_attention_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 关注"
+                android:textColor="@color/teacher_info_color"
+                android:padding="3dp"
+                android:layout_toLeftOf="@+id/line_vertical"
+                />
+
+            <TextView
+                android:id="@+id/line_vertical"
+                android:layout_centerInParent="true"
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:background="@color/teacher_info_color"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+
+            <TextView
+                android:layout_toRightOf="@+id/line_vertical"
+                android:id="@+id/tv_vedio_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 视频"
+                android:textColor="@color/teacher_info_color"
+                android:padding="3dp"
+                />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_attention"
+            android:layout_below="@+id/rl_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/guanzhu"
+            android:padding="5dp"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -8,7 +8,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/VrUnity3D" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/jcvideoplayer-lib" />
+            <option value="$PROJECT_DIR$/uikit" />
+            <option value="$PROJECT_DIR$/vitamio_lib" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gap_bg"
+    >
+    <include layout="@layout/activity_top_hold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/sizhibeijing">
+
+        <TextView
+            android:id="@+id/tv_recharge_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/mainTextColor"
+            android:textSize="60sp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/ll_layout1"
+            android:layout_alignParentTop="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_minute_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="沃币"
+            android:textColor="@color/mainTextColor"
+            android:textSize="@dimen/textBigBiggerSize"
+            android:layout_toRightOf="@+id/tv_recharge_time"
+            android:layout_alignBaseline="@+id/tv_recharge_time"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_layout1"
+            android:layout_above="@+id/tv_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/chongzhiwancheng"
+                android:layout_below="@+id/tv_remain_time"
+                />
+            <TextView
+                android:id="@+id/tv_remaintime_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="充值完成"
+                android:textColor="@color/mainTextColor"
+                android:textSize="@dimen/textBigBiggerSize"
+                android:paddingLeft="10dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="预计十分钟内到账，充值可能会有延迟"
+            android:textColor="@color/mainHintColor"
+            android:textSize="@dimen/textSmallerSize"
+            android:paddingLeft="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="20dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:padding="10dp">
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_layout2"-->
+            <!--android:layout_below="@+id/rl_layout1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--&gt;-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/lvshutiao"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_course_content"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="推荐课程"-->
+                <!--android:textSize="@dimen/textBiggerSize"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:textColor="@color/comment_commente_color"-->
+                <!--/>-->
+        <!--</LinearLayout>-->
+
+        <!--<com.github.jdsjlzx.recyclerview.LRecyclerView-->
+            <!--android:id="@+id/list"-->
+            <!--android:layout_below="@+id/ll_layout2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"></com.github.jdsjlzx.recyclerview.LRecyclerView>-->
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

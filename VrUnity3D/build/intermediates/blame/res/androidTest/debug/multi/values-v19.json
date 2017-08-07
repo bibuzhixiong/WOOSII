@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "F:\\WOOSII02\\VrUnity3D\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v19\\values-v19.xml",
+        "outputFile": "F:\\WOOSII\\VrUnity3D\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v19\\values-v19.xml",
         "map": [
             {
                 "to": {
@@ -11,31 +11,7 @@
                     "endOffset": 111
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\03a15056df9efadc23f17961b57dd7898092cd6c\\output\\res\\values-v19\\values.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 0,
-                        "startOffset": 148,
-                        "endColumn": 56,
-                        "endOffset": 204
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "E:\\currentproject\\WOOSII02\\VrUnity3D\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v19\\values-v19.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 60,
-                    "endOffset": 111
-                },
-                "from": {
-                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\d9341cae2241342f6666d529c366c514db9bd77f\\output\\res\\values-v19\\values.xml",
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\f7b8017c801cfec7630ad53f53545b5b437fa4e9\\output\\res\\values-v19\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,

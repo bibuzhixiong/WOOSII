@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/liuyifei"
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_alignBottom="@+id/iv_photo"
+        android:layout_alignTop="@+id/iv_photo"
+        android:layout_toRightOf="@+id/iv_photo"
+        android:layout_marginBottom="-10dp"
+
+        >
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="李红伟老师"
+            android:textSize="@dimen/textSmallerSize"
+            android:textColor="#333333"
+            />
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人物介绍：南开大学毕业，数学功底扎实，逻辑思维严密。热爱教育..."
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="@dimen/textSmallSmallerSize"
+            android:paddingTop="3dp"
+            android:textColor="@color/school_infocolor"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="bottom"
+                >
+                <ImageView
+                    android:id="@+id/iv_course"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/kecheng"
+                    android:layout_centerVertical="true"
+
+                    />
+                <TextView
+                    android:id="@+id/tv_course_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="168"
+                    android:layout_alignBottom="@+id/iv_course"
+                    android:layout_toRightOf="@+id/iv_course"
+                    android:textSize="@dimen/textSmallSmallerSize"
+                    android:textColor="@color/school_contentcolor"
+                    android:paddingLeft="5dp"
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="bottom"
+                >
+                <ImageView
+                    android:id="@+id/iv_eye"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/guankan"
+                    android:layout_centerVertical="true"
+
+                    />
+                <TextView
+                    android:id="@+id/tv_attention_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="168"
+                    android:layout_alignBottom="@+id/iv_eye"
+                    android:layout_toRightOf="@+id/iv_eye"
+                    android:textSize="@dimen/textSmallSmallerSize"
+                    android:textColor="@color/school_contentcolor"
+                    android:paddingLeft="5dp"
+                    />
+
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/iv_attention"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:src="@drawable/guanzhu"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_below="@+id/iv_photo"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/gap_bg"
+        />
+
+</RelativeLayout>

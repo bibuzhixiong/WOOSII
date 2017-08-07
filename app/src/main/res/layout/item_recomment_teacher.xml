@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="90dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+    <ImageView
+        android:id="@+id/iv_teacher_photo"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/app_icon"/>
+
+    <TextView
+        android:id="@+id/tv_teacher_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="老师"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/textSmallerSize"
+        android:textColor="@color/mainTextColor"
+        android:padding="5dp"
+        android:gravity="center_horizontal"
+        />
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="80dp">
+    <ImageView
+        android:id="@+id/iv_recharge_or_reflect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/jiaoyichongzhi"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingBottom="3dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/tv_order_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="充值与提现"
+                android:textColor="@color/mainTextColor"
+                android:textSize="@dimen/textBiggerSize"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_pay_time"
+            android:paddingLeft="10dp"
+            android:layout_below="@+id/ll_layout"
+            android:layout_alignLeft="@+id/ll_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-06-17 15:30:06"
+            android:textColor="@color/mainTipColor"
+            />
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_pay_money"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textColor="@color/mianColor"
+        android:text="+3.50"
+        android:textSize="@dimen/textBigBiggerSize"
+        android:gravity="center"
+        />
+</LinearLayout>

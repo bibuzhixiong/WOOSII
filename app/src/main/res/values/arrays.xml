@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="professional">
+        <item>-请选择您的职业-</item>
+        <item>公务员</item>
+        <item>事业单位员工</item>
+        <item>企业高管</item>
+        <item>私营业主</item>
+        <item>金融从业人员</item>
+        <item>律师</item>
+        <item>会计师</item>
+        <item>医护人员</item>
+        <item>学生</item>
+        <item>公司员工</item>
+        <item>商业服务人员</item>
+        <item>工人</item>
+        <item>农林牧副渔</item>
+        <item>军人武警</item>
+        <item>文体工作者</item>
+        <item>家庭主妇</item>
+        <item>退休</item>
+        <item>自由职业者</item>
+        <item>其他</item>
+    </string-array>
+
+
+</resources>

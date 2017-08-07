@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/white">
+    <sochat.so.com.android.customview.SearchEditText
+        android:id="@+id/et_search"
+        style="@style/editTextStyle"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/tv_cancel"
+        android:background="@drawable/corners_layout"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:text="取消"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/et_search"
+        android:layout_alignTop="@+id/et_search"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="@drawable/selector_text_selected_gray"
+        />
+    <View
+        android:id="@+id/line"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topLineThick"
+        android:background="@color/line_gray"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/line"
+        >
+
+    <RelativeLayout
+        android:id="@+id/rl_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="历史搜索"
+            android:textSize="@dimen/textSmallSmallerSize"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:id="@+id/iv_delete_history"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="4dp"
+            android:src="@drawable/qingchu"
+            />
+
+        <sochat.so.com.android.customview.MyGridView
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/iv_delete_history"
+            android:id="@+id/gv_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="4"
+            android:horizontalSpacing="10dp"
+            android:verticalSpacing="10dp"
+            >
+
+        </sochat.so.com.android.customview.MyGridView>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_hot_search"
+            android:layout_below="@+id/gv_history"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="热门搜索"
+            android:textSize="@dimen/textSmallSmallerSize"
+            android:gravity="center"
+            />
+
+        <sochat.so.com.android.customview.MyGridView
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_hot_search"
+            android:id="@+id/gv_hot_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="4"
+            android:horizontalSpacing="10dp"
+            android:verticalSpacing="10dp"
+            >
+
+        </sochat.so.com.android.customview.MyGridView>
+
+    </RelativeLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/sv_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        android:background="@color/white"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="最佳匹配老师"
+                android:textSize="@dimen/textSmallSmallerSize"
+                android:gravity="center"
+                />
+
+            <com.github.jdsjlzx.recyclerview.LRecyclerView
+                android:background="@color/white"
+                android:id="@+id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            </com.github.jdsjlzx.recyclerview.LRecyclerView>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="搜索到的课程"
+                android:textSize="@dimen/textSmallSmallerSize"
+                android:gravity="center"
+                />
+
+            <com.github.jdsjlzx.recyclerview.LRecyclerView
+                android:background="@color/white"
+                android:id="@+id/list_vedio"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            </com.github.jdsjlzx.recyclerview.LRecyclerView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <TextView
+        android:id="@+id/tv_no"
+        android:layout_below="@+id/line"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:text="很抱歉，没有找到相关内容"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

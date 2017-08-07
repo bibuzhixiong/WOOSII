@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/activity_top_hold"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:paddingRight="12dp"-->
+                <!--android:background="@color/white"-->
+                <!--android:gravity="center_vertical"-->
+                <!--&gt;-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@null"-->
+                    <!--android:text="+86"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:textSize="@dimen/textPrimarySize"-->
+                    <!--android:textColor="#333333"-->
+                    <!--/>-->
+                <!--<View-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_width="1dp"-->
+                    <!--android:layout_height="15dp"-->
+                    <!--android:background="@color/comment_time_color"-->
+                    <!--/>-->
+
+
+                <!--<EditText-->
+                    <!--android:hint="手机"-->
+                    <!--android:id="@+id/et_register_phoneNumber"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:inputType="phone"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textColor="#333333"-->
+                    <!--android:background="@null"-->
+                    <!--android:maxLength = "11"-->
+                    <!--/>-->
+
+            <!--</LinearLayout>-->
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/topLineThick"-->
+                <!--android:background="@color/line_gray"-->
+                <!--/>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_marginTop="13dp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--&lt;!&ndash; <TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="输入验证码"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textColor="#B1AFAF"-->
+                    <!--/> &ndash;&gt;-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_register_captcha"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:inputType="number"-->
+                    <!--android:maxLength="4"-->
+                    <!--android:textColor="#333333"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:hint="验证码"-->
+                    <!--android:textColorHint="@color/hint_textcolor"-->
+                    <!--android:background="@null"-->
+                    <!--/>-->
+                <!--<View-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_width="1dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginTop="13dp"-->
+                    <!--android:layout_marginBottom="13dp"-->
+                    <!--android:background="@color/mianColor"-->
+                    <!--android:gravity="center"-->
+                    <!--/>-->
+
+
+                <!--<TextView-->
+                    <!--android:clickable="true"-->
+                    <!--android:id="@+id/tv_register_captcha"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:gravity="center"-->
+                    <!--android:background="@color/white"-->
+                    <!--android:text="获取验证码"-->
+                    <!--android:textSize="@dimen/textSmallerSize"-->
+                    <!--android:textColor="@drawable/selector__text_selected"-->
+                    <!--/>-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                style="@style/AuthenticationInformationItemLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    style="@style/AuthenticationInformationItemTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:text="手机号" />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    style="@style/AuthenticationInformationItemEditTexxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:hint="请输入手机号" />
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/AuthenticationInformationItemLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:paddingRight="15dp"
+                android:layout_marginTop="-1dp"
+                >
+
+                <!-- <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="输入验证码"
+                    android:textSize="15sp"
+                    android:textColor="#B1AFAF"
+                    /> -->
+
+                <EditText
+                    android:id="@+id/et_captcha"
+                    style="@style/AuthenticationInformationItemEditTexxt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="44dp"
+                    android:hint="请输入验证码"
+                    />
+                <View
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="13dp"
+                    android:background="@color/mianColor"
+                    android:gravity="center"
+                    />
+
+
+                <TextView
+                    android:clickable="true"
+                    android:id="@+id/tv_captcha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="获取验证码"
+                    android:textSize="@dimen/textSmallerSize"
+                    android:textColor="@drawable/selector__text_selected"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/AuthenticationInformationItemLayout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="-1dp" android:layout_height="44dp"
+                >
+
+                <TextView
+                    style="@style/AuthenticationInformationItemTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:text="姓名" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    style="@style/AuthenticationInformationItemEditTexxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:hint="请输入姓名" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/AuthenticationInformationItemLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="-1dp">
+
+                <TextView
+                    style="@style/AuthenticationInformationItemTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:text="身份证号" />
+
+                <EditText
+                    android:id="@+id/et_id"
+                    style="@style/AuthenticationInformationItemEditTexxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:hint="请输入身份证号"
+                    android:digits="0123456789qwertyuioiplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/AuthenticationInformationItemLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="-1dp">
+
+                <TextView
+                    style="@style/AuthenticationInformationItemTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:text="身份证有效期" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_id_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:drawableRight="@drawable/skip"
+                    android:paddingRight="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/AuthenticationInformationItemLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    style="@style/AuthenticationInformationItemTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:text="设置支付密码" />
+
+                <EditText
+                    android:id="@+id/et_pay_password"
+                    style="@style/AuthenticationInformationItemEditTexxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:hint="请输入6位数字支付密码"
+                    android:maxLines="1"
+                    android:maxLength="6"
+                    android:inputType="numberPassword"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/AuthenticationInformationItemLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="-1dp">
+
+                <TextView
+                    style="@style/AuthenticationInformationItemTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:text="再次设置支付密码" />
+
+                <EditText
+                    android:id="@+id/et_ensure_pay_password"
+                    style="@style/AuthenticationInformationItemEditTexxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:hint="请再次输入6位数字支付密码"
+                    android:inputType="textPassword"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/AuthenticationInformationItemLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    style="@style/AuthenticationInformationItemTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:text="职业类别" />
+
+                <Spinner
+                    android:id="@+id/sp_professional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/professional">
+
+                </Spinner>
+
+                <!--<EditText-->
+                <!--android:id="@+id/et_profession"-->
+                <!--style="@style/AuthenticationInformationItemEditTexxt"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:hint="请选择职业类别"-->
+                <!--/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/AuthenticationInformationItemLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="-1dp">
+
+                <TextView
+                    style="@style/AuthenticationInformationItemTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:text="所在地区" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:drawableRight="@drawable/skip"
+                    android:paddingRight="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/AuthenticationInformationItemLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="-1dp">
+
+                <TextView
+                    style="@style/AuthenticationInformationItemTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:text="详细地址" />
+
+                <EditText
+                    android:id="@+id/et_address"
+                    style="@style/AuthenticationInformationItemEditTexxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="填写详细地址" />
+
+            </LinearLayout>
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="159dp"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                    <!--style="@style/AuthenticationInformationItemTextView"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="44dp"-->
+                    <!--android:background="@drawable/no_corners_layout"-->
+                    <!--android:ems="8"-->
+                    <!--android:paddingLeft="15dp"-->
+                    <!--android:text="身份证上传" />-->
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginTop="-1dp"-->
+                    <!--android:background="@drawable/no_corners_layout"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:paddingLeft="15dp">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<ImageView-->
+                            <!--android:id="@+id/iv_front"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="75dp"-->
+                            <!--android:padding="8dp"-->
+                            <!--android:src="@drawable/tianjiantupian" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="40dp"-->
+                            <!--android:gravity="center"-->
+                            <!--android:text="上传正面证件照" />-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<ImageView-->
+                            <!--android:id="@+id/iv_back"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="75dp"-->
+                            <!--android:padding="8dp"-->
+                            <!--android:src="@drawable/tianjiantupian" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="40dp"-->
+                            <!--android:gravity="center"-->
+                            <!--android:text="上传正面证件照" />-->
+
+                    <!--</LinearLayout>-->
+
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <TextView
+                android:enabled="false"
+                android:id="@+id/tv_commit"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:background="@color/line_gray"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textBiggerSize" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/activity_top_hold"/>
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:padding="10dp"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/corners_dialog_ll_pay"
+        >
+
+<sochat.so.com.android.customview.CircleImageView
+    android:id="@+id/iv_bank_icon"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:src="@mipmap/bank_deflaut"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="15dp"
+
+    />
+        <TextView
+            android:id="@+id/tv_bank_name"
+            android:layout_alignTop="@+id/iv_bank_icon"
+            android:layout_toRightOf="@+id/iv_bank_icon"
+            android:layout_marginLeft="20dp"
+            android:text="招商银行"
+            android:textColor="@color/mainTextColor"
+            android:textSize="@dimen/textBigBiggerSize"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+
+
+        <TextView
+            android:id="@+id/tv_bank_type"
+            android:layout_below="@+id/tv_bank_name"
+            android:textSize="@dimen/textPrimarySize"
+            android:text="储蓄卡"
+            android:textColor="@color/mainTipColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="3"
+            android:layout_toRightOf="@+id/tv_bank_no_four"
+            />
+        <TextView
+            android:id="@+id/tv_bank_no_four"
+            android:layout_alignLeft="@+id/tv_bank_name"
+            android:layout_below="@+id/tv_bank_name"
+            android:textSize="@dimen/textPrimarySize"
+            android:text="尾号3191"
+            android:textColor="@color/mainTipColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:id="@+id/iv_current_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/yinhangkaduigou"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/transparent"
+        />
+
+</LinearLayout>

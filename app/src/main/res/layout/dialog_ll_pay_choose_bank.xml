@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="#00000000">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/corners_dialog_ll_pay">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/selector_back_press"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_alignParentLeft="true"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="选择支付方式"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textBigBiggerSize"
+                />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/topLineThin"
+            android:background="@color/tipColor"/>
+
+        <ListView
+            android:id="@+id/mListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/tipColor"
+            android:dividerHeight="@dimen/topLineThin"
+            >
+
+        </ListView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/topLineThin"
+            android:background="@color/tipColor"/>
+
+            <TextView
+                android:id="@+id/tv_add_new_bank"
+                android:paddingLeft="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/skip"
+                android:background="@drawable/selector_item_click_bg_bottom_corner"
+                android:paddingRight="10dp"
+                android:text="使用新卡支付"
+                android:textColor="@color/mainTextColor"
+                />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/iv_start_live"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/zhibokaibo"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开播"
+                android:textSize="@dimen/textSmallerSize"
+                android:textColor="@color/mainTextColor"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/iv_attention"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/zhiboguanzhu"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关注"
+                android:textSize="@dimen/textSmallerSize"
+                android:textColor="@color/mainTextColor"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/iv_private_msg"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/zhibosixin"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="私信"
+                android:textSize="@dimen/textSmallerSize"
+                android:textColor="@color/mainTextColor"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/gap_bg"/>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:text="直播推荐"
+    android:gravity="center_vertical"
+    android:textColor="@color/mainTextColor"
+    android:textSize="@dimen/textBiggerSize"
+    android:drawableLeft="@drawable/live_tuijian"
+    android:paddingLeft="10dp"
+    android:drawablePadding="10dp"
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+       >
+
+    </com.github.jdsjlzx.recyclerview.LRecyclerView>
+    </LinearLayout>
+
+
+</LinearLayout>

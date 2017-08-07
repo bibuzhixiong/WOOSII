@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/ll_layout"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textSize="@dimen/textBigBiggerSize"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25沃币"
+            android:textSize="@dimen/textPrimarySize"
+            android:padding="5dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/shchool_timecolor"/>
+
+    </LinearLayout>
+
+    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+        android:id="@+id/videoplayer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        >
+
+        <sochat.so.com.android.customview.CircleImageView
+            android:id="@+id/ivAuthorPhoto"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/default_user_photo"
+            />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxEms="8"
+            android:ellipsize="end"
+            style="@style/ItemMarketingContentText"/>
+
+        <RelativeLayout
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/ivWatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/guankan"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:id="@+id/tv_attention_count"
+                android:layout_toRightOf="@+id/ivWatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="266"
+                android:textColor="@color/shchool_timecolor"
+                android:textSize="@dimen/textSmallSmallerSize"
+                android:layout_marginTop="25dp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/ivLove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xihuan"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:id="@+id/tv_like_count"
+                android:layout_toRightOf="@+id/ivLove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="182"
+                android:textColor="@color/shchool_timecolor"
+                android:textSize="@dimen/textSmallSmallerSize"
+                android:layout_marginTop="25dp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            >
+            <ImageView
+                android:id="@+id/ivComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pinglun"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:id="@+id/tv_comment_count"
+                android:layout_toRightOf="@+id/ivComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="106"
+                android:textColor="@color/shchool_timecolor"
+                android:textSize="@dimen/textSmallSmallerSize"
+                android:layout_marginTop="25dp"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/gap_bg"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    >
+
+    <sochat.so.com.android.customview.CircleImageView
+        android:id="@+id/iv_user_photo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/morentouxiang"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_user_photo"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="无心之失"
+            android:textColor="@color/school_contentcolor"
+            android:textSize="@dimen/textSmallerSize"
+            />
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18:20"
+            android:textColor="@color/comment_time_color"
+            android:textSize="@dimen/textSmallSmallerSize"
+            />
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="老师讲的一般般，还没有我讲的好"
+            android:textColor="@color/comment_commente_color"
+            android:textSize="@dimen/textSmallSmallerSize"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:minLines="2"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_alignLeft="@+id/iv_user_photo"
+        android:layout_below="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topLineThin"
+        android:background="@color/line_gray"
+        />
+
+
+</RelativeLayout>

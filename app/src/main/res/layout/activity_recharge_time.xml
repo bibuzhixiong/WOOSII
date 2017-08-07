@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gap_bg"
+    >
+    <include layout="@layout/activity_top_hold"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/tv_remaintime_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="VR当前剩余使用时间"
+            android:textColor="@color/mainTipColor"
+            android:textSize="@dimen/textPrimarySize"
+
+            />
+
+        <TextView
+            android:layout_below="@+id/tv_remaintime_text"
+            android:id="@+id/tv_remain_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/mianColor"
+            android:textSize="60sp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            />
+        <TextView
+            android:id="@+id/tv_minute_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="沃币"
+            android:textColor="@color/mianColor"
+            android:textSize="@dimen/textBigBiggerSize"
+            android:layout_toRightOf="@+id/tv_remain_time"
+            android:layout_alignBaseline="@+id/tv_remain_time"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/white"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_recharge_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/chongzhi"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_recharge_image"
+            android:layout_alignBottom="@+id/iv_recharge_image"
+            android:layout_toRightOf="@+id/iv_recharge_image"
+            android:paddingLeft="10dp"
+            android:text="立即充值"
+            android:textSize="@dimen/textPrimarySize"
+            android:textColor="@color/mainTextColor"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="20dp"
+            android:id="@+id/recyclerview"
+            android:layout_below="@+id/iv_recharge_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_rechare_now">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:layout_above="@+id/iv_explain_image"
+            android:id="@+id/tv_rechare_now"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/corners_layout_fill"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="立即充值"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            />
+
+        <ImageView
+            android:id="@+id/iv_explain_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_above="@+id/recharge_text_explain_one"
+            android:src="@drawable/shuoming"
+            android:layout_marginBottom="10dp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_explain_image"
+            android:layout_alignBottom="@+id/iv_explain_image"
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/iv_explain_image"
+            android:text="说明："
+            android:textSize="@dimen/textPrimarySize"
+            android:textColor="@color/mainTextColor"
+            />
+
+        <TextView
+            android:layout_above="@+id/recharge_text_explain_two"
+            android:id="@+id/recharge_text_explain_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recharge_text_explain_one"
+            android:textColor="@color/mainTipColor"
+            android:layout_marginBottom="3dp"
+            />
+        <TextView
+            android:id="@+id/recharge_text_explain_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recharge_text_explain_two"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/mainTipColor"
+            android:lineSpacingMultiplier="1.2"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
