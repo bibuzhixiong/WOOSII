@@ -23,6 +23,7 @@ import android.graphics.Rect;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -32,6 +33,8 @@ import android.view.WindowManager;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+
+
 
 public class NEVideoView extends SurfaceView {
     private static final String TAG = "NEVideoView";
@@ -81,9 +84,58 @@ public class NEVideoView extends SurfaceView {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int width = getDefaultSize(mVideoWidth, widthMeasureSpec);
-        int height = getDefaultSize(mVideoHeight, heightMeasureSpec);
+//        int width = getDefaultSize(mVideoWidth, widthMeasureSpec);
+//        int height = getDefaultSize(mVideoHeight, heightMeasureSpec);
         if (mVideoWidth > 0 && mVideoHeight > 0) {
+            float aspectRatio = (float) (mVideoWidth) / mVideoHeight;
+        }
+
+         int width=getDefaultSize(mVideoWidth, widthMeasureSpec);
+         int height=getDefaultSize(mVideoHeight, heightMeasureSpec);
+        Rect rect = new Rect();
+        this.getWindowVisibleDisplayFrame(rect);//获取状态栏高度
+        WindowManager wm = (WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay(); //获取屏幕分辨率
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) { //new
+            DisplayMetrics metrics = new DisplayMetrics();
+            display.getRealMetrics(metrics);
+            width = metrics.widthPixels;
+            height = metrics.heightPixels ;//- rect.top
+        } else { //old
+            try {
+                Method mRawWidth = Display.class.getMethod("getRawWidth");
+                Method mRawHeight = Display.class.getMethod("getRawHeight");
+                width = (Integer) mRawWidth.invoke(display);
+                height = (Integer) mRawHeight.invoke(display) - rect.top;
+            } catch (NoSuchMethodException e) {
+                DisplayMetrics dm = mContext.getResources().getDisplayMetrics();
+                width = dm.widthPixels;
+                height = dm.heightPixels - rect.top;
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            }
+        }
+        int videoWidth=getDefaultSize(mVideoWidth, heightMeasureSpec);
+        int videoHeight=getDefaultSize(mVideoHeight, heightMeasureSpec);
+        if (mVideoWidth > 0 && mVideoHeight > 0) {
+            float aspectRatio = (float) (mVideoWidth) / mVideoHeight;
+
+        float winRatio = (float) width / height;
+        if(winRatio > aspectRatio){
+            videoWidth= width;
+            videoHeight = (int) (width/aspectRatio);
+        }else{
+            videoWidth = (int)(height * aspectRatio);
+            videoHeight = height;
+        }
+        }
+
+       /* if (mVideoWidth > 0 && mVideoHeight > 0) {
             if ( mVideoWidth * height  > width * mVideoHeight ) {
                 //Log.i("@@@", "image too tall, correcting");
                 //height = width * mVideoHeight / mVideoWidth;
@@ -95,8 +147,9 @@ public class NEVideoView extends SurfaceView {
                         //width+"/"+height+"="+
                         //mVideoWidth+"/"+mVideoHeight);
             }
-        }
-        setMeasuredDimension(width, height);
+        }*/
+        Log.e("YYY",videoWidth+"--"+videoHeight);
+        setMeasuredDimension(videoWidth, videoHeight);
     }
 
     public void setVideoScalingMode(int videoScalingMode) {
@@ -112,7 +165,7 @@ public class NEVideoView extends SurfaceView {
             DisplayMetrics metrics = new DisplayMetrics();
             display.getRealMetrics(metrics);
             winWidth = metrics.widthPixels;
-            winHeight = metrics.heightPixels - rect.top;
+            winHeight = metrics.heightPixels ;//- rect.top
         } else { //old
             try {
                 Method mRawWidth = Display.class.getMethod("getRawWidth");
@@ -181,7 +234,9 @@ public class NEVideoView extends SurfaceView {
                     layPara.height = winHeight;
                 }
             }
+            Log.e("YYY","layPara.width:"+layPara.width+"  layPara.height:"+layPara.height+"  mSurfaceWidth:"+mSurfaceWidth+"  mSurfaceHeight:"+mSurfaceHeight);
             setLayoutParams(layPara);
+//            getHolder().setKeepScreenOn(false);
             getHolder().setFixedSize(mSurfaceWidth, mSurfaceHeight);
         }
     }
