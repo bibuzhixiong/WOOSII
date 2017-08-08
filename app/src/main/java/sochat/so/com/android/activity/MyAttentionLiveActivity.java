@@ -23,6 +23,7 @@ import java.util.List;
 
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.LiveAttentionAdapter;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.LiveAttentionResult;
 import sochat.so.com.android.model.LiveAttrentionModel;
 import sochat.so.com.android.utils.DemoHelper;

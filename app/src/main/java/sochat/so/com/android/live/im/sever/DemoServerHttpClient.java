@@ -18,6 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.live.DemoCache;
 import sochat.so.com.android.live.activity.EnterAudienceActivity;
 import sochat.so.com.android.live.entity.AddVideoResponseEntity;

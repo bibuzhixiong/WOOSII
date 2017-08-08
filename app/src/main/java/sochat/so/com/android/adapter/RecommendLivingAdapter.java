@@ -10,6 +10,7 @@ import com.squareup.picasso.Picasso;
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.help_adapter.ListBaseAdapter;
 import sochat.so.com.android.adapter.help_adapter.SuperViewHolder;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.RecommentLivingModel;
 import sochat.so.com.android.utils.MyToast;
 

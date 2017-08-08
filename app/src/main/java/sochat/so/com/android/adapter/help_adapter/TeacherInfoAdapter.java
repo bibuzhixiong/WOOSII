@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import sochat.so.com.android.R;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.TeacherCourseList;
 
 /**

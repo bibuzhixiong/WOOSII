@@ -16,6 +16,7 @@ import org.greenrobot.eventbus.EventBus;
 import sochat.so.com.android.R;
 import sochat.so.com.android.activity.BaseActivity;
 import sochat.so.com.android.app.MyApplication;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.eventbus.WXPayFinishEvent;
 
 import static com.tencent.mm.opensdk.modelbase.BaseResp.ErrCode.ERR_OK;

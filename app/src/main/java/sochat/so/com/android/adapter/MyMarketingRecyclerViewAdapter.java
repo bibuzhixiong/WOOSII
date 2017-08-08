@@ -23,6 +23,7 @@ import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 import sochat.so.com.android.R;
 import sochat.so.com.android.activity.PlayVedioActivity;
 import sochat.so.com.android.activity.TeacherInfoActivity;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.customview.CircleImageView;
 import sochat.so.com.android.customview.MyAdGallery;
 import sochat.so.com.android.model.Child;

@@ -28,6 +28,7 @@ import java.util.List;
 import sochat.so.com.android.R;
 import sochat.so.com.android.activity.PanoramaWebViewActivity;
 import sochat.so.com.android.adapter.PanoramaAdapter;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.PanoramaModel;
 import sochat.so.com.android.model.PanoramaResult;
 import sochat.so.com.android.utils.CommonUtils;

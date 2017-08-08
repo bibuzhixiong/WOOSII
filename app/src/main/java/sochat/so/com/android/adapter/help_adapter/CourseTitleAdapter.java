@@ -12,6 +12,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import sochat.so.com.android.R;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.CourseModel;
 import sochat.so.com.android.utils.CourseTitleJson2Model;
 

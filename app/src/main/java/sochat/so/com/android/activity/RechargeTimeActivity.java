@@ -40,6 +40,7 @@ import butterknife.OnClick;
 import sobase.rtiai.util.common.Utility;
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.RechargeTimeAdapter;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.dialog.LLPayBankDialog;
 import sochat.so.com.android.dialog.LLPayChooseBankDialog;
 import sochat.so.com.android.dialog.LLPaySMSCodeDialog;
@@ -94,7 +95,7 @@ public class RechargeTimeActivity extends BaseActivity implements LLPayChooseBan
     private String money;
     private int time;
 
-    public final IWXAPI api = WXAPIFactory.createWXAPI(this,ConfigInfo.APP_ID,false);
+    public final IWXAPI api = WXAPIFactory.createWXAPI(this, ConfigInfo.APP_ID,false);
     private PayReq request;
 
     /**

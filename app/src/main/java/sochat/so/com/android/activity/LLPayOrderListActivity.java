@@ -36,6 +36,7 @@ import java.util.Map;
 import okhttp3.ResponseBody;
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.OrderListAdapter;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.llpay_util.MyHashMap;
 import sochat.so.com.android.model.OrderDetialModel;
 import sochat.so.com.android.net.MyNetWorkUtil;

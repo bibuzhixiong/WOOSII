@@ -31,6 +31,7 @@ import java.util.List;
 import sochat.so.com.android.R;
 import sochat.so.com.android.activity.MyAttentionLiveActivity;
 import sochat.so.com.android.adapter.RecommendLivingAdapter;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.live.activity.EnterLiveActivity;
 import sochat.so.com.android.live.activity.LiveRoomActivity;
 import sochat.so.com.android.model.CourseRecommendLiving;

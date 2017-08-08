@@ -26,6 +26,7 @@ import butterknife.OnClick;
 import sobase.rtiai.util.common.Utility;
 import sochat.so.com.android.R;
 import sochat.so.com.android.app.MyApplication;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.dialog.ProgressDialog;
 import sochat.so.com.android.eventbus.BackCityEvent;
 import sochat.so.com.android.eventbus.RegisterSkipEvent;

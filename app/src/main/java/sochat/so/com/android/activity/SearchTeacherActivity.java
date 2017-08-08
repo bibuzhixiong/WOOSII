@@ -41,6 +41,7 @@ import sochat.so.com.android.adapter.DeleteHistoryAdapter;
 import sochat.so.com.android.adapter.HotSearchAdapter;
 import sochat.so.com.android.adapter.SearchAdapter;
 import sochat.so.com.android.adapter.help_adapter.SearchShowVedioAdapter;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.customview.SearchEditText;
 import sochat.so.com.android.model.SearchBean;
 import sochat.so.com.android.model.SearchResult;

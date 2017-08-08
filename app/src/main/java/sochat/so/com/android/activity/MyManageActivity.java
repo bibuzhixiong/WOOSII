@@ -27,6 +27,7 @@ import java.util.List;
 
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.EmployeeAdapter;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.EmployeeModel;
 import sochat.so.com.android.utils.DemoHelper;
 import sochat.so.com.android.utils.HttpUtils;

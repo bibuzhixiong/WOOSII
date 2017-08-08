@@ -38,6 +38,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import sochat.so.com.android.R;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.interface_method.ILLPaySmsCodeView;
 import sochat.so.com.android.interface_method.JsonCallBack;
 import sochat.so.com.android.interface_method.LLPresenterCallBack;
@@ -265,7 +266,7 @@ public class AuthenticationInformationActivity extends BaseActivity implements I
         sign_parameters.clear();
         parameters.clear();
         sign_parameters.put("oid_partner", ConfigInfo.QUICK_WALLET_OID_PARTNER);
-        sign_parameters.put("sign_type",ConfigInfo.SIGN_TYPE_RSA);
+        sign_parameters.put("sign_type", ConfigInfo.SIGN_TYPE_RSA);
         sign_parameters.put("user_id", DemoHelper.getUid());
         sign_parameters.put("token",token_sms);
         sign_parameters.put("verify_code", etCaptcha.getText().toString().trim());

@@ -13,6 +13,7 @@ import org.greenrobot.eventbus.EventBus;
 import java.util.List;
 
 import sochat.so.com.android.R;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.eventbus.BackCityEvent;
 import sochat.so.com.android.model.CityModel;
 import sochat.so.com.android.utils.DemoHelper;

@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import sochat.so.com.android.R;
+import sochat.so.com.android.config.ConfigInfo;
 
 /**
  * 用户协议

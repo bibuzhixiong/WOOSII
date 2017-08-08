@@ -31,6 +31,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.BankCardListAdapter;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.interface_method.JsonCallBack;
 import sochat.so.com.android.llpay_util.MyHashMap;
 import sochat.so.com.android.model.BankCardModel;
@@ -129,7 +130,7 @@ public class LLPayBankActivity extends BaseActivity {
         parameters.clear();
 
         addparameters.put("oid_partner", ConfigInfo.QUICK_WALLET_OID_PARTNER);
-        addparameters.put("sign_type",ConfigInfo.SIGN_TYPE_RSA);
+        addparameters.put("sign_type", ConfigInfo.SIGN_TYPE_RSA);
         addparameters.put("user_id", DemoHelper.getUid());
         addparameters.put("offset", 1);
 

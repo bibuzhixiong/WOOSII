@@ -30,6 +30,7 @@ import java.util.List;
 
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.AttentionAdapter;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.AttentionModel;
 import sochat.so.com.android.model.AttentionResult;
 import sochat.so.com.android.utils.CommonUtils;

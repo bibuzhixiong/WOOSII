@@ -23,6 +23,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import sochat.so.com.android.R;
 import sochat.so.com.android.activity.MyMainActivity;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.customview.AnswerRecordImageView;
 import sochat.so.com.android.customview.FiveLine;
 import sochat.so.com.android.customview.NoScrollViewPager;

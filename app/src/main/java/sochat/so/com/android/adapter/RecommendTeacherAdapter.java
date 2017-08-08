@@ -16,6 +16,7 @@ import java.util.List;
 
 import sochat.so.com.android.R;
 import sochat.so.com.android.activity.TeacherInfoActivity;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.RecommendTeacherModel;
 import sochat.so.com.android.utils.CommonUtils;
 

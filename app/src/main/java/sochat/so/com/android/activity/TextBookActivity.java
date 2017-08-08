@@ -25,6 +25,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.TextBookAdapter;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.TextBookModel;
 import sochat.so.com.android.utils.HttpUtils;
 

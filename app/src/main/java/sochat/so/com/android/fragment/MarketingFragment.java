@@ -33,6 +33,7 @@ import sochat.so.com.android.activity.TextBookActivity;
 import sochat.so.com.android.adapter.MostHotAdapter;
 import sochat.so.com.android.adapter.MostNewAdapter;
 import sochat.so.com.android.adapter.RecommendTeacherAdapter;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.customview.DividerGridItemDecoration;
 import sochat.so.com.android.customview.RecyclerBanner;
 import sochat.so.com.android.model.HomepageVedioResult;
@@ -298,7 +299,7 @@ public class MarketingFragment extends BaseFragment {
                 break;
             case R.id.tv_hot_more:
                 intent = new Intent(mActivity,MoreRecommentActivity.class);
-                intent.putExtra("more_url",ConfigInfo.ApiUrl+"/index.php/Vr/Vlive/new_hot?type=1&user_id=");
+                intent.putExtra("more_url", ConfigInfo.ApiUrl+"/index.php/Vr/Vlive/new_hot?type=1&user_id=");
                 CommonUtils.startActivity(mActivity,intent);
                 break;
         }

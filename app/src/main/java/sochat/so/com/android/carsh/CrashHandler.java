@@ -23,6 +23,7 @@ import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.utils.HttpConnection;
 
 /**

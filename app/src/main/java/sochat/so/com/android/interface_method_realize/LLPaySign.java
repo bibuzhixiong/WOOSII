@@ -13,6 +13,7 @@ import java.util.Map;
 
 import okhttp3.ResponseBody;
 import rx.Subscriber;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.interface_method.ILLPaySign;
 import sochat.so.com.android.net.MyApiService;
 import sochat.so.com.android.net.MyNetWorkUtil;

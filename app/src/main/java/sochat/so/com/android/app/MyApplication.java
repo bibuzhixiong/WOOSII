@@ -38,6 +38,7 @@ import java.util.List;
 import cn.jpush.android.api.JPushInterface;
 import sochat.so.com.android.R;
 import sochat.so.com.android.carsh.CrashHandler;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.live.DemoCache;
 import sochat.so.com.android.live.activity.WelcomeActivity;
 import sochat.so.com.android.live.im.Preferences;

@@ -43,6 +43,7 @@ import java.util.Set;
 import cn.jpush.android.api.JPushInterface;
 import cn.jpush.android.api.TagAliasCallback;
 import sochat.so.com.android.R;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.customview.NoScrollViewPager;
 import sochat.so.com.android.customview.PopupMenuUtil;
 import sochat.so.com.android.dialog.ProgressDialog;

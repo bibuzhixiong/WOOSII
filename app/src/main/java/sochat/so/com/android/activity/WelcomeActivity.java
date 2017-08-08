@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import sochat.so.com.android.R;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.CourseModel;
 import sochat.so.com.android.utils.CommonUtils;
 import sochat.so.com.android.utils.DemoHelper;
@@ -218,7 +219,7 @@ public class WelcomeActivity extends BaseActivity implements AnimationListener,O
 
     private ArrayList<String> courseList = new ArrayList<String>();
         private void getSchoolTitle(){
-            HttpUtils.doGetAsyn(null,false,ConfigInfo.SCHOOL_COURSE_URL, handler, new HttpUtils.CallBack() {
+            HttpUtils.doGetAsyn(null,false, ConfigInfo.SCHOOL_COURSE_URL, handler, new HttpUtils.CallBack() {
                 @Override
                 public void onRequestComplete(String result) {
                     try {
