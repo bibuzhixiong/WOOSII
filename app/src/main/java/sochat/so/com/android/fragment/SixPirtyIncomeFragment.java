@@ -228,7 +228,7 @@ public class SixPirtyIncomeFragment extends BaseFragment {
 //        parameters.put("url",ConfigInfo.LL_Pay_USERPAYMENT);
 
         parameters.put("user_id", DemoHelper.getUid());
-        MyNetWorkUtil.getNovate(mActivity, ConfigInfo.YES_UID,headers,parameters,ConfigInfo.NO_CACHE,ConfigInfo.NO_COOKIE,ConfigInfo.ApiUrl);
+        MyNetWorkUtil.getNovate(mActivity, ConfigInfo.YES_UID,headers,parameters,ConfigInfo.NO_CACHE,ConfigInfo.NO_COOKIE, ConfigInfo.ApiUrl);
         MyNetWorkUtil.getMyMothed(mActivity, "/index.php/Vr/Record/six_record", parameters, new JsonCallBack() {
             @Override
             public void backJson(JSONObject jsonObject) {

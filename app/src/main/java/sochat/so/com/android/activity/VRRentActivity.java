@@ -62,7 +62,7 @@ public class VRRentActivity extends BaseActivity {
 
 
     private MyToast toast;
-    public final IWXAPI api = WXAPIFactory.createWXAPI(this,ConfigInfo.APP_ID,false);
+    public final IWXAPI api = WXAPIFactory.createWXAPI(this, ConfigInfo.APP_ID,false);
     private PayReq request;
     private String unRentState;
     /**

@@ -242,7 +242,7 @@ public class SixPartyIncomeActivity extends BaseActivity {
      */
     private void requestData() {
         parameters.put("user_id", DemoHelper.getUid());
-        MyNetWorkUtil.getNovate(this, ConfigInfo.YES_UID,headers,parameters,ConfigInfo.NO_CACHE,ConfigInfo.NO_COOKIE,ConfigInfo.ApiUrl);
+        MyNetWorkUtil.getNovate(this, ConfigInfo.YES_UID,headers,parameters,ConfigInfo.NO_CACHE,ConfigInfo.NO_COOKIE, ConfigInfo.ApiUrl);
 
 
         MyNetWorkUtil.novate.get("/index.php/Vr/Record/six_record", parameters,new BaseSubscriber<ResponseBody>(this){

@@ -130,7 +130,7 @@ public class LLPayBankActivity extends BaseActivity {
         parameters.clear();
 
         addparameters.put("oid_partner", ConfigInfo.QUICK_WALLET_OID_PARTNER);
-        addparameters.put("sign_type",ConfigInfo.SIGN_TYPE_RSA);
+        addparameters.put("sign_type", ConfigInfo.SIGN_TYPE_RSA);
         addparameters.put("user_id", DemoHelper.getUid());
         addparameters.put("offset", 1);
 

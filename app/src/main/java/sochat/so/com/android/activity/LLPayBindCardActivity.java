@@ -122,7 +122,7 @@ public class LLPayBindCardActivity extends BaseActivity {
         parameters.clear();
 
         addparameters.put("oid_partner", ConfigInfo.QUICK_WALLET_OID_PARTNER);
-        addparameters.put("sign_type",ConfigInfo.SIGN_TYPE_RSA);
+        addparameters.put("sign_type", ConfigInfo.SIGN_TYPE_RSA);
         addparameters.put("user_id", DemoHelper.getUid());
         addparameters.put("api_version", ConfigInfo.LL_VERSION_NO);
         addparameters.put("bind_mob", phone);
