@@ -30,7 +30,7 @@ public class LLPaySign {
         //添加到map准备转为json报文
         Map<String, String> headers = new HashMap<>();
         headers.put("Accept", "application/json");
-        MyNetWorkUtil.getNovate(activity, ConfigInfo.NO_UID,headers,parameters,ConfigInfo.NO_CACHE,ConfigInfo.NO_COOKIE,ConfigInfo.ApiUrl);
+        MyNetWorkUtil.getNovate(activity, ConfigInfo.NO_UID,headers,parameters,ConfigInfo.NO_CACHE,ConfigInfo.NO_COOKIE, ConfigInfo.ApiUrl);
         if (MyNetWorkUtil.novate!=null){
             MyNetWorkUtil.myAPI = MyNetWorkUtil.novate.create(MyApiService.class);
 

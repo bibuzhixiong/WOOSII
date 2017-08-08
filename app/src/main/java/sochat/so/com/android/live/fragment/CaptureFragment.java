@@ -602,6 +602,7 @@ private PublishParam mPublishParam;
                 if (rlBottomLayout!=null){
                     rlBottomLayout.setVisibility(View.GONE);
                 }
+                myview.setVisibility(View.GONE);
                 btnStartLive.setVisibility(View.VISIBLE);
             }
         });
@@ -844,11 +845,13 @@ private PublishParam mPublishParam;
                 controller.switchFlash();
                 break;
             case R.id.iv_setting:
+                myview.setVisibility(View.VISIBLE);
                 setBottomLayoutVisibility(true);
                 ll_setting_layout.setVisibility(View.VISIBLE);
                 rl_lvjing_layout.setVisibility(View.GONE);
                 break;
             case R.id.iv_meiyan:
+                myview.setVisibility(View.VISIBLE);
                 //显示美颜布局
                 setBottomLayoutVisibility(true);
                 ll_setting_layout.setVisibility(View.GONE);

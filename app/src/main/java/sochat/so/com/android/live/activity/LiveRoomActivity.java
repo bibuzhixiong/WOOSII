@@ -3,12 +3,10 @@ package sochat.so.com.android.live.activity;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -53,6 +51,9 @@ import sochat.so.com.android.live.livestreaming.CapturePreviewController;
 import sochat.so.com.android.live.livestreaming.PublishParam;
 import sochat.so.com.android.live.utils.ScreenUtil;
 import sochat.so.com.android.live.utils.VcloudFileUtils;
+import sochat.so.com.android.utils.CallBack;
+import sochat.so.com.android.utils.CommonUtils;
+import sochat.so.com.android.view.ExitRemindPopuwindow;
 
 
 /**
@@ -295,25 +296,32 @@ public class LiveRoomActivity extends LiveBaseActivity implements NimContract.Ui
         btn_kick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CommonUtils.showRegisterRemindPopuwindow(LiveRoomActivity.this,popuwindow,"确认将此人踢出房间?","确定","取消",tv_nick_name,new CallBack(){
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(LiveRoomActivity.this);
-                builder.setTitle(null);
-                builder.setMessage("确认将此人踢出房间?");
-                builder.setPositiveButton(R.string.ok,
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int whichButton) {
-                                nimController.kickMember(current_operate_member);
+                    @Override
+                    public void callback() {
+                        nimController.kickMember(current_operate_member);
                                 dismissMemberOperateLayout();
-                            }
-                        });
-                builder.setNegativeButton(R.string.cancel,
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                            }
-                        });
-                builder.show();
+                    }
+                });
+//                AlertDialog.Builder builder = new AlertDialog.Builder(LiveRoomActivity.this);
+//                builder.setTitle(null);
+//                builder.setMessage("确认将此人踢出房间?");
+//                builder.setPositiveButton(R.string.ok,
+//                        new DialogInterface.OnClickListener() {
+//                            public void onClick(DialogInterface dialog, int whichButton) {
+//                                nimController.kickMember(current_operate_member);
+//                                dismissMemberOperateLayout();
+//                            }
+//                        });
+//                builder.setNegativeButton(R.string.cancel,
+//                        new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                dialog.cancel();
+//                            }
+//                        });
+//                builder.show();
             }
         });
 
@@ -321,24 +329,33 @@ public class LiveRoomActivity extends LiveBaseActivity implements NimContract.Ui
             @Override
             public void onClick(View v) {
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(LiveRoomActivity.this);
-                builder.setTitle(null);
-                builder.setMessage("确认将此人在该直播间"+ (current_operate_member.isMuted()? "解禁?":" 禁言?"));
-                builder.setPositiveButton(R.string.ok,
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int whichButton) {
-                                nimController.muteMember(current_operate_member);
-                                dismissMemberOperateLayout();
-                            }
-                        });
-                builder.setNegativeButton(R.string.cancel,
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                            }
-                        });
-                builder.show();
+                CommonUtils.showRegisterRemindPopuwindow(LiveRoomActivity.this,popuwindow,"确认将此人在该直播间"+ (current_operate_member.isMuted()? "解禁?":" 禁言?"),"确定","取消",tv_nick_name,new CallBack(){
+
+                    @Override
+                    public void callback() {
+                        nimController.muteMember(current_operate_member);
+                        dismissMemberOperateLayout();
+                    }
+                });
+
+//                AlertDialog.Builder builder = new AlertDialog.Builder(LiveRoomActivity.this);
+//                builder.setTitle(null);
+//                builder.setMessage("确认将此人在该直播间"+ (current_operate_member.isMuted()? "解禁?":" 禁言?"));
+//                builder.setPositiveButton(R.string.ok,
+//                        new DialogInterface.OnClickListener() {
+//                            public void onClick(DialogInterface dialog, int whichButton) {
+//                                nimController.muteMember(current_operate_member);
+//                                dismissMemberOperateLayout();
+//                            }
+//                        });
+//                builder.setNegativeButton(R.string.cancel,
+//                        new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                dialog.cancel();
+//                            }
+//                        });
+//                builder.show();
             }
         });
     }
@@ -369,20 +386,29 @@ public class LiveRoomActivity extends LiveBaseActivity implements NimContract.Ui
             super.onBackPressed();
             return;
         }
+        CommonUtils.showRegisterRemindPopuwindow(LiveRoomActivity.this,popuwindow,"确定退出直播？","确定","取消",tv_nick_name,new CallBack(){
 
-        showConfirmDialog(null, "确定结束直播?", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
+            public void callback() {
                 normalFinishLive();
-            }
-        }, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
             }
         });
 
+//        showConfirmDialog(null, "确定结束直播?", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                normalFinishLive();
+//            }
+//        }, new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.cancel();
+//            }
+//        });
+
     }
+
+    private ExitRemindPopuwindow popuwindow;
 
     /**
      * 正常结束直播
@@ -482,7 +508,7 @@ public class LiveRoomActivity extends LiveBaseActivity implements NimContract.Ui
 
             liveBottomBar.setVisibility(View.GONE);
             rl_member_operate.setVisibility(View.VISIBLE);
-
+            Picasso.with(LiveRoomActivity.this).load(current_operate_member.getAvatar()).error(R.drawable.avatar_def).placeholder(R.drawable.avatar_def).into(iv_avatar);
             tv_nick_name.setText(member.getNick());
             if(member.isMuted()){
                 btn_mute.setText("解禁");

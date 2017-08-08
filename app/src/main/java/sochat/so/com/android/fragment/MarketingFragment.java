@@ -26,7 +26,6 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.vov.vitamio.utils.Log;
 import sochat.so.com.android.R;
 import sochat.so.com.android.activity.MoreRecommentActivity;
 import sochat.so.com.android.activity.SearchTeacherActivity;

@@ -51,7 +51,7 @@ public class LLPayGetBankListModel implements ILLPayGetBankListModel{
         sign_parameters.clear();
         parameters.clear();
         sign_parameters.put("oid_partner", ConfigInfo.QUICK_WALLET_OID_PARTNER);
-        sign_parameters.put("sign_type",ConfigInfo.SIGN_TYPE_RSA);
+        sign_parameters.put("sign_type", ConfigInfo.SIGN_TYPE_RSA);
         sign_parameters.put("user_id", DemoHelper.getUid());
         sign_parameters.put("offset", 1);
         parameters.put("data",sign_parameters.toString());

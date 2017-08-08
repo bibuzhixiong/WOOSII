@@ -361,7 +361,7 @@ public class MyCollectActivity extends BaseActivity {
         headers.put("Accept", "application/json");
         parameters.clear();
         parameters.put("arr", array);
-        MyNetWorkUtil.getNovate(MyCollectActivity.this,ConfigInfo.YES_UID,headers,parameters,ConfigInfo.NO_CACHE,ConfigInfo.NO_CACHE,ConfigInfo.ApiUrl);
+        MyNetWorkUtil.getNovate(MyCollectActivity.this, ConfigInfo.YES_UID,headers,parameters,ConfigInfo.NO_CACHE,ConfigInfo.NO_CACHE,ConfigInfo.ApiUrl);
         if (MyNetWorkUtil.novate!=null){
             MyNetWorkUtil.myAPI = MyNetWorkUtil.novate.create(MyApiService.class);
             MyNetWorkUtil.novate.call(MyNetWorkUtil.myAPI.getSougu(parameters), new BaseSubscriber<IpResult>(MyCollectActivity.this) {

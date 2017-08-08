@@ -10,6 +10,7 @@ import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.style.ForegroundColorSpan;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ import java.util.regex.Pattern;
 import sochat.so.com.android.R;
 import sochat.so.com.android.dialog.ProgressDialog;
 import sochat.so.com.android.llpay_util.RiskParameterUtil;
+import sochat.so.com.android.view.ExitRemindPopuwindow;
 
 /**
  * Created by Administrator on 2017/2/22.
@@ -346,6 +348,21 @@ public class CommonUtils {
         ForegroundColorSpan redSpan = new ForegroundColorSpan(color);
         builder.setSpan(redSpan, start,end , Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         return builder;
+    }
+
+
+    public static void showRegisterRemindPopuwindow(Activity context, ExitRemindPopuwindow popuwindow, String content, String sure, String cancle, View view, final CallBack callBack){
+        if(popuwindow!=null){
+            popuwindow.dismiss();
+        }
+        popuwindow=new ExitRemindPopuwindow(context,content,sure,cancle);
+        popuwindow.setOnContinueClickListener(new ExitRemindPopuwindow.OnContinueClickListener() {
+            @Override
+            public void onContinueClickListener() {
+                callBack.callback();
+            }
+        });
+        popuwindow.showAtLocation(view, Gravity.CENTER, 0, 0);
     }
 
 }

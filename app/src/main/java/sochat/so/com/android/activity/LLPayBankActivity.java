@@ -138,7 +138,7 @@ public class LLPayBankActivity extends BaseActivity {
         parameters.put("url",ConfigInfo.LL_Pay_USERBANKCARD);
 
 
-        MyNetWorkUtil.getNovate(LLPayBankActivity.this, ConfigInfo.YES_UID,headers,parameters,ConfigInfo.NO_CACHE,ConfigInfo.NO_COOKIE,ConfigInfo.ApiUrl);
+        MyNetWorkUtil.getNovate(LLPayBankActivity.this, ConfigInfo.YES_UID,headers,parameters,ConfigInfo.NO_CACHE,ConfigInfo.NO_COOKIE, ConfigInfo.ApiUrl);
         MyNetWorkUtil.getMyMothed(LLPayBankActivity.this, "/index.php/Vr/Lianlianpay/pub_fun", parameters, new JsonCallBack() {
             @Override
             public void backJson(JSONObject jsonObject) {

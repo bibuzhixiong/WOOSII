@@ -95,7 +95,7 @@ public class RechargeTimeActivity extends BaseActivity implements LLPayChooseBan
     private String money;
     private int time;
 
-    public final IWXAPI api = WXAPIFactory.createWXAPI(this,ConfigInfo.APP_ID,false);
+    public final IWXAPI api = WXAPIFactory.createWXAPI(this, ConfigInfo.APP_ID,false);
     private PayReq request;
 
     /**

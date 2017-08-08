@@ -235,7 +235,7 @@ public class AnswerFragment extends BaseFragment implements AnswerRecordImageVie
     }
 
     private void getAnswer() {
-        HttpUtils.doGetAsyn(null,false,ConfigInfo.ANSWER_URL, handler, new HttpUtils.CallBack() {
+        HttpUtils.doGetAsyn(null,false, ConfigInfo.ANSWER_URL, handler, new HttpUtils.CallBack() {
             @Override
             public void onRequestComplete(String result) {
                 Log.i(ConfigInfo.TAG,"getAnswer():"+result);

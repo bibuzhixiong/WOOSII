@@ -51,7 +51,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import butterknife.ButterKnife;
 import io.vov.vitamio.MediaPlayer;
 import io.vov.vitamio.Vitamio;
 import io.vov.vitamio.widget.VideoView;
@@ -823,7 +822,7 @@ public class PlayVedioActivity extends BaseActivity implements View.OnClickListe
         parameters.put("arr", array);
         headers.put("Accept", "application/json");
 
-        MyNetWorkUtil.getNovate(PlayVedioActivity.this,ConfigInfo.YES_UID,headers,parameters,ConfigInfo.NO_CACHE,ConfigInfo.NO_CACHE,ConfigInfo.ApiUrl);
+        MyNetWorkUtil.getNovate(PlayVedioActivity.this, ConfigInfo.YES_UID,headers,parameters,ConfigInfo.NO_CACHE,ConfigInfo.NO_CACHE,ConfigInfo.ApiUrl);
         if (MyNetWorkUtil.novate!=null){
             MyNetWorkUtil.myAPI = MyNetWorkUtil.novate.create(MyApiService.class);
             MyNetWorkUtil.novate.call(MyNetWorkUtil.myAPI.getSougu(parameters), new BaseSubscriber<IpResult>(PlayVedioActivity.this) {
