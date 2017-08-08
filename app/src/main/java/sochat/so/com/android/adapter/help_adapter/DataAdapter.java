@@ -15,7 +15,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import sochat.so.com.android.R;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.CourseChild;
 import sochat.so.com.android.utils.DemoHelper;
 import sochat.so.com.android.utils.HttpUtils;

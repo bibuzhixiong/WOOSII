@@ -33,7 +33,6 @@ import java.util.Map;
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.MyCollectAdapter;
 import sochat.so.com.android.adapter.OnItemListener;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.MyCollectResult;
 import sochat.so.com.android.model.TeacherCourseList;
 import sochat.so.com.android.net.IpResult;

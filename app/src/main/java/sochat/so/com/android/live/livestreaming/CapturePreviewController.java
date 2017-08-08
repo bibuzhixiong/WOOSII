@@ -26,7 +26,6 @@ import com.netease.vcloud.video.render.NeteaseView;
 
 import java.io.ByteArrayOutputStream;
 
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.live.utils.NetworkMonitor;
 import sochat.so.com.android.live.utils.NetworkUtils;
 import sochat.so.com.android.live.utils.VcloudFileUtils;

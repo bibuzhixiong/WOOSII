@@ -39,9 +39,6 @@ public class MyReceiver extends BroadcastReceiver {
                     processCustomMessage(context, bundle);
                 }
             }*/
-            //cesahishangcchuan
-
-
             if (JPushInterface.ACTION_REGISTRATION_ID.equals(intent.getAction())) {
                 String regId = bundle.getString(JPushInterface.EXTRA_REGISTRATION_ID);
                 Logger.d(TAG, "[MyReceiver] 接收Registration Id : " + regId);

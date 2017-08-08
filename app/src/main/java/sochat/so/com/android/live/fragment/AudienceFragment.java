@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import sochat.so.com.android.R;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.live.activity.LiveRoomActivity;
 import sochat.so.com.android.live.base.LiveBaseFragment;
 import sochat.so.com.android.live.liveplayer.LivePlayerController;

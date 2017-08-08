@@ -13,7 +13,6 @@ import sochat.so.com.android.R;
 import sochat.so.com.android.activity.BaseActivity;
 import sochat.so.com.android.activity.IncomeToCashActivity;
 import sochat.so.com.android.activity.LoginActivity;
-import sochat.so.com.android.config.ConfigInfo;
 
 /**
  * 微信回调

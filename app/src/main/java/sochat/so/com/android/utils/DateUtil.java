@@ -10,8 +10,6 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.regex.Pattern;
 
-import sochat.so.com.android.config.ConfigInfo;
-
 /**
  * Created by Administrator on 2017/5/13.
  */

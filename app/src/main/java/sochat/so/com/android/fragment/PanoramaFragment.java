@@ -2,7 +2,6 @@ package sochat.so.com.android.fragment;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,8 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.jdsjlzx.ItemDecoration.GridItemDecoration;
-import com.github.jdsjlzx.ItemDecoration.SpacesItemDecoration;
 import com.github.jdsjlzx.interfaces.OnItemClickListener;
 import com.github.jdsjlzx.interfaces.OnLoadMoreListener;
 import com.github.jdsjlzx.interfaces.OnNetWorkErrorListener;
@@ -31,7 +28,6 @@ import java.util.List;
 import sochat.so.com.android.R;
 import sochat.so.com.android.activity.PanoramaWebViewActivity;
 import sochat.so.com.android.adapter.PanoramaAdapter;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.PanoramaModel;
 import sochat.so.com.android.model.PanoramaResult;
 import sochat.so.com.android.utils.CommonUtils;
@@ -117,15 +113,15 @@ public class PanoramaFragment extends BaseFragment {
         mRecyclerView.setLayoutManager(layoutManager);
 
 
-        int spacing = getResources().getDimensionPixelSize(R.dimen.dp_4);
-        mRecyclerView.addItemDecoration(SpacesItemDecoration.newInstance(spacing, spacing, layoutManager.getSpanCount(), Color.WHITE));
+//        int spacing = getResources().getDimensionPixelSize(R.dimen.dp_4);
+//        mRecyclerView.addItemDecoration(SpacesItemDecoration.newInstance(spacing, spacing, layoutManager.getSpanCount(), Color.WHITE));
 
         //根据需要选择使用GridItemDecoration还是SpacesItemDecoration
-        GridItemDecoration divider = new GridItemDecoration.Builder(mActivity)
+      /*  GridItemDecoration divider = new GridItemDecoration.Builder(mActivity)
                 .setHorizontal(R.dimen.divider_height1)
                 .setVertical(R.dimen.divider_height1)
                 .setColorResource(R.color.white)
-                .build();
+                .build();*/
         //mRecyclerView.addItemDecoration(divider);
 
         mRecyclerView.setHasFixedSize(true);

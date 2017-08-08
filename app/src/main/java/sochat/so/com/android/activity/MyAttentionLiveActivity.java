@@ -23,7 +23,6 @@ import java.util.List;
 
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.LiveAttentionAdapter;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.LiveAttentionResult;
 import sochat.so.com.android.model.LiveAttrentionModel;
 import sochat.so.com.android.utils.DemoHelper;
@@ -86,13 +85,14 @@ public class MyAttentionLiveActivity extends BaseActivity {
 
         //setLayoutManager must before setAdapter
         GridLayoutManager manager = new GridLayoutManager(this, 2);
+        mRecyclerView.setLayoutManager(manager);
 
         mAdapter = new LiveAttentionAdapter(mActivity);
         mLRecyclerViewAdapter = new LRecyclerViewAdapter(mAdapter);
         mRecyclerView.setAdapter(mLRecyclerViewAdapter);
 
         int spacing = getResources().getDimensionPixelSize(R.dimen.dp_4);
-        mRecyclerView.addItemDecoration(SpacesItemDecoration.newInstance(spacing, spacing, manager.getSpanCount(), Color.GRAY));
+        mRecyclerView.addItemDecoration(SpacesItemDecoration.newInstance(spacing, spacing, manager.getSpanCount(), Color.WHITE));
 
         //根据需要选择使用GridItemDecoration还是SpacesItemDecoration
         GridItemDecoration divider = new GridItemDecoration.Builder(this)
@@ -100,7 +100,7 @@ public class MyAttentionLiveActivity extends BaseActivity {
                 .setVertical(R.dimen.divider_height1)
                 .setColorResource(R.color.white)
                 .build();
-        mRecyclerView.addItemDecoration(divider);
+//        mRecyclerView.addItemDecoration(divider);
 
 //
 //        DividerDecoration divider = new DividerDecoration.Builder(this)
@@ -111,7 +111,7 @@ public class MyAttentionLiveActivity extends BaseActivity {
 //        mRecyclerView.addItemDecoration(divider);
         mRecyclerView.setHasFixedSize(true);
 
-        mRecyclerView.setLayoutManager(new GridLayoutManager(mActivity,2));
+
 
 
         //禁用下拉刷新功能
@@ -150,6 +150,7 @@ public class MyAttentionLiveActivity extends BaseActivity {
             public void onItemClick(View view, int position) {
                 if (mAdapter.getDataList().size() > position) {
                     LiveAttrentionModel item = mAdapter.getDataList().get(position);
+                    MyToast.makeShortToast(MyAttentionLiveActivity.this,item.getRoomid()+"");
                 }
             }
         });

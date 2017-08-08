@@ -22,7 +22,6 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.MoreRecommendAdapter;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.MostNewResult;
 import sochat.so.com.android.model.TeacherCourseList;
 import sochat.so.com.android.utils.DemoHelper;

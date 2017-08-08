@@ -51,13 +51,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import butterknife.ButterKnife;
 import io.vov.vitamio.MediaPlayer;
 import io.vov.vitamio.Vitamio;
 import io.vov.vitamio.widget.VideoView;
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.PlayVedioCommitRecycleViewAdapter;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.customview.SearchEditText;
 import sochat.so.com.android.model.PlayVedioComment;
 import sochat.so.com.android.model.PlayVedioCommentResult;

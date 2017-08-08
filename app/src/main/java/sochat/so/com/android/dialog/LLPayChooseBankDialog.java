@@ -21,7 +21,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import sochat.so.com.android.R;
-import sochat.so.com.android.config.ConfigInfo;
 
 /**
  * Created by Administrator on 2017/6/15.

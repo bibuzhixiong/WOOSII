@@ -29,7 +29,6 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 import com.netease.nimlib.sdk.team.model.Team;
 import com.netease.nimlib.sdk.uinfo.UserInfoProvider;
 import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
-import com.tencent.smtt.sdk.QbSdk;
 import com.umeng.socialize.PlatformConfig;
 import com.umeng.socialize.UMShareAPI;
 
@@ -39,7 +38,6 @@ import java.util.List;
 import cn.jpush.android.api.JPushInterface;
 import sochat.so.com.android.R;
 import sochat.so.com.android.carsh.CrashHandler;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.live.DemoCache;
 import sochat.so.com.android.live.activity.WelcomeActivity;
 import sochat.so.com.android.live.im.Preferences;

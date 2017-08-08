@@ -20,7 +20,6 @@ import sochat.so.com.android.activity.LoginActivity;
 import sochat.so.com.android.activity.MyMainActivity;
 import sochat.so.com.android.activity.PlayVedioActivity;
 import sochat.so.com.android.activity.TeacherInfoActivity;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.interface_method.JsonCallBack;
 import sochat.so.com.android.utils.CommonUtils;
 import sochat.so.com.android.utils.LoginCallBack;

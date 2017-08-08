@@ -32,7 +32,6 @@ import java.util.Map;
 import sochat.so.com.android.R;
 import sochat.so.com.android.activity.TeacherInfoActivity;
 import sochat.so.com.android.adapter.help_adapter.DataAdapter;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.llpay_util.MyHashMap;
 import sochat.so.com.android.model.CourseChild;
 import sochat.so.com.android.model.CouurseInfoResult;

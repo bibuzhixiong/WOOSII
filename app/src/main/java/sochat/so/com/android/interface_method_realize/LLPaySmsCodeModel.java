@@ -7,7 +7,6 @@ import org.json.JSONObject;
 
 import java.util.Map;
 
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.interface_method.ILLPaySmsCodeModel;
 import sochat.so.com.android.interface_method.JsonCallBack;
 import sochat.so.com.android.interface_method.LLModelCallBack;

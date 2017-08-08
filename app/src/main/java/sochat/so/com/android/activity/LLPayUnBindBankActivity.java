@@ -19,7 +19,6 @@ import java.util.List;
 import java.util.Map;
 
 import sochat.so.com.android.R;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.dialog.ProgressDialog;
 import sochat.so.com.android.interface_method.JsonCallBack;
 import sochat.so.com.android.llpay_util.MyHashMap;

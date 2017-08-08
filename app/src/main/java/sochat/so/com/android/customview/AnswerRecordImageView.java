@@ -9,10 +9,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.utils.CommonUtils;
 
 import static android.content.Context.VIBRATOR_SERVICE;

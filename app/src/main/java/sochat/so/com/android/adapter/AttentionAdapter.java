@@ -12,7 +12,6 @@ import com.wevey.selector.dialog.NormalAlertDialog;
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.help_adapter.ListBaseAdapter;
 import sochat.so.com.android.adapter.help_adapter.SuperViewHolder;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.AttentionModel;
 
 /**

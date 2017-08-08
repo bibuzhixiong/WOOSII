@@ -19,7 +19,6 @@ import sochat.so.com.android.activity.LoginActivity;
 import sochat.so.com.android.activity.MyMainActivity;
 import sochat.so.com.android.activity.PlayVedioActivity;
 import sochat.so.com.android.activity.TeacherInfoActivity;
-import sochat.so.com.android.config.ConfigInfo;
 
 //Http请求的工具类
 public class HttpUtils {

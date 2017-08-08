@@ -34,7 +34,6 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import sochat.so.com.android.R;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.live.base.LiveBaseActivity;
 import sochat.so.com.android.live.fragment.AudienceFragment;
 import sochat.so.com.android.live.fragment.CaptureFragment;

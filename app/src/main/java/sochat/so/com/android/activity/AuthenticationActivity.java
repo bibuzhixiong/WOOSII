@@ -19,7 +19,6 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import sochat.so.com.android.R;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.utils.CommonUtils;
 import sochat.so.com.android.utils.DemoHelper;
 import sochat.so.com.android.utils.HttpUtils;

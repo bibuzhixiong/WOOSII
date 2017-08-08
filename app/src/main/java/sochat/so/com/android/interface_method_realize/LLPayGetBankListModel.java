@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.interface_method.ILLPayGetBankListCallBack;
 import sochat.so.com.android.interface_method.ILLPayGetBankListModel;
 import sochat.so.com.android.interface_method.JsonCallBack;

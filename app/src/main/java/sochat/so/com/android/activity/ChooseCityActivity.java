@@ -28,7 +28,6 @@ import java.util.List;
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.CityAdapter;
 import sochat.so.com.android.adapter.HeaderRecyclerAndFooterWrapperAdapter;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.customview.SearchEditText;
 import sochat.so.com.android.model.CityModel;
 import sochat.so.com.android.utils.HttpUtils;

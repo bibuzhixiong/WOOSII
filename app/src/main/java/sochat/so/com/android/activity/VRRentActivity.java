@@ -26,7 +26,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import sobase.rtiai.util.common.Utility;
 import sochat.so.com.android.R;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.eventbus.WXPayFinishEvent;
 import sochat.so.com.android.utils.CommonUtils;
 import sochat.so.com.android.utils.DemoHelper;

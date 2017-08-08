@@ -2,8 +2,6 @@
 package sochat.so.com.android.llpay_util;
 
 
-import sochat.so.com.android.config.ConfigInfo;
-
 public class PartnerConfig {
 
 //    // 合作商户ID。

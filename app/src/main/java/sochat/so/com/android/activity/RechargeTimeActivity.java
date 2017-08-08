@@ -40,7 +40,6 @@ import butterknife.OnClick;
 import sobase.rtiai.util.common.Utility;
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.RechargeTimeAdapter;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.dialog.LLPayBankDialog;
 import sochat.so.com.android.dialog.LLPayChooseBankDialog;
 import sochat.so.com.android.dialog.LLPaySMSCodeDialog;

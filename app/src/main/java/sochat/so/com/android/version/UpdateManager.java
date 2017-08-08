@@ -31,7 +31,6 @@ import java.net.URL;
 import java.util.HashMap;
 
 import sochat.so.com.android.R;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.dialog.UpdateDialog;
 import sochat.so.com.android.utils.HttpUtils;
 import sochat.so.com.android.utils.MyToast;

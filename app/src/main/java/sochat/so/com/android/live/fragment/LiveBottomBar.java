@@ -31,7 +31,6 @@ import java.util.List;
 import java.util.Map;
 
 import sochat.so.com.android.R;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.live.DemoCache;
 import sochat.so.com.android.live.im.adapter.GiftAdapter;
 import sochat.so.com.android.live.im.chatroom.helper.ChatRoomMemberCache;

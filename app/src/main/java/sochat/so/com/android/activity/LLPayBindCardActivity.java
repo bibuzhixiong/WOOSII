@@ -23,7 +23,6 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import sochat.so.com.android.R;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.eventbus.LLPayBindBankEvent;
 import sochat.so.com.android.interface_method.JsonCallBack;
 import sochat.so.com.android.llpay_util.BaseHelper;

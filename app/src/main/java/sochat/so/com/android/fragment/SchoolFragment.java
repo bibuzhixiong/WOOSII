@@ -44,7 +44,6 @@ import sochat.so.com.android.activity.ChooseCityActivity;
 import sochat.so.com.android.activity.SearchTeacherActivity;
 import sochat.so.com.android.adapter.help_adapter.CourseTitleAdapter;
 import sochat.so.com.android.adapter.help_adapter.CourseTitleAdapterMore;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.customview.BasePopuWindow;
 import sochat.so.com.android.customview.ExamplePagerAdapter;
 import sochat.so.com.android.eventbus.BackCityEvent;

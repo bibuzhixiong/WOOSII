@@ -34,7 +34,6 @@ import sochat.so.com.android.activity.UserSelfInfoActivity;
 import sochat.so.com.android.activity.VRLoginCodeActivity;
 import sochat.so.com.android.activity.VRRentActivity;
 import sochat.so.com.android.activity.WoosiiEmployeeFoundTeacherActivity;
-import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.customview.CircleImageView;
 import sochat.so.com.android.utils.CommonUtils;
 import sochat.so.com.android.utils.DemoHelper;
