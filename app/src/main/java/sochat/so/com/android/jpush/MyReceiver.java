@@ -39,6 +39,7 @@ public class MyReceiver extends BroadcastReceiver {
                     processCustomMessage(context, bundle);
                 }
             }*/
+            //cesahishangcchuan
 
 
             if (JPushInterface.ACTION_REGISTRATION_ID.equals(intent.getAction())) {
