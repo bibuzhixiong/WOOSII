@@ -6,5 +6,5 @@ package sochat.so.com.android.utils;
  */
 
 public interface CallBack {
-    void callback();
+    void callback();//huidiao
 }
