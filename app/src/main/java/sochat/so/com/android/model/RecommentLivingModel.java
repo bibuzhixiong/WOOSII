@@ -23,6 +23,49 @@ public class RecommentLivingModel implements Serializable{
     private int is_power;
     private int usercount;
 
+    private String vip;
+    private String wobi;
+
+    @Override
+    public String toString() {
+        return "RecommentLivingModel{" +
+                "thumb='" + thumb + '\'' +
+                ", count=" + count +
+                ", name='" + name + '\'' +
+                ", theme='" + theme + '\'' +
+                ", url='" + url + '\'' +
+                ", roomid=" + roomid +
+                ", live_id='" + live_id + '\'' +
+                ", school_id='" + school_id + '\'' +
+                ", school_name='" + school_name + '\'' +
+                ", master_id='" + master_id + '\'' +
+                ", schoo_info='" + schoo_info + '\'' +
+                ", is_college=" + is_college +
+                ", is_myschool=" + is_myschool +
+                ", is_power=" + is_power +
+                ", usercount=" + usercount +
+                ", vip='" + vip + '\'' +
+                ", wobi='" + wobi + '\'' +
+                ", foll=" + foll +
+                '}';
+    }
+
+    public String getVip() {
+        return vip;
+    }
+
+    public void setVip(String vip) {
+        this.vip = vip;
+    }
+
+    public String getWobi() {
+        return wobi;
+    }
+
+    public void setWobi(String wobi) {
+        this.wobi = wobi;
+    }
+
     private int foll;
 
     public int getFoll() {
@@ -153,24 +196,4 @@ public class RecommentLivingModel implements Serializable{
         this.usercount = usercount;
     }
 
-    @Override
-    public String toString() {
-        return "RecommentLivingModel{" +
-                "thumb='" + thumb + '\'' +
-                ", count=" + count +
-                ", name='" + name + '\'' +
-                ", theme='" + theme + '\'' +
-                ", url='" + url + '\'' +
-                ", roomid=" + roomid +
-                ", live_id='" + live_id + '\'' +
-                ", school_id='" + school_id + '\'' +
-                ", school_name='" + school_name + '\'' +
-                ", master_id='" + master_id + '\'' +
-                ", schoo_info='" + schoo_info + '\'' +
-                ", is_college=" + is_college +
-                ", is_myschool=" + is_myschool +
-                ", is_power=" + is_power +
-                ", usercount=" + usercount +
-                '}';
-    }
 }

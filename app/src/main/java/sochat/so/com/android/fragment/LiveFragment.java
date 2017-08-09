@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.widget.GridLayoutManager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,11 +26,15 @@ import com.github.jdsjlzx.recyclerview.LRecyclerViewAdapter;
 import com.github.jdsjlzx.recyclerview.ProgressStyle;
 import com.google.gson.Gson;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
 import sochat.so.com.android.R;
+import sochat.so.com.android.activity.LoginActivity;
 import sochat.so.com.android.activity.MyAttentionLiveActivity;
 import sochat.so.com.android.adapter.RecommendLivingAdapter;
 import sochat.so.com.android.config.ConfigInfo;
@@ -39,7 +44,9 @@ import sochat.so.com.android.model.CourseRecommendLiving;
 import sochat.so.com.android.model.RecommentLivingModel;
 import sochat.so.com.android.utils.CommonUtils;
 import sochat.so.com.android.utils.DemoHelper;
+import sochat.so.com.android.utils.DialogCallBack;
 import sochat.so.com.android.utils.HttpUtils;
+import sochat.so.com.android.utils.MyToast;
 
 /**
  * 直播的fragment
@@ -114,21 +121,13 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
 
     private void findById() {
         mRecyclerView = (LRecyclerView) view.findViewById(R.id.list);
-//        ivAttention = (ImageView) view.findViewById(R.id.iv_attention);
-//        ivStartLive = (ImageView) view.findViewById(R.id.iv_start_live);
-//        ivPrivateMsg = (ImageView) view.findViewById(R.id.iv_private_msg);
+        ivAttention = (ImageView) view.findViewById(R.id.iv_attention);
+        ivStartLive = (ImageView) view.findViewById(R.id.iv_start_live);
+        ivPrivateMsg = (ImageView) view.findViewById(R.id.iv_private_msg);
 
-        ll_start_live = (LinearLayout) view.findViewById(R.id.ll_start_live);
-        ll_attention = (LinearLayout) view.findViewById(R.id.ll_attention);
-        ll_private_msg = (LinearLayout) view.findViewById(R.id.ll_private_msg);
-
-//        ivAttention.setOnClickListener(this);
-//        ivStartLive.setOnClickListener(this);
-//        ivPrivateMsg.setOnClickListener(this);
-
-        ll_start_live.setOnClickListener(this);
-        ll_attention.setOnClickListener(this);
-        ll_private_msg.setOnClickListener(this);
+        ivAttention.setOnClickListener(this);
+        ivStartLive.setOnClickListener(this);
+        ivPrivateMsg.setOnClickListener(this);
     }
 
     private void inits() {
@@ -231,7 +230,13 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
                 RecommentLivingModel item;
                 if (mDataAdapter.getDataList().size() > position) {
                     item = mDataAdapter.getDataList().get(position);
-                    LiveRoomActivity.startAudience(getActivity(), item.getRoomid()+"",  item.getUrl(), true,item.getFoll(),item.getSchool_id());
+                    if (item.getVip().equals("0")|item.getWobi().equals("0")){
+                        LiveRoomActivity.startAudience(getActivity(), item.getRoomid()+"",  item.getUrl(), true,item.getFoll(),item.getSchool_id());
+                    }else{
+                       livepay(item.getRoomid()+"",item.getUrl(),item.getFoll(),item.getSchool_id());
+                    }
+
+
 
                     //1为直播地址，1为房间号
 //                    currentMode=1;
@@ -245,6 +250,30 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
 
     }
 
+    private void livepay(final String roomid, final String pillurl, final int foll, final String school_id) {
+        final String url = ConfigInfo.ApiUrl+"index.php/Api/Wylive/live_vip?user_id="+DemoHelper.getUid()+"&school_id="+school_id;
+        HttpUtils.doGetAsyn(mActivity,false,url, mHandler, new HttpUtils.CallBack() {
+            @Override
+            public void onRequestComplete(String result) {
+                try {
+                    JSONObject js = new JSONObject(result);
+                    if (js.getInt("code")==1){//扣费成功
+                        LiveRoomActivity.startAudience(getActivity(), roomid,pillurl, true,foll,school_id);
+                    }else{
+                        Message msg = new Message();
+                        msg.what = 1;
+                        msg.obj = js.getString("msg");
+                        mHandler.sendMessage(msg);
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
+    }
 
 
     private void notifyDataSetChanged() {
@@ -260,17 +289,39 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
     public void onClick(View v) {
         Intent intent ;
         switch (v.getId()){
-            case R.id.ll_start_live:
-                intent = new Intent(mActivity, EnterLiveActivity.class);
-                CommonUtils.startActivity(mActivity,intent);
+            case R.id.iv_start_live:
+
+                if (TextUtils.isEmpty(DemoHelper.getUid())){
+                    CommonUtils.showTipDialog(getActivity(), true, "提示", "您还没有登录，跳转登陆？", "取消", "登录", true, new DialogCallBack() {
+                        @Override
+                        public void left() {
+
+                        }
+
+                        @Override
+                        public void right() {
+                            Intent intent = new Intent(mActivity, LoginActivity.class);
+                            CommonUtils.startActivity(mActivity,intent);
+                        }
+
+                        @Override
+                        public void edittext(String edittext) {
+
+                        }
+                    });
+                }else{
+                    intent = new Intent(mActivity, EnterLiveActivity.class);
+                    CommonUtils.startActivity(mActivity,intent);
+                }
+
 
 
                 break;
-            case R.id.ll_attention:
+            case R.id.iv_attention:
                 intent = new Intent(mActivity, MyAttentionLiveActivity.class);
                 CommonUtils.startActivity(mActivity,intent);
                 break;
-            case R.id.ll_private_msg:
+            case R.id.iv_private_msg:
 
                 break;
         }
@@ -313,6 +364,10 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
                         }
                     });
 
+                    break;
+
+                case 1:
+                    MyToast.makeShortToast(getActivity(), (String) msg.obj);
                     break;
                 default:
                     break;

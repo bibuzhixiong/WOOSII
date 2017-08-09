@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import sochat.so.com.android.R;
 import sochat.so.com.android.config.ConfigInfo;
+import sochat.so.com.android.customview.BasePopuWindow;
 import sochat.so.com.android.live.activity.LiveRoomActivity;
 import sochat.so.com.android.live.base.LiveBaseFragment;
 import sochat.so.com.android.live.livestreaming.CapturePreviewContract;
@@ -39,6 +41,7 @@ import sochat.so.com.android.live.utils.NetworkUtils;
 import sochat.so.com.android.live.widget.MixAudioLayout;
 import sochat.so.com.android.utils.DemoHelper;
 import sochat.so.com.android.utils.HttpUtils;
+import sochat.so.com.android.utils.MyToast;
 
 /**
  * Created by zhukkun on 1/5/17.
@@ -133,10 +136,11 @@ private PublishParam mPublishParam;
     //用来处理点击事件显示隐藏底部美颜布局
     private View myview;
 
+    View view;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_capture, container, false);
+        view = inflater.inflate(R.layout.fragment_capture, container, false);
         ButterKnife.bind(this, view);
         return view;
     }
@@ -842,7 +846,14 @@ private PublishParam mPublishParam;
                 }
                 break;
             case R.id.iv_openclose_flash:
-                controller.switchFlash();
+                if (controller.isfrontOrBack){
+                    controller.switchFlash();
+                    ivOpencloseFlash.setImageResource(R.drawable.shanguangdeng);
+                }else{
+                    ivOpencloseFlash.setImageResource(R.drawable.shanguangdeng_guanbi);
+                    MyToast.makeShortToast(getActivity(),"后置摄像头才能打开闪光灯");
+                }
+
                 break;
             case R.id.iv_setting:
                 myview.setVisibility(View.VISIBLE);
@@ -862,6 +873,9 @@ private PublishParam mPublishParam;
                 onBackPressed();
                 break;
             case R.id.tv_if_charge:
+                liveRoomPopupWindow = new LiveRoomPopupWindow(getActivity());
+//                liveRoomPopupWindow.setAnimationStyle(R.style.anim_popwindow);
+                liveRoomPopupWindow.showAsDropDown(rlEnterLiveTop);
                 break;
         }
     }
@@ -876,7 +890,7 @@ private PublishParam mPublishParam;
 
     private void changeRoomTitle(){
         try {
-            String url = ConfigInfo.ApiUrl+"index.php/Api/Wylive/set_video?school_id="+ DemoHelper.getSchool_id()+"&needRecord=1&format=1&theme="+ URLEncoder.encode(etRoomName.getText().toString().trim(), "UTF-8");
+            String url = ConfigInfo.ApiUrl+"index.php/Api/Wylive/set_video?school_id="+ DemoHelper.getSchool_id()+"&wobi="+wobi+"&needRecord=1&format=1&theme="+ URLEncoder.encode(etRoomName.getText().toString().trim(), "UTF-8");
             HttpUtils.doGetAsyn(getActivity(), false, url, null, new HttpUtils.CallBack() {
                 @Override
                 public void onRequestComplete(String result) {
@@ -892,5 +906,88 @@ private PublishParam mPublishParam;
         }
 
     }
+
+    //记录钱的字符串
+    private String wobi ="0";
+    private LiveRoomPopupWindow liveRoomPopupWindow;
+
+    public class LiveRoomPopupWindow extends BasePopuWindow {
+        private Context context;
+
+        public LiveRoomPopupWindow(Context context) {
+            super(context);
+        }
+
+        @Override
+        protected View getRootView(LayoutInflater inflater) {
+            View popopview = inflater.inflate(R.layout.popupwindow_liveroom_setprivce,null);
+
+            TextView tvone = (TextView) popopview.findViewById(R.id.tvone);
+            TextView tvtwo = (TextView) popopview.findViewById(R.id.tvtwo);
+            TextView tvthree = (TextView) popopview.findViewById(R.id.tvthree);
+            TextView tvCommit = (TextView) popopview.findViewById(R.id.tvCommit);
+            View view1 = popopview.findViewById(R.id.view1);
+            View view2 = popopview.findViewById(R.id.view2);
+            final EditText etcustom = (EditText) popopview.findViewById(R.id.etcustom);
+            view1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dismiss();
+                }
+            });
+            view2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dismiss();
+                }
+            });
+            tvone.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    wobi = "10";
+                    tvIfCharge.setText("10 沃币");
+                    dismiss();
+                }
+            });
+            tvtwo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    wobi = "20";
+                    tvIfCharge.setText("20 沃币");
+                    dismiss();
+                }
+            });
+            tvthree.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    wobi = "30";
+                    tvIfCharge.setText("30 沃币");
+                    dismiss();
+                }
+            });
+            tvCommit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (TextUtils.isEmpty(etcustom.getText().toString())){
+                        wobi = "0";
+                        tvIfCharge.setText("免费");
+                    }else{
+                        wobi = etcustom.getText().toString();
+                        tvIfCharge.setText(etcustom.getText().toString()+" 沃币");
+                    }
+
+                    dismiss();
+                }
+            });
+            return popopview;
+        }
+
+        @Override
+        public void dismiss() {
+
+            super.dismiss();
+        }
+    }
+
 
 }

@@ -69,9 +69,6 @@ public class EnterLiveActivity extends LiveBaseActivity {
     private boolean stopLiveFinished = true;
     private boolean cancelEnterRoom = false;
 
-
-    private String live_id;
-
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -313,12 +310,12 @@ public class EnterLiveActivity extends LiveBaseActivity {
             return;
         }
         cancelEnterRoom = false;
-        DialogMaker.showProgressDialog(EnterLiveActivity.this, null, "创建房间中", true, new DialogInterface.OnCancelListener() {
-            @Override
-            public void onCancel(DialogInterface dialog) {
-                cancelEnterRoom = true;
-            }
-        }).setCanceledOnTouchOutside(false);
+//        DialogMaker.showProgressDialog(EnterLiveActivity.this, null, "创建房间中", true, new DialogInterface.OnCancelListener() {
+//            @Override
+//            public void onCancel(DialogInterface dialog) {
+//                cancelEnterRoom = true;
+//            }
+//        }).setCanceledOnTouchOutside(false);
 
         DemoServerHttpClient.getInstance().createRoom(EnterLiveActivity.this, new DemoServerHttpClient.DemoServerHttpCallback<RoomInfoEntity>() {
             @Override
@@ -351,6 +348,7 @@ public class EnterLiveActivity extends LiveBaseActivity {
             @Override
             public void onFailed(int code, String errorMsg) {
                 showToast(errorMsg);
+                onBackPressed();
                 DialogMaker.dismissProgressDialog();
                 progressDialogStart.destroy();
             }

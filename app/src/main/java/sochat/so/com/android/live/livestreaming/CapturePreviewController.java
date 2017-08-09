@@ -75,6 +75,8 @@ public class CapturePreviewController extends CapturePreviewContract.CapturePrev
     private boolean openVideo = true; //视频流 是否开始
     private boolean canUse4GNetwork = false; //4G网络下是否直播
 
+    public boolean isfrontOrBack = false;
+
     /**
      * 直播状态记录
      */
@@ -610,6 +612,7 @@ public class CapturePreviewController extends CapturePreviewContract.CapturePrev
      */
     @Override
     public void switchCam() {
+        isfrontOrBack = true ;
         if(mLSMediaCapture != null) {
             mLSMediaCapture.switchCamera();
         }
