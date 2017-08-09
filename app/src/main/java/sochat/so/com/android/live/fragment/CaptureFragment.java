@@ -893,8 +893,14 @@ private PublishParam mPublishParam;
 
 
     private void changeRoomTitle(){
+        int vip;
         try {
-            String url = ConfigInfo.ApiUrl+"index.php/Api/Wylive/set_video?school_id="+ DemoHelper.getSchool_id()+"&wobi="+wobi+"&needRecord=1&format=1&theme="+ URLEncoder.encode(etRoomName.getText().toString().trim(), "UTF-8");
+            if (wobi.equals("0")){
+                vip = 0;
+            }else{
+                vip = 1;
+            }
+            String url = ConfigInfo.ApiUrl+"index.php/Api/Wylive/set_video?school_id="+ DemoHelper.getSchool_id()+"&vip="+vip+"&wobi="+wobi+"&needRecord=1&format=1&theme="+ URLEncoder.encode(etRoomName.getText().toString().trim(), "UTF-8");
             HttpUtils.doGetAsyn(getActivity(), false, url, null, new HttpUtils.CallBack() {
                 @Override
                 public void onRequestComplete(String result) {

@@ -35,6 +35,7 @@ import java.util.List;
 import sochat.so.com.android.R;
 import sochat.so.com.android.activity.LoginActivity;
 import sochat.so.com.android.activity.MyAttentionLiveActivity;
+import sochat.so.com.android.activity.RechargeTimeActivity;
 import sochat.so.com.android.adapter.RecommendLivingAdapter;
 import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.live.activity.EnterLiveActivity;
@@ -225,17 +226,31 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
         mLRecyclerViewAdapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(View view,final int position) {
-                RecommentLivingModel item;
+                final RecommentLivingModel item;
                 if (mDataAdapter.getDataList().size() > position) {
                     item = mDataAdapter.getDataList().get(position);
                     if (item.getVip().equals("0")|item.getWobi().equals("0")){
+                        Log.e(ConfigInfo.TAG,"直播是否付费不付费："+item.getWobi()+";vip:"+item.getVip());
                         LiveRoomActivity.startAudience(getActivity(), item.getRoomid()+"",  item.getUrl(), true,item.getFoll(),item.getSchool_id());
                     }else{
-                       livepay(item.getRoomid()+"",item.getUrl(),item.getFoll(),item.getSchool_id());
+                        Log.e(ConfigInfo.TAG,"直播是否付费付费："+item.getWobi()+";vip:"+item.getVip());
+                        CommonUtils.showTipDialog(getActivity(), true, "提示", "该直播为付费直播", "取消", "确定", true, new DialogCallBack() {
+                            @Override
+                            public void left() {
+
+                            }
+
+                            @Override
+                            public void right() {
+                                livepay(item.getRoomid()+"",item.getUrl(),item.getFoll(),item.getSchool_id());
+                            }
+
+                            @Override
+                            public void edittext(String edittext) {
+
+                            }
+                        });
                     }
-
-
-
                     //1为直播地址，1为房间号
 //                    currentMode=1;
 //                    if(currentMode == MODE_ROOM) {
@@ -257,6 +272,24 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
                     JSONObject js = new JSONObject(result);
                     if (js.getInt("code")==1){//扣费成功
                         LiveRoomActivity.startAudience(getActivity(), roomid,pillurl, true,foll,school_id);
+                    }else if(js.getInt("code")==2){
+                        CommonUtils.showTipDialog(getActivity(), true, "提示", "您的沃币余额不足，是否跳转充值？", "取消", "确定", true, new DialogCallBack() {
+                            @Override
+                            public void left() {
+
+                            }
+
+                            @Override
+                            public void right() {
+                                Intent intent = new Intent(getActivity(), RechargeTimeActivity.class);
+                                CommonUtils.startActivity(getActivity(),intent);
+                            }
+
+                            @Override
+                            public void edittext(String edittext) {
+
+                            }
+                        });
                     }else{
                         Message msg = new Message();
                         msg.what = 1;

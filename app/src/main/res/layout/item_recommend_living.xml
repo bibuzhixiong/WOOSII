@@ -22,6 +22,37 @@
                 android:scaleType="centerCrop" >
             </ImageView>
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/beijingheitiao"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                />
+            <TextView
+                android:id="@+id/tv_person_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:drawableLeft="@drawable/guankanrenshu"
+                android:drawablePadding="5dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSmallerSize"
+                />
+            <TextView
+                android:id="@+id/tv_wobi_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/huobijinbi"
+                android:drawablePadding="5dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSmallerSize"
+                />
             <!--<LinearLayout-->
                 <!--android:layout_width="wrap_content"-->
                 <!--android:layout_height="wrap_content"-->

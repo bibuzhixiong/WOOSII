@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.Random;
+
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.help_adapter.ListBaseAdapter;
 import sochat.so.com.android.adapter.help_adapter.SuperViewHolder;
@@ -40,9 +42,14 @@ public class RecommendLivingAdapter extends ListBaseAdapter<RecommentLivingModel
 
         TextView tvLiveTitle = holder.getView(R.id.tv_live_title);
         TextView tvLiveName = holder.getView(R.id.tv_live_name);
-//        TextView tvLiveLooknum = holder.getView(R.id.tv_live_looknum);
+        TextView tvPersonCount = holder.getView(R.id.tv_person_count);
+        TextView tvWobiCount = holder.getView(R.id.tv_wobi_count);
 
         ImageView ivLive = holder.getView(R.id.iv_live_image);
+        Random random = new Random();
+        tvPersonCount.setText(item.getPerson_count()+random.nextInt(1000)+" 观看");
+        tvWobiCount.setText(item.getWobi()+" 沃币");
+
 
         if (!TextUtils.isEmpty(item.getTheme())){
             tvLiveTitle.setText(item.getTheme());

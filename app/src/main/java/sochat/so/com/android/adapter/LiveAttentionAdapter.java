@@ -1,22 +1,20 @@
 package sochat.so.com.android.adapter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
+
+import java.util.Random;
 
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.help_adapter.ListBaseAdapter;
 import sochat.so.com.android.adapter.help_adapter.SuperViewHolder;
 import sochat.so.com.android.config.ConfigInfo;
-import sochat.so.com.android.model.LiveAttentionResult;
 import sochat.so.com.android.model.LiveAttrentionModel;
 import sochat.so.com.android.utils.DemoHelper;
 import sochat.so.com.android.utils.HttpUtils;
@@ -53,10 +51,11 @@ public class LiveAttentionAdapter extends ListBaseAdapter<LiveAttrentionModel> {
         TextView tv_person_count = holder.getView(R.id.tv_person_count);
         TextView tv_liver_name = holder.getView(R.id.tv_liver_name);
         TextView tv_is_attention = holder.getView(R.id.tv_is_attention);
-
+        TextView tvWobiCount = holder.getView(R.id.tv_wobi_count);
 
         tv_liver_name.setText(item.getName());
-        tv_person_count.setText(item.getPerson_count()+" 万观看");
+        Random random = new Random();
+        tv_person_count.setText(item.getPerson_count()+random.nextInt(1000)+" 观看");
         if (item.getThumb()!=null){
                 Picasso.with(context).load(ConfigInfo.ApiUrl+item.getThumb()).placeholder(R.drawable.zhanweifu).error(R.drawable.avatar_def).into(sq_layout);
                 Picasso.with(context).load(ConfigInfo.ApiUrl+item.getThumb()).placeholder(R.drawable.zhanweifu).error(R.drawable.avatar_def).into(iv_creator_photo);
@@ -67,8 +66,13 @@ public class LiveAttentionAdapter extends ListBaseAdapter<LiveAttrentionModel> {
 
         if (item.getState_id()==3){
             iv_is_living.setImageResource(R.drawable.zhibozhong);
+            tvWobiCount.setVisibility(View.VISIBLE);
+            tvWobiCount.setText(item.getWobi()+" 沃币");
+            tv_person_count.setVisibility(View.VISIBLE);
         }else{
             iv_is_living.setImageResource(R.drawable.zanweikaino);
+            tvWobiCount.setVisibility(View.GONE);
+            tv_person_count.setVisibility(View.GONE);
         }
 
         if (item.getFoll()==0){

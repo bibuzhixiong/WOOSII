@@ -21,10 +21,7 @@ public class RecommentLivingModel implements Serializable{
     private int is_college;
     private int is_myschool;
     private int is_power;
-    private int usercount;
-
-    private String vip;
-    private String wobi;
+    private int person_count;
 
     @Override
     public String toString() {
@@ -43,12 +40,23 @@ public class RecommentLivingModel implements Serializable{
                 ", is_college=" + is_college +
                 ", is_myschool=" + is_myschool +
                 ", is_power=" + is_power +
-                ", usercount=" + usercount +
+                ", person_count=" + person_count +
                 ", vip='" + vip + '\'' +
                 ", wobi='" + wobi + '\'' +
                 ", foll=" + foll +
                 '}';
     }
+
+    public int getPerson_count() {
+        return person_count;
+    }
+
+    public void setPerson_count(int person_count) {
+        this.person_count = person_count;
+    }
+
+    private String vip;
+    private String wobi;
 
     public String getVip() {
         return vip;
@@ -186,14 +194,6 @@ public class RecommentLivingModel implements Serializable{
 
     public void setIs_power(int is_power) {
         this.is_power = is_power;
-    }
-
-    public int getUsercount() {
-        return usercount;
-    }
-
-    public void setUsercount(int usercount) {
-        this.usercount = usercount;
     }
 
 }
