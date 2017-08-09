@@ -530,7 +530,7 @@ public class UserSelfInfoActivity extends BaseActivity {
             File file = new File(imagePath);//将要保存图片的路径
             try {
                 BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
-                photo.compress(Bitmap.CompressFormat.JPEG, 30, bos);
+                photo.compress(Bitmap.CompressFormat.JPEG, 100, bos);
                 bos.flush();
                 bos.close();
             } catch (IOException e) {

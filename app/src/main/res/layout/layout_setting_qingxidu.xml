@@ -36,7 +36,7 @@
                 android:paddingLeft="25dp"
                 android:paddingRight="25dp"
                 android:gravity="center"
-                android:background="@drawable/bg_live_setting_corner"
+                android:background="@drawable/bg_live_setting_corner_gray"
                 />
 
         </RelativeLayout>
