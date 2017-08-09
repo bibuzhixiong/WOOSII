@@ -66,6 +66,7 @@ public class MyReceiver extends BroadcastReceiver {
                         Intent b = new Intent(context, MyMainActivity.class);
                         b.putExtras(bundle);
 //                   i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        //ceshi
                         b.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP );
                         context.startActivity(b);
                     }else{
