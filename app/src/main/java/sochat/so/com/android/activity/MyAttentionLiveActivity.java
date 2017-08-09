@@ -24,6 +24,7 @@ import java.util.List;
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.LiveAttentionAdapter;
 import sochat.so.com.android.config.ConfigInfo;
+import sochat.so.com.android.live.activity.LiveRoomActivity;
 import sochat.so.com.android.model.LiveAttentionResult;
 import sochat.so.com.android.model.LiveAttrentionModel;
 import sochat.so.com.android.utils.DemoHelper;
@@ -93,7 +94,7 @@ public class MyAttentionLiveActivity extends BaseActivity {
         mRecyclerView.setAdapter(mLRecyclerViewAdapter);
 
         int spacing = getResources().getDimensionPixelSize(R.dimen.dp_4);
-        mRecyclerView.addItemDecoration(SpacesItemDecoration.newInstance(spacing, spacing, manager.getSpanCount(), Color.WHITE));
+        mRecyclerView.addItemDecoration(SpacesItemDecoration.newInstance(spacing, spacing, manager.getSpanCount(),0));
 
         //根据需要选择使用GridItemDecoration还是SpacesItemDecoration
         GridItemDecoration divider = new GridItemDecoration.Builder(this)
@@ -151,10 +152,16 @@ public class MyAttentionLiveActivity extends BaseActivity {
             public void onItemClick(View view, int position) {
                 if (mAdapter.getDataList().size() > position) {
                     LiveAttrentionModel item = mAdapter.getDataList().get(position);
-                    MyToast.makeShortToast(MyAttentionLiveActivity.this,item.getRoomid()+"");
+                        if(item.getState_id()==3){
+                            LiveRoomActivity.startAudience(MyAttentionLiveActivity.this,item.getRoomid()+"", item.getUrl(), true,1,item.getSchool_id());
+                        }else{
+                        MyToast.makeShortToast(MyAttentionLiveActivity.this,"暂未开播");
+                    }
+
                 }
             }
         });
+
 
     }
 

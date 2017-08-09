@@ -255,7 +255,7 @@ public class LivePlayerController implements PlayerContract.MediaPlayControllerB
 
         public void onVideoSizeChanged(NELivePlayer mp, int width, int height,
                                        int sarNum, int sarDen) {
-            Log.d(TAG, "onVideoSizeChanged: " + width + "x"+ height + "sarNum:" + sarNum + "sarDen:" + sarDen);
+            Log.d("YYY", "onVideoSizeChanged: " + width + "x"+ height + "sarNum:" + sarNum + "sarDen:" + sarDen);
             mVideoView.upDateVideoSize(mp.getVideoWidth(), mp.getVideoHeight(), sarNum, sarDen);
             if (mp.getVideoWidth() != 0 && mp.getVideoHeight() != 0)
                 setVideoScalingMode(mVideoScalingMode);
