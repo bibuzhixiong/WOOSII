@@ -56,14 +56,6 @@ public class MyReceiver extends BroadcastReceiver {
             } else if (JPushInterface.ACTION_NOTIFICATION_OPENED.equals(intent.getAction())) {
                 Logger.d(TAG, "[MyReceiver] 用户点击打开了通知");
 
-                //  Intent i = new Intent(context, MainActivity.class);错误
-
-//                   processCustomMessage(context, bundle);
-//             order:已接单 。newOrder 新订单 。recharge：提现提醒
-
-//                JSONObject jsonObject=new JSONObject(JPushInterface.EXTRA_EXTRA);
-//                jsonObject.get("main");
-//                + jsonObject.get("main")
                 JSONObject json1 = new JSONObject(bundle.getString(JPushInterface.EXTRA_EXTRA));
                 Log.e("JPush",bundle.getString(JPushInterface.EXTRA_EXTRA)+"---"+json1.get("live_id").toString());
                 String roomid=json1.get("roomid").toString();

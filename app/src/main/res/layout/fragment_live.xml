@@ -12,6 +12,7 @@
         >
 
         <LinearLayout
+            android:id="@+id/ll_start_live"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -36,6 +37,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/ll_attention"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -60,6 +62,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/ll_private_msg"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.github.jdsjlzx.ItemDecoration.GridItemDecoration;
 import com.github.jdsjlzx.ItemDecoration.SpacesItemDecoration;
@@ -51,6 +52,7 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
     private ImageView ivStartLive;
     private ImageView ivAttention;
     private ImageView ivPrivateMsg;
+    private LinearLayout ll_start_live,ll_attention,ll_private_msg;
 
 
     /**服务器端一共多少条数据*/
@@ -112,13 +114,21 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
 
     private void findById() {
         mRecyclerView = (LRecyclerView) view.findViewById(R.id.list);
-        ivAttention = (ImageView) view.findViewById(R.id.iv_attention);
-        ivStartLive = (ImageView) view.findViewById(R.id.iv_start_live);
-        ivPrivateMsg = (ImageView) view.findViewById(R.id.iv_private_msg);
+//        ivAttention = (ImageView) view.findViewById(R.id.iv_attention);
+//        ivStartLive = (ImageView) view.findViewById(R.id.iv_start_live);
+//        ivPrivateMsg = (ImageView) view.findViewById(R.id.iv_private_msg);
 
-        ivAttention.setOnClickListener(this);
-        ivStartLive.setOnClickListener(this);
-        ivPrivateMsg.setOnClickListener(this);
+        ll_start_live = (LinearLayout) view.findViewById(R.id.ll_start_live);
+        ll_attention = (LinearLayout) view.findViewById(R.id.ll_attention);
+        ll_private_msg = (LinearLayout) view.findViewById(R.id.ll_private_msg);
+
+//        ivAttention.setOnClickListener(this);
+//        ivStartLive.setOnClickListener(this);
+//        ivPrivateMsg.setOnClickListener(this);
+
+        ll_start_live.setOnClickListener(this);
+        ll_attention.setOnClickListener(this);
+        ll_private_msg.setOnClickListener(this);
     }
 
     private void inits() {
@@ -250,17 +260,17 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
     public void onClick(View v) {
         Intent intent ;
         switch (v.getId()){
-            case R.id.iv_start_live:
+            case R.id.ll_start_live:
                 intent = new Intent(mActivity, EnterLiveActivity.class);
                 CommonUtils.startActivity(mActivity,intent);
 
 
                 break;
-            case R.id.iv_attention:
+            case R.id.ll_attention:
                 intent = new Intent(mActivity, MyAttentionLiveActivity.class);
                 CommonUtils.startActivity(mActivity,intent);
                 break;
-            case R.id.iv_private_msg:
+            case R.id.ll_private_msg:
 
                 break;
         }
