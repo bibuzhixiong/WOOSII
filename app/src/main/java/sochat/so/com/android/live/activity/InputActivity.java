@@ -149,6 +149,10 @@ public class InputActivity extends LiveBaseActivity {
         // 更多布局按钮
         moreFunctionButtonInInputBar = rootView.findViewById(R.id.buttonMoreFuntionInText);
         moreFunctionButtonInInputBar.setVisibility(inputConfig.isMoreFunctionShow ? View.VISIBLE : View.GONE);
+
+
+
+
     }
 
     private void setListeners() {
@@ -247,6 +251,13 @@ public class InputActivity extends LiveBaseActivity {
                 messageEditText.addTextChangedListener(this);
             }
         });
+
+        //弹起键盘
+        messageEditText.setFocusableInTouchMode(true);
+        messageEditText.requestFocus();
+        InputMethodManager inputManager = (InputMethodManager)messageEditText.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputManager.showSoftInput(messageEditText, 0);
+
     }
 
     /**

@@ -462,6 +462,7 @@
         <activity
             android:name=".live.activity.InputActivity"
             android:theme="@style/InputActivityTheme"
+            android:windowSoftInputMode="stateVisible"
             android:screenOrientation="portrait" />
 
         <activity
