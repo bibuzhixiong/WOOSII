@@ -251,7 +251,6 @@ public class InputActivity extends LiveBaseActivity {
                 messageEditText.addTextChangedListener(this);
             }
         });
-
         //弹起键盘
         messageEditText.setFocusableInTouchMode(true);
         messageEditText.requestFocus();

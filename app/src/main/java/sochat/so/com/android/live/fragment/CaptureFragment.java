@@ -2,9 +2,12 @@ package sochat.so.com.android.live.fragment;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -875,7 +878,8 @@ private PublishParam mPublishParam;
             case R.id.tv_if_charge:
                 liveRoomPopupWindow = new LiveRoomPopupWindow(getActivity());
 //                liveRoomPopupWindow.setAnimationStyle(R.style.anim_popwindow);
-                liveRoomPopupWindow.showAsDropDown(rlEnterLiveTop);
+//                liveRoomPopupWindow.showAsDropDown(rlEnterLiveTop,0,0);
+                liveRoomPopupWindow.showAtLocation(view, Gravity.TOP,0,0);
                 break;
         }
     }
@@ -927,8 +931,10 @@ private PublishParam mPublishParam;
             TextView tvthree = (TextView) popopview.findViewById(R.id.tvthree);
             TextView tvCommit = (TextView) popopview.findViewById(R.id.tvCommit);
             View view1 = popopview.findViewById(R.id.view1);
+            View view_top = popopview.findViewById(R.id.view_top);
             View view2 = popopview.findViewById(R.id.view2);
             final EditText etcustom = (EditText) popopview.findViewById(R.id.etcustom);
+
             view1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -941,6 +947,19 @@ private PublishParam mPublishParam;
                     dismiss();
                 }
             });
+            view_top.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dismiss();
+                }
+            });
+
+            //动态设置view_top的高
+            Rect rect = new Rect();
+            getActivity().getWindow().getDecorView().getWindowVisibleDisplayFrame(rect);//获取状态栏高度
+            LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(rlEnterLiveTop.getWidth(),rlEnterLiveTop.getHeight()-rect.top);
+            Log.e("WWW",rlEnterLiveTop.getWidth()+"---"+rlEnterLiveTop.getHeight()+"--"+rect.top);
+          view_top.setLayoutParams(params);
             tvone.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
