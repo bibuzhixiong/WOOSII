@@ -12,7 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.github.jdsjlzx.ItemDecoration.GridItemDecoration;
 import com.github.jdsjlzx.ItemDecoration.SpacesItemDecoration;
@@ -55,9 +55,9 @@ import sochat.so.com.android.utils.MyToast;
 public class LiveFragment extends BaseFragment implements View.OnClickListener{
     private View view;
 
-    private ImageView ivStartLive;
-    private ImageView ivAttention;
-    private ImageView ivPrivateMsg;
+    private LinearLayout ivStartLive;
+    private LinearLayout ivAttention;
+    private LinearLayout ivPrivateMsg;
 
 
     /**服务器端一共多少条数据*/
@@ -119,9 +119,9 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
 
     private void findById() {
         mRecyclerView = (LRecyclerView) view.findViewById(R.id.list);
-        ivAttention = (ImageView) view.findViewById(R.id.iv_attention);
-        ivStartLive = (ImageView) view.findViewById(R.id.iv_start_live);
-        ivPrivateMsg = (ImageView) view.findViewById(R.id.iv_private_msg);
+        ivAttention = (LinearLayout) view.findViewById(R.id.iv_attention);
+        ivStartLive = (LinearLayout) view.findViewById(R.id.iv_start_live);
+        ivPrivateMsg = (LinearLayout) view.findViewById(R.id.iv_private_msg);
 
         ivAttention.setOnClickListener(this);
         ivStartLive.setOnClickListener(this);

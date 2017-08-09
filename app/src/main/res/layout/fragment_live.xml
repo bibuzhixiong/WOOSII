@@ -12,6 +12,7 @@
         >
 
         <LinearLayout
+            android:id="@+id/iv_start_live"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -19,7 +20,6 @@
             android:gravity="center"
             >
             <ImageView
-                android:id="@+id/iv_start_live"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/zhibokaibo"
@@ -35,31 +35,34 @@
                 />
 
         </LinearLayout>
+
         <LinearLayout
+            android:id="@+id/iv_attention"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
             android:gravity="center"
-            >
+            android:orientation="vertical">
+
             <ImageView
-                android:id="@+id/iv_attention"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:src="@drawable/zhiboguanzhu"
 
                 />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="关注"
-                android:textSize="@dimen/textSmallerSize"
-                android:textColor="@color/mainTextColor"
                 android:gravity="center"
-                />
+                android:text="关注"
+                android:textColor="@color/mainTextColor"
+                android:textSize="@dimen/textSmallerSize" />
 
         </LinearLayout>
+
         <LinearLayout
+            android:id="@+id/iv_private_msg"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -67,7 +70,6 @@
             android:gravity="center"
             >
             <ImageView
-                android:id="@+id/iv_private_msg"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:src="@drawable/zhibosixin"
