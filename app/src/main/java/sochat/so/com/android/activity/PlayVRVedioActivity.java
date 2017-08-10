@@ -329,9 +329,6 @@ public class PlayVRVedioActivity extends BaseActivity {
                         public void run() {
                             try {
 
-//                 videoWidgetView.loadVideoFromAsset("congo.mp4", options);
-//                 String videoUrl1 = Environment.getExternalStorageDirectory().getPath()+"/congo.mp4" ;
-//                 Uri uri = Uri.parse(videoUrl1);
                                 Uri uri = Uri.parse(teacherCourse.getUrl());
 
                                 videoWidgetView.loadVideo(uri,options);
