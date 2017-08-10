@@ -76,7 +76,7 @@ public class LoginActivity extends BaseActivity {
     LinearLayout llTextThreeLogin;
     @Bind(R.id.login_weixin_login)
     ImageView loginWeixinLogin;
-
+    //测试上传分支(a)
     /**
      用来记录是否同意woosii协议内容的状态
      */
