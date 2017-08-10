@@ -193,7 +193,7 @@ public class MyCollectActivity extends BaseActivity {
                         if (item.getVr()==0){
                             intent = new Intent(MyCollectActivity.this,PlayVedioActivity.class);
                         }else{
-                            intent = new Intent(MyCollectActivity.this,PlayVedioActivity.class);
+                            intent = new Intent(MyCollectActivity.this,PlayVRVedioActivity.class);
                         }
                         intent.putExtra("vedio_info",item);
                         CommonUtils.startActivity(MyCollectActivity.this,intent);

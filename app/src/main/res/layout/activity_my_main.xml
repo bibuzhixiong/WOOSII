@@ -67,6 +67,7 @@
             android:textColor="@drawable/selector_main_tab_text_selected"
             />
         <RadioButton
+            android:visibility="gone"
             android:id="@+id/rb_tab_vr"
             android:button="@null"
             android:layout_width="0dp"
@@ -108,6 +109,7 @@
     </RadioGroup>
 
     <ImageView
+        android:visibility="gone"
         android:id="@+id/iv_vr_center"
         android:layout_width="55dp"
         android:layout_height="0dp"

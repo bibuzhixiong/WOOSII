@@ -1,1 +1,1 @@
-include ':app', ':vitamio_lib', ':jcvideoplayer-lib', ':VrUnity3D', ':uikit'
+include ':app', ':vitamio_lib', ':uikit'

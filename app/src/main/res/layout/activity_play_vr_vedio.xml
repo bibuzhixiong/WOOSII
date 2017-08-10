@@ -5,18 +5,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp">
-        <!--<com.google.vr.sdk.widgets.video.VrVideoView-->
-            <!--android:id="@+id/video_view"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:scrollbars="none"-->
-            <!--android:layout_height="200dip"/>-->
+        android:layout_height="wrap_content">
+        <com.google.vr.sdk.widgets.video.VrVideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="200dip"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/video_view"
             >
             <!-- Seeking UI & progress indicator.-->
             <SeekBar

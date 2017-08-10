@@ -262,7 +262,7 @@ public class TeacherInfoActivity extends BaseActivity {
                     if (item.getVr()==0){
                         intent = new Intent(TeacherInfoActivity.this,PlayVedioActivity.class);
                     }else{
-                        intent = new Intent(TeacherInfoActivity.this,PlayVedioActivity.class);
+                        intent = new Intent(TeacherInfoActivity.this,PlayVRVedioActivity.class);
                     }
                     if (vip ==0){//免费视频
 
@@ -466,7 +466,7 @@ public class TeacherInfoActivity extends BaseActivity {
                     if (item.getVr()==0){
                         intent = new Intent(TeacherInfoActivity.this,PlayVedioActivity.class);
                     }else{
-                        intent = new Intent(TeacherInfoActivity.this,PlayVedioActivity.class);
+                        intent = new Intent(TeacherInfoActivity.this,PlayVRVedioActivity.class);
                     }
                     intent.putExtra("vedio_info",item);
                     CommonUtils.startActivity(TeacherInfoActivity.this,intent);

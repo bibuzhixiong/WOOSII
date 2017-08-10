@@ -18,8 +18,6 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
-import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 import sochat.so.com.android.R;
 import sochat.so.com.android.activity.PlayVedioActivity;
 import sochat.so.com.android.activity.TeacherInfoActivity;
@@ -151,7 +149,7 @@ public class MyMarketingRecyclerViewAdapter extends RecyclerView.Adapter<Recycle
 //
 //        }
         if (viewHolder instanceof MyViewHolder) {
-            ((MyViewHolder)viewHolder).jcVideoPlayer.setUp(child.getUrl(), JCVideoPlayer.SCREEN_LAYOUT_LIST,"");
+//            ((MyViewHolder)viewHolder).jcVideoPlayer.setUp(child.getUrl(), JCVideoPlayer.SCREEN_LAYOUT_LIST,"");
 //            if (child.getThumb().trim().length() == 0){
 //
 //            }else{
@@ -264,7 +262,7 @@ public class MyMarketingRecyclerViewAdapter extends RecyclerView.Adapter<Recycle
 //    }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
-        JCVideoPlayerStandard jcVideoPlayer;
+//        JCVideoPlayerStandard jcVideoPlayer;
         private TextView tvTitle;
 //        private TextView tvContent;
         private CircleImageView ivUserPhoto;
@@ -279,7 +277,7 @@ public class MyMarketingRecyclerViewAdapter extends RecyclerView.Adapter<Recycle
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            jcVideoPlayer = (JCVideoPlayerStandard) itemView.findViewById(R.id.videoplayer);
+//            jcVideoPlayer = (JCVideoPlayerStandard) itemView.findViewById(R.id.videoplayer);
             tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
 //            tvContent = (TextView) itemView.findViewById(R.id.tvContent);
             ivUserPhoto = (CircleImageView) itemView.findViewById(R.id.ivAuthorPhoto);

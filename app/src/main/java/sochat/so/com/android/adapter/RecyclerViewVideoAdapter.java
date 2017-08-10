@@ -6,12 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.squareup.picasso.Picasso;
-
-import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
-import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 import sochat.so.com.android.R;
-import sochat.so.com.android.model.VideoConstant;
 
 public class RecyclerViewVideoAdapter extends RecyclerView.Adapter<RecyclerViewVideoAdapter.MyViewHolder> {
 
@@ -35,12 +30,12 @@ public class RecyclerViewVideoAdapter extends RecyclerView.Adapter<RecyclerViewV
     public void onBindViewHolder(MyViewHolder holder, int position) {
 //        Log.i(TAG, "onBindViewHolder [" + holder.jcVideoPlayer.hashCode() + "] position=" + position);
 
-        holder.jcVideoPlayer.setUp(
-                VideoConstant.videoUrls[0][position], JCVideoPlayer.SCREEN_LAYOUT_LIST,
-                VideoConstant.videoTitles[0][position]);
-        Picasso.with(holder.jcVideoPlayer.getContext())
-                .load(VideoConstant.videoThumbs[0][position])
-                .into(holder.jcVideoPlayer.thumbImageView);
+//        holder.jcVideoPlayer.setUp(
+//                VideoConstant.videoUrls[0][position], JCVideoPlayer.SCREEN_LAYOUT_LIST,
+//                VideoConstant.videoTitles[0][position]);
+//        Picasso.with(holder.jcVideoPlayer.getContext())
+//                .load(VideoConstant.videoThumbs[0][position])
+//                .into(holder.jcVideoPlayer.thumbImageView);
     }
 
     @Override
@@ -49,11 +44,11 @@ public class RecyclerViewVideoAdapter extends RecyclerView.Adapter<RecyclerViewV
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
-        JCVideoPlayerStandard jcVideoPlayer;
+//        JCVideoPlayerStandard jcVideoPlayer;
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            jcVideoPlayer = (JCVideoPlayerStandard) itemView.findViewById(R.id.videoplayer);
+//            jcVideoPlayer = (JCVideoPlayerStandard) itemView.findViewById(R.id.videoplayer);
         }
     }
 

@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import sochat.so.com.android.R;
+import sochat.so.com.android.activity.PlayVRVedioActivity;
 import sochat.so.com.android.activity.PlayVedioActivity;
 import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.model.TeacherCourseList;
@@ -58,7 +59,7 @@ public class MostHotAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                     if (currentClickItem.getVr()==0){
                         intent = new Intent(context,PlayVedioActivity.class);
                     }else{
-                        intent = new Intent(context,PlayVedioActivity.class);
+                        intent = new Intent(context,PlayVRVedioActivity.class);
                     }
                     intent.putExtra("vedio_info",currentClickItem);
                     CommonUtils.startActivity(context,intent);
@@ -129,7 +130,7 @@ public class MostHotAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 if (currentClickItem.getVr()==0){
                     intent = new Intent(context,PlayVedioActivity.class);
                 }else{
-                    intent = new Intent(context,PlayVedioActivity.class);
+                    intent = new Intent(context,PlayVRVedioActivity.class);
                 }
                 pay_cu_id = currentClickItem.getCu_id();
                 time = currentClickItem.getLongtime();

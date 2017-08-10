@@ -17,6 +17,7 @@ import java.net.URL;
 
 import sochat.so.com.android.activity.LoginActivity;
 import sochat.so.com.android.activity.MyMainActivity;
+import sochat.so.com.android.activity.PlayVRVedioActivity;
 import sochat.so.com.android.activity.PlayVedioActivity;
 import sochat.so.com.android.activity.TeacherInfoActivity;
 import sochat.so.com.android.config.ConfigInfo;
@@ -44,7 +45,7 @@ public class HttpUtils {
 			@Override
 			public void cancel() {
 				//这个地方是对有些Activity页面进行跳转登录的处理，让下面的页面在点击取消按钮时不会关闭当前页面
-				if (mContext instanceof MyMainActivity||mContext instanceof PlayVedioActivity||mContext instanceof TeacherInfoActivity){
+				if (mContext instanceof MyMainActivity||mContext instanceof PlayVRVedioActivity||mContext instanceof PlayVedioActivity||mContext instanceof TeacherInfoActivity){
 
 				}else{
 					mContext.finish();
@@ -96,7 +97,7 @@ public class HttpUtils {
 			@Override
 			public void cancel() {
 				//这个地方是对有些Activity页面进行跳转登录的处理，让下面的页面在点击取消按钮时不会关闭当前页面
-				if (mContext instanceof MyMainActivity||mContext instanceof PlayVedioActivity||mContext instanceof TeacherInfoActivity){
+				if (mContext instanceof MyMainActivity||mContext instanceof PlayVRVedioActivity||mContext instanceof PlayVedioActivity||mContext instanceof TeacherInfoActivity){
 
 				}else{
 					mContext.finish();

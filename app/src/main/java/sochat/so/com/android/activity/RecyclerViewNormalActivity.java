@@ -7,7 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 
-import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 import sochat.so.com.android.R;
 import sochat.so.com.android.adapter.RecyclerViewVideoAdapter;
 
@@ -54,16 +53,16 @@ public class RecyclerViewNormalActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        if (JCVideoPlayer.backPress()) {
-            return;
-        }
+//        if (JCVideoPlayer.backPress()) {
+//            return;
+//        }
         super.onBackPressed();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        JCVideoPlayer.releaseAllVideos();
+//        JCVideoPlayer.releaseAllVideos();
     }
 
     @Override
