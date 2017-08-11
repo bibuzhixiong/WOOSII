@@ -3,19 +3,27 @@ package sochat.so.com.android.live.activity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.style.ImageSpan;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
+import com.netease.nim.uikit.common.util.media.BitmapDecoder;
+import com.netease.nim.uikit.common.util.media.ImageUtil;
 import com.netease.nim.uikit.common.util.string.StringUtil;
 import com.netease.nim.uikit.session.emoji.MoonUtil;
 import com.netease.nimlib.sdk.NIMClient;
@@ -23,10 +31,15 @@ import com.netease.nimlib.sdk.Observer;
 import com.netease.nimlib.sdk.chatroom.ChatRoomServiceObserver;
 import com.netease.nimlib.sdk.chatroom.model.ChatRoomKickOutEvent;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import sochat.so.com.android.R;
 import sochat.so.com.android.live.DemoCache;
 import sochat.so.com.android.live.base.LiveBaseActivity;
 import sochat.so.com.android.live.im.session.input.InputConfig;
+import sochat.so.com.android.live.utils.ScreenUtil;
+import sochat.so.com.android.view.SoftKeyBoardListener;
 
 
 /**
@@ -72,6 +85,9 @@ public class InputActivity extends LiveBaseActivity {
     private int keyboardNowHeight = -1;
     private boolean quit = false;
 
+    private RelativeLayout textMessageLayout;
+    private int softheight=0;
+
     public static void startActivityForResult(Context context, String text, InputConfig inputConfig, InputActivityProxy proxy) {
         InputActivityProxyManager.getInstance().setProxy(proxy);
 
@@ -95,6 +111,34 @@ public class InputActivity extends LiveBaseActivity {
 
     @Override
     protected void initView() {
+
+        //监听键盘谈起，设置margin ,（仿制小米手机6.0.1，edittext被遮住）
+        SoftKeyBoardListener.setListener(this,new SoftKeyBoardListener.OnSoftKeyBoardChangeListener() {
+            @Override
+            public void keyBoardShow(int height) {
+                softheight=height;
+                    new Handler().post(new Runnable() {
+                        @Override
+                        public void run() {
+                            LinearLayout.LayoutParams params=(LinearLayout.LayoutParams)textMessageLayout.getLayoutParams();
+                            params.setMargins(0,0,0,   ScreenUtil.dip2px(4));
+                            textMessageLayout.setLayoutParams(params);
+                        }
+                    });
+
+//                Toast.makeText(InputActivity.this, "键盘显示 高度" + height, Toast.LENGTH_SHORT).show();
+//                Log.e("OOO","height_shwo:"+height);
+
+            }
+
+            @Override
+            public void keyBoardHide(int height) {
+                softheight=height;
+//                Toast.makeText(InputActivity.this, "键盘隐藏 高度" + height, Toast.LENGTH_SHORT).show();
+//                Log.e("OOO","height_hide:"+height);
+            }
+        });
+
         findViews();
         setListeners();
         setInputListener();
@@ -105,6 +149,8 @@ public class InputActivity extends LiveBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         registerObservers(true);
+
+
     }
 
     @Override
@@ -129,7 +175,7 @@ public class InputActivity extends LiveBaseActivity {
     private void findViews() {
         // 根布局
         rootView = findView(R.id.input_layout);
-
+        textMessageLayout= (RelativeLayout) findViewById(R.id.textMessageLayout);
         // 输入框
         messageEditText = findView(R.id.editTextMessage);
         MoonUtil.identifyFaceExpression(DemoCache.getContext(), messageEditText, text, ImageSpan.ALIGN_BOTTOM);
@@ -151,8 +197,6 @@ public class InputActivity extends LiveBaseActivity {
         moreFunctionButtonInInputBar.setVisibility(inputConfig.isMoreFunctionShow ? View.VISIBLE : View.GONE);
 
 
-
-
     }
 
     private void setListeners() {
@@ -168,7 +212,7 @@ public class InputActivity extends LiveBaseActivity {
             switch (v.getId()) {
                 case R.id.buttonSendMessage:
                     InputActivityProxy proxy = InputActivityProxyManager.getInstance().getProxy();
-                    if(proxy != null) {
+                    if (proxy != null) {
                         proxy.onSendMessage(messageEditText.getText().toString());
                     }
                     messageEditText.setText("");
@@ -208,6 +252,8 @@ public class InputActivity extends LiveBaseActivity {
             }
         });
     }
+
+
 
     private ViewTreeObserver.OnGlobalLayoutListener globalLayoutListener;
 
@@ -251,11 +297,14 @@ public class InputActivity extends LiveBaseActivity {
                 messageEditText.addTextChangedListener(this);
             }
         });
-        //弹起键盘
+
         messageEditText.setFocusableInTouchMode(true);
+        messageEditText.setFocusable(true);
         messageEditText.requestFocus();
         InputMethodManager inputManager = (InputMethodManager)messageEditText.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         inputManager.showSoftInput(messageEditText, 0);
+
+
 
     }
 
