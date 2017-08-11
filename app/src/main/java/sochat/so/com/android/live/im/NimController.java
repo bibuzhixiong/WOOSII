@@ -312,7 +312,7 @@ public class NimController extends NimContract.BaseNimController{
                     ui.onChatRoomFinished("您的账号被顶,请重新登录");
                     break;
                 default:
-                    ui.onChatRoomFinished("直播异常");
+                    ui.onChatRoomFinished("直播结束");
                     break;
             }
 

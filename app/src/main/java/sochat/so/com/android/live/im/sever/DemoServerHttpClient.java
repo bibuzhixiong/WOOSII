@@ -11,6 +11,8 @@ import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import com.netease.nim.uikit.common.http.NimHttpClient;
 import com.netease.nim.uikit.common.util.log.LogUtil;
+import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.auth.AuthService;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -240,7 +242,7 @@ public class DemoServerHttpClient {
     /**
      * 向应用服务器发送登出请求
      */
-    public void logout(){
+    public static void logout(){
         String url = API_SERVER + API_LOGOUT;
 
         Map<String, String> headers = new HashMap<>(1);
@@ -255,7 +257,9 @@ public class DemoServerHttpClient {
                 //登出不保证是否成功
             }
         });
+        NIMClient.getService(AuthService.class).logout();
     }
+
 
     /**
      * 主播创建房间接口

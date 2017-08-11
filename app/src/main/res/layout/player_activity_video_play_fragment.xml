@@ -151,14 +151,6 @@
                 android:textSize="12sp"
                 />
 
-            <ImageView
-                android:id="@+id/orientation_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@mipmap/ic_enlarge" />
-
             <TextView
                 android:id="@+id/player_total_time"
                 android:layout_width="wrap_content"
@@ -168,7 +160,17 @@
                 android:text="00:00"
                 android:textColor="@android:color/white"
                 android:textSize="12sp"
-                 />
+                />
+
+
+            <ImageView
+                android:id="@+id/orientation_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_enlarge" />
+
 
             <SeekBar
                 android:id="@+id/player_seekbar"

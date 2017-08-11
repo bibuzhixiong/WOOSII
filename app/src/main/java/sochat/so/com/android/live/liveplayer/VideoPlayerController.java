@@ -364,7 +364,7 @@ public class VideoPlayerController implements PlayerContract.MediaPlayController
                 //若网络检查器已启动,则由检测器处理异常.
                 return true;
             }
-            mUi.onError(isLiveStream() ? "直播异常" : "播放异常");
+            mUi.onError(isLiveStream() ? "直播结束" : "播放异常");
             return true;
         }
 

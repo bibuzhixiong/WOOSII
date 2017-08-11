@@ -73,7 +73,7 @@
     <string name="ok">确定</string>
     <string name="living_finished">主播已停止直播，直播结束</string>
     <string name="video_finished">视频播放结束</string>
-    <string name="living_error">直播异常</string>
+    <string name="living_error">直播结束</string>
     <string name="not_support_version">当前系统版本不支持滤镜模式，请选择普通模式</string>
     <string name="live_starting">直播已开始</string>
     <string name="net_broken">网络连接已断开</string>

@@ -335,7 +335,7 @@ public class LivePlayerController implements PlayerContract.MediaPlayControllerB
             }
 
             if(!receiver.justNetworkChanged){
-                mUi.onError("直播异常");
+                mUi.onError("直播结束");
                 return true;
             }
             DialogMaker.showProgressDialog(mContext, "网络重连中");
@@ -375,7 +375,7 @@ public class LivePlayerController implements PlayerContract.MediaPlayControllerB
             monitor.startMonitorDuration(10000, new Runnable() {
                 @Override
                 public void run() {
-                    mUi.onError("直播异常");
+                    mUi.onError("直播结束");
                 }
             });
 
