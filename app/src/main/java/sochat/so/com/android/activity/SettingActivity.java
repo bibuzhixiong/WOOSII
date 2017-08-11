@@ -13,6 +13,7 @@ import org.greenrobot.eventbus.EventBus;
 
 import sochat.so.com.android.R;
 import sochat.so.com.android.eventbus.UpdateJPush;
+import sochat.so.com.android.live.im.sever.DemoServerHttpClient;
 import sochat.so.com.android.utils.CommonUtils;
 import sochat.so.com.android.utils.DataCleanManager;
 import sochat.so.com.android.utils.DemoHelper;
@@ -102,6 +103,8 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
             case R.id.tv_exit:
                 DemoHelper.clear();
                 EventBus.getDefault().post(new UpdateJPush());
+
+                DemoServerHttpClient.logout();
                 SettingActivity.this.finish();
                 break;
             case R.id.rl_remove_cache:

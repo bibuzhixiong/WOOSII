@@ -12,33 +12,95 @@
             android:scrollbars="none"
             android:layout_height="200dip"/>
 
+        <ImageView
+            android:id="@+id/iv_back_circle"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/houtuiyuan"
+            android:padding="10dp"
+            />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:orientation="horizontal"
-            android:layout_below="@+id/video_view"
+            android:layout_alignBottom="@+id/video_view"
+            android:gravity="center_vertical"
+            android:layout_marginRight="96dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
             >
             <!-- Seeking UI & progress indicator.-->
+
+            <ImageView
+                android:id="@+id/player_play_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/player_mediacontroller_play" />
+
+            <TextView
+                android:id="@+id/player_current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/player_play_switch"
+                android:text="00:00"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:id="@+id/tv_xiexian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="/"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/player_current_time"
+                android:padding="2dp"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:id="@+id/player_total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_xiexian"
+                android:text="00:00"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                />
             <SeekBar
                 android:id="@+id/seek_bar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_height="32dp"
-                android:layout_weight="8"
-                android:layout_width="0dp"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/player_total_time"
+                android:layout_weight="1"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:paddingLeft="8dp"
+                android:progressDrawable="@drawable/video_seek_progress"
+                android:thumb="@drawable/video_seek_thumb"
+                android:thumbOffset="7dp" />
+
             <ImageButton
+                android:visibility="gone"
                 android:background="@android:color/transparent"
                 android:id="@+id/volume_toggle"
-                android:paddingTop="4dp"
                 android:paddingStart="0dp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 android:src="@drawable/volume_on"/>
         </LinearLayout>
 
     </RelativeLayout>
 
     <TextView
+        android:visibility="gone"
         android:id="@+id/status_text"
         android:text="Loading Video..."
         android:layout_centerInParent="true"
