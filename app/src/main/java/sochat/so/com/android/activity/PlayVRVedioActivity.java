@@ -14,6 +14,7 @@ import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -118,8 +119,10 @@ public class PlayVRVedioActivity extends BaseActivity implements View.OnClickLis
 
 
 
-
+    //控制器上的暂停播放按钮
     private ImageView player_play_switch;
+    //屏幕中央的按钮
+    private ImageView player_center_switch;
     private TextView player_current_time;
     private TextView player_total_time;
 
@@ -185,6 +188,8 @@ public class PlayVRVedioActivity extends BaseActivity implements View.OnClickLis
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_vr_vedio);
+        //设置屏幕常亮
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         teacherCourse = (TeacherCourseList) getIntent().getSerializableExtra("vedio_info");
 
@@ -196,11 +201,18 @@ public class PlayVRVedioActivity extends BaseActivity implements View.OnClickLis
 
 
         player_play_switch = (ImageView) findViewById(R.id.player_play_switch);
+        player_center_switch = (ImageView) findViewById(R.id.player_center_switch);
         player_current_time = (TextView) findViewById(R.id.player_current_time);
         player_total_time = (TextView) findViewById(R.id.player_total_time);
 
 
         player_play_switch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performClickPlay();
+            }
+        });
+        player_center_switch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 performClickPlay();
@@ -353,12 +365,17 @@ public class PlayVRVedioActivity extends BaseActivity implements View.OnClickLis
      * 播放暂停切换
      */
     private void performClickPlay() {
+        Log.d(ConfigInfo.TAG,"一直在执行");
         if (!isPaused) {
             videoWidgetView.pauseVideo();
             player_play_switch.setImageResource(R.mipmap.player_mediacontroller_play);
+            //正在播放就隐藏这个按钮
+            player_center_switch.setVisibility(View.GONE);
             isPaused = true;
         } else {
             videoWidgetView.playVideo();
+            //暂停播放就显示这个按钮
+            player_center_switch.setVisibility(View.VISIBLE);
             player_play_switch.setImageResource(R.mipmap.player_mediacontroller_pause);
             isPaused = false;
         }
@@ -473,13 +490,19 @@ public class PlayVRVedioActivity extends BaseActivity implements View.OnClickLis
     }
 
     private void updateStatusText() {
+
+        Log.d(ConfigInfo.TAG,"WWWWWWWWWWWWWWWWWWWWWW");
         SimpleDateFormat formatter = new SimpleDateFormat("mm:ss");//初始化Formatter的转换格式。
 
         player_total_time.setText(formatter.format(videoWidgetView.getDuration()));
         player_current_time.setText(formatter.format(videoWidgetView.getCurrentPosition()));
         if (isPaused){
+            //暂停状态隐藏中心的控件
+            player_center_switch.setVisibility(View.VISIBLE);
             player_play_switch.setImageResource(R.mipmap.player_mediacontroller_play);
         }else{
+            //播放状态显示中心的控件
+            player_center_switch.setVisibility(View.GONE);
             player_play_switch.setImageResource(R.mipmap.player_mediacontroller_pause);
         }
     }

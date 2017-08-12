@@ -65,6 +65,8 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     private void inits() {
         ivTopBack.setVisibility(View.VISIBLE);
         tvTitle.setText("设置");
+
+        tvCurrentVersion.setText("版本号 V"+CommonUtils.getVersionName(this));
         setCache();
         listener = new MyClick();
         popupWindow = new MyPopupWindow(this);

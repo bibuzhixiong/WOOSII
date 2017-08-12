@@ -16,6 +16,7 @@ import com.umeng.socialize.utils.Log;
 import com.umeng.socialize.utils.ShareBoardlistener;
 
 import sochat.so.com.android.R;
+import sochat.so.com.android.config.ConfigInfo;
 
 /**
  * Created by Administrator on 2017/2/28.
@@ -31,6 +32,7 @@ public class SharedUtils {
             @Override
             public void onStart(SHARE_MEDIA platform) {
                 //分享开始的回调
+                Log.d(ConfigInfo.TAG,"分享开始的回调");
             }
             @Override
             public void onResult(SHARE_MEDIA platform) {

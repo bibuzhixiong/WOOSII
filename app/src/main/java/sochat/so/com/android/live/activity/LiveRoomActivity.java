@@ -99,17 +99,12 @@ public class LiveRoomActivity extends LiveBaseActivity implements NimContract.Ui
     private float screenHeight;
     private boolean isLiveStart; //是否已开启直播
 
-    private String live_id;//分享直播的id
-
-
-    private static PublishParam mPublishParam;
 
     /**
      * 静态方法 启动主播
      * @param context 上下文
      */
     public static void startLive(Context context, String roomId, PublishParam param){
-        mPublishParam =param;
         Intent intent = new Intent(context, LiveRoomActivity.class);
         intent.putExtra(IS_AUDIENCE, false);
         intent.putExtra(NimController.EXTRA_ROOM_ID, roomId);
@@ -457,7 +452,10 @@ public class LiveRoomActivity extends LiveBaseActivity implements NimContract.Ui
      */
     @Override
     public void refreshRoomInfo(ChatRoomInfo roomInfo) {
-
+        //这里是给为了获得分享的内容
+        if (liveBottomBar!=null){
+            liveBottomBar.setRoomInfo(roomInfo.getName());
+        }
 
         liveRoomInfoFragment.refreshRoomInfo(roomInfo);
         tv_finish_operate.setText(roomInfo.getName());

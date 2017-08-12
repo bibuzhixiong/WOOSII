@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import sochat.so.com.android.activity.MyMainActivity;
 import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.live.DemoCache;
 import sochat.so.com.android.live.activity.EnterAudienceActivity;
@@ -258,6 +259,7 @@ public class DemoServerHttpClient {
             }
         });
         NIMClient.getService(AuthService.class).logout();
+        MyMainActivity.hadLogin = false;
     }
 
 

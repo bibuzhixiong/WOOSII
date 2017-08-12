@@ -18,6 +18,7 @@
             android:layout_centerInParent="true"
             />
         <TextView
+            android:id="@+id/tv_version"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="沃噻大学 V1.0"

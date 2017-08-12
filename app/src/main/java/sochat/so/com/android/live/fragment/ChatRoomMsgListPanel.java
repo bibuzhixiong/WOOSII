@@ -38,6 +38,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import sochat.so.com.android.R;
 import sochat.so.com.android.live.im.session.extension.GiftAttachment;
 import sochat.so.com.android.live.im.session.extension.LikeAttachment;
 import sochat.so.com.android.live.im.viewholder.ChatRoomMsgViewHolderFactory;
@@ -108,7 +109,7 @@ public class ChatRoomMsgListPanel implements TAdapterDelegate {
         adapter = new MsgAdapter(container.activity, items, this);
         adapter.setEventListener(new MsgItemEventListener());
 
-        messageListView = (MessageListView) rootView.findViewById(com.netease.nim.uikit.R.id.messageListView);
+        messageListView = (MessageListView) rootView.findViewById(R.id.messageListView);
         messageListView.requestDisallowInterceptTouchEvent(true);
 
         messageListView.setMode(AutoRefreshListView.Mode.START);

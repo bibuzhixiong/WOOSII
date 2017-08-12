@@ -36,8 +36,8 @@ public class ChatRoomViewHolderText extends MsgViewHolderText {
 
     @Override
     protected void bindContentView() {
-        TextView bodyTextView = findViewById(com.netease.nim.uikit.R.id.nim_message_item_text_body);
-        bodyTextView.setTextColor(bodyTextView.getContext().getResources().getColor(R.color.color_chat_text));
+        TextView bodyTextView = findViewById(R.id.nim_message_item_text_body);
+        bodyTextView.setTextColor(bodyTextView.getContext().getResources().getColor(R.color.white));
         layoutDirection();
         MoonUtil.identifyFaceExpression(NimUIKit.getContext(), bodyTextView, getDisplayText(), ImageSpan.ALIGN_BOTTOM);
         bodyTextView.setMovementMethod(LinkMovementMethod.getInstance());

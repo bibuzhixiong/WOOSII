@@ -28,6 +28,8 @@ public class WithWoosiiActivity extends BaseActivity {
     TextView tvVersionUpdate;
     @Bind(R.id.tv_version_explain)
     TextView tvVersionExplain;
+    @Bind(R.id.tv_version)
+    TextView tv_version;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class WithWoosiiActivity extends BaseActivity {
 
     private void inits() {
     tvTopText.setText("关于沃噻");
+        tv_version.setText("沃噻教育 V"+CommonUtils.getVersionName(this));
     }
 
     @OnClick({R.id.iv_top_back, R.id.tv_version_update, R.id.tv_version_explain})

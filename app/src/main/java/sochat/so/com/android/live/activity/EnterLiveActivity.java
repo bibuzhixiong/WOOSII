@@ -436,7 +436,12 @@ public class EnterLiveActivity extends LiveBaseActivity {
         if(ll_quality_select.getVisibility()==View.VISIBLE) {
             ll_quality_select.setVisibility(View.GONE);
         }else{
-            super.onBackPressed();
+           try{
+               super.onBackPressed();
+           }catch (Exception e){
+               e.printStackTrace();
+           }
+
         }
     }
 }

@@ -4,7 +4,8 @@
     android:id="@+id/gift_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="gone">
+    android:visibility="gone"
+    >
 
     <GridView
         android:id="@+id/gift_grid_view"
@@ -23,7 +24,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
         android:drawablePadding="10dp"
-        android:drawableTop="@drawable/icon_no_gift"
+        android:drawableTop="@drawable/btn_gift_n"
         android:text="@string/no_gift"
         android:textColor="@color/white"
         android:textSize="12sp" />

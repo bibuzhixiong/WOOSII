@@ -51,6 +51,7 @@
     </RelativeLayout>
 
     <sochat.so.com.android.live.im.widget.CircleImageView
+        android:id="@+id/iv_present_gift_person"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_centerVertical="true"

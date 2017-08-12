@@ -353,6 +353,7 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
                 CommonUtils.startActivity(mActivity,intent);
                 break;
             case R.id.iv_private_msg:
+                MyToast.makeShortToast(mActivity,"功能开发中，敬请期待");
 
                 break;
         }
@@ -378,7 +379,6 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
                 case -1:
 
                     mCurrentCounter = activity.mDataAdapter.getItemCount();
-
                     pindex =1;
                     psize =10;
                     mDataAdapter.setDataList(lists);
@@ -417,9 +417,10 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
     public void onResume() {
         super.onResume();
         if (lists!=null){
+//           pindex=1;
             lists.clear();
-//            mRecyclerView.refresh();
-            requestData();
+            mRecyclerView.refresh();
+//            requestData();
         }
     }
 
@@ -437,6 +438,9 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener{
                 Gson gson =new Gson();
                 courseInfoResult = gson.fromJson(result,CourseRecommendLiving.class);
                 if (courseInfoResult != null){
+                    if (pindex==1){
+                        lists.clear();
+                    }
                     //获得总数
                     TOTAL_COUNTER = courseInfoResult.getCount();
                     //获得

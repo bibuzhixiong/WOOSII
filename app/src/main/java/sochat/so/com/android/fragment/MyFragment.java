@@ -295,7 +295,7 @@ public class MyFragment extends BaseFragment implements View.OnClickListener{
                          detail = jsonObject.getString("detail");
                          thumb = jsonObject.getString("thumb");
                          longtime = jsonObject.getString("longtime");
-                        DemoHelper.setUid(jsonObject.getString("user_id"));
+//                        DemoHelper.setUid(jsonObject.getString("user_id"));
 
 
                         DemoHelper.setSchool_code(jsonObject.getInt("school_code"));

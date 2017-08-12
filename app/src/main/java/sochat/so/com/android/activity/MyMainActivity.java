@@ -94,7 +94,7 @@ public class MyMainActivity extends BaseActivity implements View.OnClickListener
     //直播聊天室相关
     private AbortableFuture<LoginInfo> loginRequest;
     //用于判断是否已经登录网易云信
-    private boolean hadLogin = false;
+    public static boolean hadLogin = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -108,6 +108,7 @@ public class MyMainActivity extends BaseActivity implements View.OnClickListener
 
 
     }
+
 
     @Override
     protected void onResume() {
@@ -355,6 +356,7 @@ public class MyMainActivity extends BaseActivity implements View.OnClickListener
 
             @Override
             public void onFailed(int code) {
+                hadLogin = false;
                 LogUtil.i("WS log", "login failed:"+code);
                 onLoginDone();
                 if (code == 302 || code == 404) {
@@ -366,6 +368,7 @@ public class MyMainActivity extends BaseActivity implements View.OnClickListener
 
             @Override
             public void onException(Throwable exception) {
+                hadLogin = false;
                 Toast.makeText(MyMainActivity.this, R.string.login_exception, Toast.LENGTH_LONG).show();
                 onLoginDone();
             }

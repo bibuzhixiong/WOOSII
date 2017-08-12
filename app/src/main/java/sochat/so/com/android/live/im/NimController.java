@@ -139,7 +139,7 @@ public class NimController extends NimContract.BaseNimController{
     }
 
     private void enterRoom() {
-        DialogMaker.showProgressDialog(context, null, "", true, new DialogInterface.OnCancelListener() {
+                DialogMaker.showProgressDialog(context, null, "", true, new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
                 if (enterRequest != null) {

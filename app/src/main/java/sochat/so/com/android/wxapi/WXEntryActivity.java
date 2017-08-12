@@ -43,15 +43,25 @@ public class WXEntryActivity extends BaseActivity implements IWXAPIEventHandler 
 
 		if (IncomeToCashActivity.api!=null){
 			IncomeToCashActivity.api.handleIntent(getIntent(),this);
+		}else{
+			finish();
 		}
 
 	}
 
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+		Log.d(ConfigInfo.TAG,"DDDDDDDDDDDDDDDDDD");
+	}
+
+	@Override
 	public void onReq(BaseReq baseReq) {
 
 	}
 	private int result = 0;
 
+	@Override
 	public void onResp(BaseResp baseResp) {
 		Log.i(ConfigInfo.TAG,"resp.errCode:"+ baseResp.errCode);
 		switch (baseResp.errCode){
@@ -156,5 +166,7 @@ public class WXEntryActivity extends BaseActivity implements IWXAPIEventHandler 
 		if(result!=0){
 			Toast.makeText(WXEntryActivity.this,getResources().getString(result),Toast.LENGTH_SHORT).show();
 		}
+
+		finish();
 	}
 }

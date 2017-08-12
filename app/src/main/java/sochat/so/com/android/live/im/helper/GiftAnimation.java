@@ -3,6 +3,8 @@ package sochat.so.com.android.live.im.helper;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.OvershootInterpolator;
@@ -10,11 +12,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.netease.nimlib.sdk.chatroom.model.ChatRoomMessage;
+import com.squareup.picasso.Picasso;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 import sochat.so.com.android.R;
+import sochat.so.com.android.config.ConfigInfo;
 import sochat.so.com.android.live.DemoCache;
 import sochat.so.com.android.live.im.constant.GiftConstant;
 import sochat.so.com.android.live.im.session.extension.GiftAttachment;
@@ -38,7 +42,11 @@ public class GiftAnimation {
 
     private Queue<ChatRoomMessage> cache = new LinkedList<>();
 
-    public GiftAnimation(ViewGroup downView, ViewGroup upView) {
+    //这个对象实际上是LiveRoomActivity的对象
+    private Context context;
+
+    public GiftAnimation(Context context,ViewGroup downView, ViewGroup upView) {
+        this.context =context;
         this.upView = upView;
         this.downView = downView;
         this.upAnimatorSet = buildAnimationSet(upView);
@@ -154,13 +162,25 @@ public class GiftAnimation {
      * ********************* 更新礼物信息 *********************
      */
 
+    private String thumb;
+
+    public void showThumb(String thumb){
+        this.thumb =thumb;
+    }
+
     private void updateView(final ChatRoomMessage message, ViewGroup root) {
         // senderName
         TextView audienceNameText = (TextView) root.findViewById(R.id.audience_name);
+        ImageView iv_present_gift_person = (ImageView) root.findViewById(R.id.iv_present_gift_person);
+
         if (message.getChatRoomMessageExtension() != null) {
+            Log.d(ConfigInfo.TAG,"这里是空的，哥哥");//主播
             audienceNameText.setText(message.getChatRoomMessageExtension().getSenderNick());
+            Picasso.with(context).load(message.getChatRoomMessageExtension().getSenderAvatar()).error(R.drawable.avatar_def).into(iv_present_gift_person);
         } else {
+            Log.d(ConfigInfo.TAG,"这里是空的，弟弟");//观众
             audienceNameText.setText(DemoCache.getUserInfo() == null ? DemoCache.getAccount() : DemoCache.getUserInfo().getName());
+            Picasso.with(context).load(thumb).error(R.drawable.avatar_def).into(iv_present_gift_person);
         }
 
         // gift name & image
@@ -170,5 +190,7 @@ public class GiftAnimation {
 
         ImageView giftImage = (ImageView) root.findViewById(R.id.gift_image);
         giftImage.setImageResource(GiftConstant.images[attachment.getGiftType().getValue()]);
+
+
     }
 }

@@ -2,6 +2,7 @@ package sochat.so.com.android.live.fragment;
 
 import android.content.Context;
 import android.text.ClipboardManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -126,9 +127,12 @@ public class LiveBottomBar extends RelativeLayout {
     private String roomId;
     private int giftPosition = -1;
 
+    //这里是获得LiveRoomActivity的对象，用于GiftAnimation中Picasso加载图片
+    private Context context;
 
     public LiveBottomBar(Context context, boolean isAudience, String roomId) {
         super(context);
+        this.context = context;
         this.isAudience = isAudience;
         this.roomId = roomId;
         int resourceId = isAudience? R.layout.layout_live_audience_bottom_bar : R.layout.layout_live_captrue_bottom_bar;
@@ -205,7 +209,7 @@ public class LiveBottomBar extends RelativeLayout {
         giftAnimationViewDown = findView(R.id.gift_animation_view);
         giftAnimationViewUp = findView(R.id.gift_animation_view_up);
 
-        giftAnimation = new GiftAnimation(giftAnimationViewDown, giftAnimationViewUp);
+        giftAnimation = new GiftAnimation(context,giftAnimationViewDown, giftAnimationViewUp);
 
         giftLayout.setOnClickListener(new OnClickListener() {
             @Override
@@ -240,13 +244,19 @@ public class LiveBottomBar extends RelativeLayout {
         }
     }
 
+    private String roomname;
+    public void setRoomInfo(String roomname){
+        this.roomname = roomname;
+    }
+
+
     private void clickView() {
         btn_share.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
 //                rl_share.setVisibility(VISIBLE);
                 String url = ConfigInfo.ApiUrl+"/index.php/Api/Wylive/live_share?id="+ DemoHelper.getLive_id();
-                SharedUtils.ShareWeb(url, "沃噻教育", "沃噻教育欢迎您前来观看直播", getContext());
+                SharedUtils.ShareWeb(url, roomname, "沃噻教育欢迎您前来观看直播", getContext());
             }
         });
 
@@ -505,6 +515,12 @@ public class LiveBottomBar extends RelativeLayout {
         if (chatRoomMember != null && chatRoomMember.getMemberType() != null) {
             ext.put("type", chatRoomMember.getMemberType().getValue());
             message.setRemoteExtension(ext);
+
+            if (giftAnimation!=null){
+                giftAnimation.showThumb(chatRoomMember.getAvatar());
+                Log.d(ConfigInfo.TAG,"这里是头像的哈："+chatRoomMember.getAvatar());
+            }
+
         }
     }
 
